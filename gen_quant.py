@@ -35,7 +35,7 @@ def add(q):
     Q.append(q)
 
 # ---------------- ARITHMETIC ----------------
-for _ in range(70):
+for _ in range(110):
     k=random.choice(["pct","disc","ratio","avg","exp","root","div","prime","seq","seq2"])
     if k=="pct":
         a=random.randint(15,90); b=random.randint(20,200)
@@ -104,7 +104,7 @@ for _ in range(70):
                f"a_n = a_1 x r^(n-1) = {a0} x {r}^({n}-1) = {terms[-1]}."))
 
 # ---------------- ALGEBRA ----------------
-for _ in range(70):
+for _ in range(110):
     k=random.choice(["lin","two","quad","ineq","func","wp","absval","expo"])
     if k=="lin":
         a=random.randint(2,9); c=random.randint(1,30); x=random.randint(1,12)
@@ -153,7 +153,7 @@ for _ in range(70):
                f"{base}^{e} = {val}; so x = {e}."))
 
 # ---------------- GEOMETRY ----------------
-for _ in range(60):
+for _ in range(100):
     k=random.choice(["rect","tri","circ","pyth","vol","ang","coord","insc"])
     if k=="rect":
         w=random.randint(3,15); h=random.randint(3,15)
@@ -196,7 +196,7 @@ for _ in range(60):
                f"Diagonal of square = diameter = 2r, so side = 2r/√2 = r√2 = {r}·√2 = {side}."))
 
 # ---------------- DATA ----------------
-for _ in range(60):
+for _ in range(100):
     k=random.choice(["mean","median","prob","comb","venn","unionprob"])
     if k=="mean":
         n=random.randint(4,7); base=random.randint(10,30)
@@ -231,8 +231,8 @@ for _ in range(60):
                f"P(A or B)=P(A)+P(B)-P(A and B)={pA}+{pB}-{pAB}={punion}."))
 
 # ---------------- HARD quant (multi-step / traps) ----------------
-for _ in range(60):
-    k=random.choice(["work","invest","mixture","combo2","qc-hard1","qc-hard2","percentchange","seqsum"])
+for _ in range(110):
+    k=random.choice(["work","invest","mixture","combo2","qc-hard1","qc-hard2","percentchange","seqsum","gcdlcm","dataint"])
     if k=="work":
         a=random.randint(2,6); b=random.randint(2,6)
         t=round(a*b/(a+b),2)
@@ -271,15 +271,31 @@ for _ in range(60):
         add(mc(f"A value goes from {a} to {b}. What is the percent change?", chg,
                [round((b-a)/b*100,1),b-a,round((b+a)/2,1),round(abs(b-a),1)],"Arithmetic: Percent","hard",
                f"Change = ({b}-{a})/{a} x 100 = {chg}%."))
-    else: # sum of arithmetic series
+    elif k=="seqsum": # sum of arithmetic series
         n=random.randint(8,15); a1=random.randint(1,5); d=random.randint(1,4)
         an=a1+(n-1)*d; s=n*(a1+an)//2
         add(mc(f"Sum the first {n} terms of: {a1}, {a1+d}, {a1+2*d}, ... (to {n} terms)?", s,
                [n*a1, n*(a1+an), s+d, (a1+an)*n],"Arithmetic: Sequences","hard",
                f"S_n = n/2 (first+last) = {n}/2 x ({a1}+{an}) = {s}."))
 
+    elif k=="gcdlcm":
+        x=random.randint(6,24); y=random.randint(6,24)
+        import math as _m
+        g=_m.gcd(x,y); l=x*y//g
+        add(mc(f"What is the LCM of {x} and {y}? (given GCD = {g})", l,
+               [g, x*y, l//2 if l%2==0 else l+1, g*x],"Arithmetic: Primes","hard",
+               f"LCM x GCD = x*y, so LCM = {x}*{y}/{g} = {l}."))
+    elif k=="dataint":
+        # data interpretation: percent of a known total from a bar-style table
+        cats=["A","B","C","D"]; vals=[random.randint(10,40) for _ in range(4)]
+        tot=sum(vals); tgt=random.randint(0,3)
+        pct=round(vals[tgt]/tot*100)
+        add(mc(f"A survey of {tot} students found preferences: A={vals[0]}, B={vals[1]}, C={vals[2]}, D={vals[3]}. What percent chose {cats[tgt]}? (round to nearest whole %)",
+               pct,[round(vals[(tgt+1)%4]/tot*100),100-pct,vals[tgt],round(tot/vals[tgt])],"Data: Statistics","hard",
+               f"pct = {vals[tgt]}/{tot} x 100 = {pct}%."))
+
 # ---------------- QUANTITATIVE COMPARISON ----------------
-for _ in range(90):
+for _ in range(150):
     k=random.choice(["qc-arith","qc-alg","qc-geo","qc-var","qc-frac"])
     if k=="qc-arith":
         a=random.randint(2,9); b=random.randint(2,9)

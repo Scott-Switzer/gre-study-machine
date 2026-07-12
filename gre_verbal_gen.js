@@ -44,14 +44,14 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: The ___ child refused to share, clinging stubbornly to his toys.",
 "choices": {
-"A": "chapel",
-"B": "orthodox",
-"C": "probation",
-"D": "apropos",
-"E": "obstinate",
-"F": "predecessor"
+"A": "brilliant",
+"B": "probation",
+"C": "apropos",
+"D": "orthodox",
+"E": "predecessor",
+"F": "obstinate"
 },
-"answer": "E",
+"answer": "F",
 "explanation": "'obstinate' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-3"
@@ -63,14 +63,14 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: After the scandal, the senator tried to ___ the public with a carefully worded apology.",
 "choices": {
-"A": "outlandish",
-"B": "idiosyncratic",
-"C": "minuscule",
-"D": "pandemonium",
-"E": "placate",
+"A": "pandemonium",
+"B": "outlandish",
+"C": "fledgling",
+"D": "placate",
+"E": "idiosyncratic",
 "F": "libel"
 },
-"answer": "E",
+"answer": "D",
 "explanation": "'placate' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-4"
@@ -82,12 +82,12 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: The professor's ___ lecture, dense with jargon, lost the undergraduate audience entirely.",
 "choices": {
-"A": "frugal",
+"A": "felicitous",
 "B": "esoteric",
-"C": "felicitous",
-"D": "puerile",
-"E": "foster",
-"F": "morose"
+"C": "foster",
+"D": "recluse",
+"E": "puerile",
+"F": "frugal"
 },
 "answer": "B",
 "explanation": "'esoteric' fits the context.",
@@ -139,15 +139,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: A ___ smile played on her lips as she watched the plan unfold perfectly.",
 "choices": {
-"A": "fetid",
-"B": "myopic",
-"C": "environs",
-"D": "penury",
-"E": "delectable",
-"F": "denouement"
+"A": "muted",
+"B": "pensive",
+"C": "denigrate",
+"D": "sanguine",
+"E": "enervate",
+"F": "inept"
 },
-"answer": "E",
-"explanation": "'delectable' fits the context.",
+"answer": "D",
+"explanation": "'sanguine' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-8"
 },
@@ -197,14 +197,14 @@ var GRE_VERBAL_GEN = [
 "stem": "Fill the blank: The ___ diplomat smoothed over the tense negotiation with quiet grace.",
 "choices": {
 "A": "idiosyncratic",
-"B": "reflux",
-"C": "cumbersome",
-"D": "malapropism",
+"B": "urbane",
+"C": "malapropism",
+"D": "quash",
 "E": "desecrate",
-"F": "finagle"
+"F": "cumbersome"
 },
 "answer": "B",
-"explanation": "'reflux' fits the context.",
+"explanation": "'urbane' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-11"
 },
@@ -215,15 +215,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: His ___ wealth could not buy him genuine friends.",
 "choices": {
-"A": "portentous",
+"A": "practical",
 "B": "amenable",
-"C": "lambaste",
-"D": "protean",
-"E": "nuance",
-"F": "fathom"
+"C": "protean",
+"D": "demure",
+"E": "fathom",
+"F": "predilection"
 },
-"answer": "C",
-"explanation": "'lambaste' fits the context.",
+"answer": "A",
+"explanation": "'practical' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-12"
 },
@@ -234,14 +234,14 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: The old man's ___ memory for dates impressed even the historians.",
 "choices": {
-"A": "malapropism",
-"B": "plunder",
-"C": "capricious",
-"D": "mantle",
-"E": "erudite",
-"F": "presentiment"
+"A": "plunder",
+"B": "malapropism",
+"C": "complacent",
+"D": "erudite",
+"E": "presentiment",
+"F": "inestimable"
 },
-"answer": "E",
+"answer": "D",
 "explanation": "'erudite' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-13"
@@ -253,15 +253,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: A ___ calm settled over the village after the storm passed.",
 "choices": {
-"A": "intact",
-"B": "privy",
-"C": "fecund",
-"D": "beatific",
-"E": "nihilism",
-"F": "conspicuous"
+"A": "insular",
+"B": "privation",
+"C": "natty",
+"D": "enrich",
+"E": "tranquil",
+"F": "assuage"
 },
-"answer": "D",
-"explanation": "'beatific' fits the context.",
+"answer": "E",
+"explanation": "'tranquil' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-14"
 },
@@ -272,14 +272,14 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: The ___ toddler threw a fit when denied the candy.",
 "choices": {
-"A": "nimble",
-"B": "lambaste",
-"C": "partisan",
-"D": "abstruse",
+"A": "abstruse",
+"B": "indecorous",
+"C": "lambaste",
+"D": "irascible",
 "E": "pule",
-"F": "irascible"
+"F": "ramble"
 },
-"answer": "F",
+"answer": "D",
 "explanation": "'irascible' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-15"
@@ -291,15 +291,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: Her ___ dedication to the cause never wavered, even under pressure.",
 "choices": {
-"A": "inorganic",
-"B": "legacy",
-"C": "preen",
-"D": "pule",
-"E": "precocious",
-"F": "contrite"
+"A": "pulchritude",
+"B": "preempt",
+"C": "hegemony",
+"D": "awry",
+"E": "flout",
+"F": "tenacious"
 },
-"answer": "A",
-"explanation": "'inorganic' fits the context.",
+"answer": "F",
+"explanation": "'tenacious' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-16"
 },
@@ -310,12 +310,12 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: The ___ explanation clarified what had seemed hopelessly confusing.",
 "choices": {
-"A": "clamor",
+"A": "tranquil",
 "B": "junta",
 "C": "counterfeit",
-"D": "relapse",
+"D": "malleable",
 "E": "pellucid",
-"F": "impugn"
+"F": "silent"
 },
 "answer": "E",
 "explanation": "'pellucid' fits the context.",
@@ -329,15 +329,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: He was ___ about his plan, revealing nothing to his rivals.",
 "choices": {
-"A": "languish",
-"B": "mayhem",
-"C": "buoyancy",
-"D": "obviate",
-"E": "mollify",
-"F": "plumb"
+"A": "lurch",
+"B": "surreptitious",
+"C": "quantum",
+"D": "modish",
+"E": "plod",
+"F": "polar"
 },
-"answer": "C",
-"explanation": "'buoyancy' fits the context.",
+"answer": "B",
+"explanation": "'surreptitious' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-18"
 },
@@ -348,14 +348,14 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: The ___ old woman distributed gifts to every child on the street.",
 "choices": {
-"A": "munificent",
-"B": "legend",
-"C": "crescendo",
-"D": "percolate",
-"E": "inventive",
+"A": "inventive",
+"B": "precipitate",
+"C": "peripatetic",
+"D": "munificent",
+"E": "brackish",
 "F": "raze"
 },
-"answer": "A",
+"answer": "D",
 "explanation": "'munificent' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-19"
@@ -367,15 +367,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: The critic's ___ review shredded the novel with razor-sharp prose.",
 "choices": {
-"A": "prosaic",
-"B": "quiescent",
-"C": "legacy",
-"D": "adumbrate",
-"E": "diurnal",
-"F": "phobic"
+"A": "dilettante",
+"B": "erudite",
+"C": "journal",
+"D": "scintillating",
+"E": "recount",
+"F": "papacy"
 },
-"answer": "F",
-"explanation": "'phobic' fits the context.",
+"answer": "D",
+"explanation": "'scintillating' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-20"
 },
@@ -386,15 +386,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: Because the evidence was ___, the jury deliberated for only minutes.",
 "choices": {
-"A": "consternation",
-"B": "outlandish",
-"C": "latent",
-"D": "ingenuous",
-"E": "plod",
-"F": "hapless"
+"A": "ire",
+"B": "insular",
+"C": "berserk",
+"D": "raffish",
+"E": "disabuse",
+"F": "enrage"
 },
-"answer": "D",
-"explanation": "'ingenuous' fits the context.",
+"answer": "F",
+"explanation": "'enrage' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-21"
 },
@@ -405,14 +405,14 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: The ___ student impressed the teacher by finishing the project ahead of schedule.",
 "choices": {
-"A": "finesse",
-"B": "macabre",
-"C": "conspicuous",
-"D": "bombast",
-"E": "ostentatious",
-"F": "assiduous"
+"A": "refusal",
+"B": "assiduous",
+"C": "outlandish",
+"D": "esoteric",
+"E": "fraternity",
+"F": "cull"
 },
-"answer": "F",
+"answer": "B",
 "explanation": "'assiduous' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-22"
@@ -424,14 +424,14 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: His ___ tone suggested he did not truly believe what he was saying.",
 "choices": {
-"A": "raft",
-"B": "malapropism",
-"C": "malady",
-"D": "glib",
-"E": "braggart",
-"F": "cabal"
+"A": "glib",
+"B": "distend",
+"C": "blithe",
+"D": "apprehensive",
+"E": "frugal",
+"F": "finagle"
 },
-"answer": "D",
+"answer": "A",
 "explanation": "'glib' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-23"
@@ -443,15 +443,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: The ___ messenger delivered the bad news with unexpected gentleness.",
 "choices": {
-"A": "perjury",
-"B": "heterogeneous",
-"C": "hybrid",
-"D": "occlude",
-"E": "cursory",
-"F": "exult"
+"A": "deride",
+"B": "braggart",
+"C": "cabal",
+"D": "radiant",
+"E": "urbane",
+"F": "malady"
 },
-"answer": "A",
-"explanation": "'perjury' fits the context.",
+"answer": "E",
+"explanation": "'urbane' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-24"
 },
@@ -462,14 +462,14 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: She remained ___ despite the chaos erupting around her.",
 "choices": {
-"A": "quantum",
-"B": "ostracize",
-"C": "phlegmatic",
-"D": "elegy",
-"E": "minatory",
-"F": "imminent"
+"A": "phlegmatic",
+"B": "miserly",
+"C": "hybrid",
+"D": "heterogeneous",
+"E": "exult",
+"F": "pretext"
 },
-"answer": "C",
+"answer": "A",
 "explanation": "'phlegmatic' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-25"
@@ -481,12 +481,12 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: The ___ explanation was so long and winding that nobody followed it.",
 "choices": {
-"A": "physical",
-"B": "horde",
+"A": "quantum",
+"B": "terse",
 "C": "convoluted",
-"D": "fatuous",
-"E": "hoodwink",
-"F": "odious"
+"D": "elicit",
+"E": "mince",
+"F": "immutable"
 },
 "answer": "C",
 "explanation": "'convoluted' fits the context.",
@@ -500,14 +500,14 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: His ___ refusal to compromise doomed the negotiations.",
 "choices": {
-"A": "random",
-"B": "facile",
-"C": "intransigent",
-"D": "portentous",
-"E": "miscreant",
-"F": "prim"
+"A": "verbose",
+"B": "intransigent",
+"C": "fallow",
+"D": "homogeneous",
+"E": "odious",
+"F": "physical"
 },
-"answer": "C",
+"answer": "B",
 "explanation": "'intransigent' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-27"
@@ -519,15 +519,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: The ___ child smiled sweetly while plotting mischief.",
 "choices": {
-"A": "flout",
-"B": "harbinger",
-"C": "pious",
-"D": "palmy",
-"E": "anonymous",
-"F": "rapport"
+"A": "facile",
+"B": "blithe",
+"C": "winsome",
+"D": "miscible",
+"E": "prevaricate",
+"F": "rancor"
 },
-"answer": "B",
-"explanation": "'harbinger' fits the context.",
+"answer": "C",
+"explanation": "'winsome' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-28"
 },
@@ -538,14 +538,14 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: A ___ aroma of spices filled the kitchen.",
 "choices": {
-"A": "grandiloquent",
-"B": "qualm",
-"C": "propensity",
-"D": "clamorous",
-"E": "privation",
-"F": "redolent"
+"A": "pinion",
+"B": "belie",
+"C": "redolent",
+"D": "protege",
+"E": "flout",
+"F": "malfeasance"
 },
-"answer": "F",
+"answer": "C",
 "explanation": "'redolent' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-29"
@@ -557,15 +557,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: The ___ king ruled with absolute, unquestioned authority.",
 "choices": {
-"A": "odious",
-"B": "figurine",
-"C": "pertinacious",
-"D": "abhor",
-"E": "lambent",
-"F": "predecessor"
+"A": "grapple",
+"B": "quantum",
+"C": "propitiate",
+"D": "clarify",
+"E": "privy",
+"F": "bellwether"
 },
-"answer": "D",
-"explanation": "'abhor' fits the context.",
+"answer": "F",
+"explanation": "'bellwether' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-30"
 },
@@ -576,15 +576,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: Her ___ wit made the dullest meeting bearable.",
 "choices": {
-"A": "comeliness",
-"B": "rankle",
-"C": "preponderance",
-"D": "mien",
-"E": "erudite",
-"F": "dispirit"
+"A": "personable",
+"B": "scintillating",
+"C": "predatory",
+"D": "occlude",
+"E": "benefactor",
+"F": "lambaste"
 },
-"answer": "F",
-"explanation": "'dispirit' fits the context.",
+"answer": "B",
+"explanation": "'scintillating' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-31"
 },
@@ -595,39 +595,663 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: The ___ lawyer dismantled the witness's testimony point by point.",
 "choices": {
-"A": "kismet",
-"B": "incisive",
-"C": "halcyon",
-"D": "observant",
-"E": "lineage",
-"F": "mingle"
+"A": "comeliness",
+"B": "preponderance",
+"C": "incisive",
+"D": "quirk",
+"E": "ephemeral",
+"F": "divest"
 },
-"answer": "B",
+"answer": "C",
 "explanation": "'incisive' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-32"
 },
 {
-"type": "se",
+"type": "tc",
 "section": "Verbal",
-"topic": "Sentence Equivalence",
+"topic": "Text Completion",
 "difficulty": "medium",
-"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"stem": "Fill the blank: The ___ wind of opinion shifted the committee's decision overnight.",
 "choices": {
-"A": "exigent",
-"B": "clarify",
-"C": "placid",
-"D": "immutable",
-"E": "pacific",
-"F": "ensconce"
+"A": "capricious",
+"B": "terse",
+"C": "optimistic",
+"D": "hamper",
+"E": "observant",
+"F": "hoax"
 },
-"answer": [
-"C",
-"E"
-],
-"explanation": "'pacific' and 'placid' are synonyms.",
+"answer": "A",
+"explanation": "'capricious' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-33"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: Her ___ refusal to acknowledge the error only deepened the rift.",
+"choices": {
+"A": "arid",
+"B": "immutable",
+"C": "nihilism",
+"D": "exigent",
+"E": "malady",
+"F": "obstinate"
+},
+"answer": "F",
+"explanation": "'obstinate' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-34"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: The diplomat's ___ manner defused the hostage situation with quiet grace.",
+"choices": {
+"A": "contiguous",
+"B": "interdict",
+"C": "dilettante",
+"D": "urbane",
+"E": "conspiratorial",
+"F": "benefactor"
+},
+"answer": "D",
+"explanation": "'urbane' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-35"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: A ___ chill settled over the room as the verdict was read.",
+"choices": {
+"A": "predecessor",
+"B": "adulation",
+"C": "surreptitious",
+"D": "halcyon",
+"E": "laconic",
+"F": "concise"
+},
+"answer": "C",
+"explanation": "'surreptitious' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-36"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: The ___ philanthropist funded the hospital without seeking credit.",
+"choices": {
+"A": "choleric",
+"B": "enervate",
+"C": "perfunctory",
+"D": "irksome",
+"E": "abate",
+"F": "munificent"
+},
+"answer": "F",
+"explanation": "'munificent' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-37"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: His ___ logic laid bare the flaw in the opponent's argument.",
+"choices": {
+"A": "equivocate",
+"B": "brilliant",
+"C": "enrich",
+"D": "incisive",
+"E": "anachronism",
+"F": "omnivorous"
+},
+"answer": "D",
+"explanation": "'incisive' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-38"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: The ___ child greeted every stranger with a disarming smile.",
+"choices": {
+"A": "feisty",
+"B": "beguile",
+"C": "lionize",
+"D": "winsome",
+"E": "munificent",
+"F": "qualm"
+},
+"answer": "D",
+"explanation": "'winsome' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-39"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: A ___ scent of jasmine drifted through the open window.",
+"choices": {
+"A": "disabuse",
+"B": "prim",
+"C": "redolent",
+"D": "gusto",
+"E": "refrain",
+"F": "ensconce"
+},
+"answer": "C",
+"explanation": "'redolent' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-40"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: The ___ monarch ruled with unquestioned, absolute authority.",
+"choices": {
+"A": "refresh",
+"B": "dismantle",
+"C": "privation",
+"D": "demarcate",
+"E": "urbane",
+"F": "effrontery"
+},
+"answer": "E",
+"explanation": "'urbane' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-41"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: Her ___ wit made even the dullest briefing bearable.",
+"choices": {
+"A": "nefarious",
+"B": "demonstrable",
+"C": "scintillating",
+"D": "eulogize",
+"E": "insufferable",
+"F": "panegyric"
+},
+"answer": "C",
+"explanation": "'scintillating' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-42"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: The ___ professor could recall every case from a decade past.",
+"choices": {
+"A": "bilk",
+"B": "definitive",
+"C": "nettle",
+"D": "erudite",
+"E": "insufferable",
+"F": "ellipsis"
+},
+"answer": "D",
+"explanation": "'erudite' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-43"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: After the loss, he remained ___, showing no outward grief.",
+"choices": {
+"A": "phlegmatic",
+"B": "catharsis",
+"C": "provident",
+"D": "banal",
+"E": "feasible",
+"F": "benevolent"
+},
+"answer": "A",
+"explanation": "'phlegmatic' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-44"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: The ___ explanation wandered so far that the point was lost.",
+"choices": {
+"A": "daunt",
+"B": "convoluted",
+"C": "maverick",
+"D": "destitute",
+"E": "rebuff",
+"F": "primal"
+},
+"answer": "B",
+"explanation": "'convoluted' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-45"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: His ___ stance left no room for negotiation or compromise.",
+"choices": {
+"A": "ascribe",
+"B": "benevolent",
+"C": "comeliness",
+"D": "intransigent",
+"E": "flux",
+"F": "myopic"
+},
+"answer": "D",
+"explanation": "'intransigent' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-46"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: The ___ servant anticipated every need before it was spoken.",
+"choices": {
+"A": "perverse",
+"B": "obsequious",
+"C": "effrontery",
+"D": "plunder",
+"E": "epitaph",
+"F": "mandate"
+},
+"answer": "B",
+"explanation": "'obsequious' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-47"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: A ___ glow spread across the horizon at dawn.",
+"choices": {
+"A": "nirvana",
+"B": "exhort",
+"C": "kinesthetic",
+"D": "refulgent",
+"E": "aloof",
+"F": "plaintive"
+},
+"answer": "D",
+"explanation": "'refulgent' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-48"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: The ___ debater reduced the complex issue to its essence.",
+"choices": {
+"A": "lapidary",
+"B": "porous",
+"C": "celerity",
+"D": "conspiratorial",
+"E": "cogent",
+"F": "odyssey"
+},
+"answer": "E",
+"explanation": "'cogent' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-49"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: She tried to ___ the angry crowd with soothing words.",
+"choices": {
+"A": "paean",
+"B": "insipid",
+"C": "mollify",
+"D": "debutant",
+"E": "presentiment",
+"F": "scintillating"
+},
+"answer": "C",
+"explanation": "'mollify' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-50"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: The critic sought to ___ the artist's reputation with cruel reviews.",
+"choices": {
+"A": "regime",
+"B": "denigrate",
+"C": "florid",
+"D": "wordy",
+"E": "evangelical",
+"F": "moot"
+},
+"answer": "B",
+"explanation": "'denigrate' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-51"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: His ___ behavior at the gala scandalized the older guests.",
+"choices": {
+"A": "parquet",
+"B": "capricious",
+"C": "minutiae",
+"D": "pretentious",
+"E": "dispatch",
+"F": "raffish"
+},
+"answer": "F",
+"explanation": "'raffish' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-52"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: The ___ student finished the assignment days early, flawless.",
+"choices": {
+"A": "eclectic",
+"B": "limpid",
+"C": "opaque",
+"D": "progeny",
+"E": "assiduous",
+"F": "dispatch"
+},
+"answer": "E",
+"explanation": "'assiduous' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-53"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: Her ___ tone hinted she doubted every word he said.",
+"choices": {
+"A": "pigmented",
+"B": "heterodox",
+"C": "licentious",
+"D": "referee",
+"E": "qualm",
+"F": "glib"
+},
+"answer": "F",
+"explanation": "'glib' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-54"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: The ___ village enjoyed decades of peace and prosperity.",
+"choices": {
+"A": "amicable",
+"B": "halcyon",
+"C": "eclectic",
+"D": "brazen",
+"E": "ravine",
+"F": "ostracize"
+},
+"answer": "B",
+"explanation": "'halcyon' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-55"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: A ___ odor of sulfur leaked from the laboratory.",
+"choices": {
+"A": "grovel",
+"B": "digression",
+"C": "gratuitous",
+"D": "malodorous",
+"E": "lexical",
+"F": "bile"
+},
+"answer": "D",
+"explanation": "'malodorous' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-56"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: The ___ old man grumbled at every noise the children made.",
+"choices": {
+"A": "florid",
+"B": "progenitor",
+"C": "reticent",
+"D": "curmudgeon",
+"E": "reconnaissance",
+"F": "rebuke"
+},
+"answer": "D",
+"explanation": "'curmudgeon' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-57"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: His ___ spending drained the inheritance within a year.",
+"choices": {
+"A": "plenary",
+"B": "diurnal",
+"C": "prodigal",
+"D": "labile",
+"E": "abet",
+"F": "peril"
+},
+"answer": "C",
+"explanation": "'prodigal' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-58"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: The ___ smile never reached her cold, calculating eyes.",
+"choices": {
+"A": "headlong",
+"B": "malediction",
+"C": "portentous",
+"D": "engaging",
+"E": "adulation",
+"F": "winsome"
+},
+"answer": "F",
+"explanation": "'winsome' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-59"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: A ___ hush fell as the conductor raised the baton.",
+"choices": {
+"A": "abnegation",
+"B": "concise",
+"C": "arbitrary",
+"D": "tranquil",
+"E": "hubris",
+"F": "boorish"
+},
+"answer": "D",
+"explanation": "'tranquil' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-60"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: The ___ toddler screamed when told to leave the playground.",
+"choices": {
+"A": "consternation",
+"B": "recondite",
+"C": "mural",
+"D": "irascible",
+"E": "polar",
+"F": "frankness"
+},
+"answer": "D",
+"explanation": "'irascible' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-61"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: Her ___ perseverance carried the project through every setback.",
+"choices": {
+"A": "gross",
+"B": "diffident",
+"C": "chide",
+"D": "tenacious",
+"E": "cordial",
+"F": "decadence"
+},
+"answer": "D",
+"explanation": "'tenacious' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-62"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: The ___ statement clarified the previously murky policy.",
+"choices": {
+"A": "sullen",
+"B": "reinstate",
+"C": "kaleidoscope",
+"D": "refulgent",
+"E": "pellucid",
+"F": "refugee"
+},
+"answer": "E",
+"explanation": "'pellucid' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-63"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: He was ___ about the surprise, telling no one of the plan.",
+"choices": {
+"A": "molt",
+"B": "surreptitious",
+"C": "abeyance",
+"D": "adulation",
+"E": "refinery",
+"F": "rarefy"
+},
+"answer": "B",
+"explanation": "'surreptitious' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-64"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: The ___ professor's lecture, thick with jargon, lost the freshmen.",
+"choices": {
+"A": "fortuitous",
+"B": "redolent",
+"C": "refer",
+"D": "natty",
+"E": "esoteric",
+"F": "perfumed"
+},
+"answer": "E",
+"explanation": "'esoteric' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-65"
+},
+{
+"type": "tc",
+"section": "Verbal",
+"topic": "Text Completion",
+"difficulty": "medium",
+"stem": "Fill the blank: A ___ calm held the ship steady through the storm.",
+"choices": {
+"A": "lying",
+"B": "mince",
+"C": "importune",
+"D": "predatory",
+"E": "phlegmatic",
+"F": "inferno"
+},
+"answer": "E",
+"explanation": "'phlegmatic' fits the context.",
+"source": "generated-verbal",
+"id": "v-gen-66"
 },
 {
 "type": "se",
@@ -636,12 +1260,34 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
 "choices": {
-"A": "benefactor",
-"B": "contrite",
+"A": "parse",
+"B": "pigmented",
+"C": "immutable",
+"D": "tranquil",
+"E": "pacific",
+"F": "plod"
+},
+"answer": [
+"D",
+"E"
+],
+"explanation": "'pacific' and 'tranquil' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-67"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "prescience",
+"B": "pulchritude",
 "C": "mercurial",
-"D": "consternation",
+"D": "dilettante",
 "E": "capricious",
-"F": "ravine"
+"F": "culpable"
 },
 "answer": [
 "C",
@@ -649,7 +1295,7 @@ var GRE_VERBAL_GEN = [
 ],
 "explanation": "'capricious' and 'mercurial' are synonyms.",
 "source": "generated-verbal",
-"id": "v-gen-34"
+"id": "v-gen-68"
 },
 {
 "type": "se",
@@ -658,11 +1304,33 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
 "choices": {
-"A": "concise",
-"B": "adulation",
+"A": "impudent",
+"B": "declivity",
+"C": "shrewd",
+"D": "terse",
+"E": "periphery",
+"F": "laconic"
+},
+"answer": [
+"D",
+"F"
+],
+"explanation": "'laconic' and 'terse' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-69"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "modest",
+"B": "ire",
 "C": "loquacious",
-"D": "hamper",
-"E": "embellish",
+"D": "fawn",
+"E": "chimerical",
 "F": "garrulous"
 },
 "answer": [
@@ -671,7 +1339,7 @@ var GRE_VERBAL_GEN = [
 ],
 "explanation": "'loquacious' and 'garrulous' are synonyms.",
 "source": "generated-verbal",
-"id": "v-gen-35"
+"id": "v-gen-70"
 },
 {
 "type": "se",
@@ -680,20 +1348,20 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
 "choices": {
-"A": "effusive",
-"B": "issue",
-"C": "ebullient",
-"D": "abate",
-"E": "buffoon",
-"F": "peril"
+"A": "extrapolate",
+"B": "ream",
+"C": "pariah",
+"D": "effusive",
+"E": "pervasive",
+"F": "ebullient"
 },
 "answer": [
-"A",
-"C"
+"D",
+"F"
 ],
 "explanation": "'ebullient' and 'effusive' are synonyms.",
 "source": "generated-verbal",
-"id": "v-gen-36"
+"id": "v-gen-71"
 },
 {
 "type": "se",
@@ -702,20 +1370,42 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
 "choices": {
-"A": "enrich",
-"B": "mettlesome",
-"C": "pertinacious",
-"D": "equivocate",
-"E": "anachronism",
-"F": "omnivorous"
+"A": "pertinacious",
+"B": "inconsequential",
+"C": "oracle",
+"D": "esoteric",
+"E": "tenacious",
+"F": "immaculate"
+},
+"answer": [
+"A",
+"E"
+],
+"explanation": "'tenacious' and 'pertinacious' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-72"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "conjunction",
+"B": "irascible",
+"C": "choleric",
+"D": "deprecate",
+"E": "punctilious",
+"F": "pungent"
 },
 "answer": [
 "B",
 "C"
 ],
-"explanation": "'pertinacious' and 'mettlesome' are synonyms.",
+"explanation": "'irascible' and 'choleric' are synonyms.",
 "source": "generated-verbal",
-"id": "v-gen-37"
+"id": "v-gen-73"
 },
 {
 "type": "se",
@@ -724,20 +1414,196 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
 "choices": {
-"A": "choleric",
-"B": "contumacious",
-"C": "quarantine",
-"D": "irascible",
-"E": "murky",
-"F": "lithe"
+"A": "modish",
+"B": "mandate",
+"C": "facetious",
+"D": "obdurate",
+"E": "obstinate",
+"F": "inaugurate"
+},
+"answer": [
+"D",
+"E"
+],
+"explanation": "'obdurate' and 'obstinate' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-74"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "lurch",
+"B": "cull",
+"C": "inimical",
+"D": "obsequious",
+"E": "hapless",
+"F": "sycophant"
+},
+"answer": [
+"D",
+"F"
+],
+"explanation": "'obsequious' and 'sycophant' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-75"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "conspicuous",
+"B": "concur",
+"C": "daunt",
+"D": "munificent",
+"E": "implicit",
+"F": "generous"
+},
+"answer": [
+"D",
+"F"
+],
+"explanation": "'munificent' and 'generous' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-76"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "palatable",
+"B": "parsimonious",
+"C": "dispatch",
+"D": "intact",
+"E": "miserly",
+"F": "modish"
+},
+"answer": [
+"B",
+"E"
+],
+"explanation": "'parsimonious' and 'miserly' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-77"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "meretricious",
+"B": "devious",
+"C": "pedantic",
+"D": "scholarly",
+"E": "lambaste",
+"F": "misanthrope"
+},
+"answer": [
+"C",
+"D"
+],
+"explanation": "'pedantic' and 'scholarly' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-78"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "pellucid",
+"B": "grovel",
+"C": "volatile",
+"D": "kernel",
+"E": "limpid",
+"F": "redeem"
+},
+"answer": [
+"A",
+"E"
+],
+"explanation": "'pellucid' and 'limpid' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-79"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "stolid",
+"B": "foster",
+"C": "plumber",
+"D": "perverse",
+"E": "mettlesome",
+"F": "phlegmatic"
+},
+"answer": [
+"A",
+"F"
+],
+"explanation": "'phlegmatic' and 'stolid' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-80"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "garrulous",
+"B": "credulous",
+"C": "malleable",
+"D": "covert",
+"E": "abhor",
+"F": "surreptitious"
+},
+"answer": [
+"D",
+"F"
+],
+"explanation": "'surreptitious' and 'covert' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-81"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "insipid",
+"B": "mingle",
+"C": "nullify",
+"D": "bland",
+"E": "penchant",
+"F": "persevere"
 },
 "answer": [
 "A",
 "D"
 ],
-"explanation": "'irascible' and 'choleric' are synonyms.",
+"explanation": "'insipid' and 'bland' are synonyms.",
 "source": "generated-verbal",
-"id": "v-gen-38"
+"id": "v-gen-82"
 },
 {
 "type": "se",
@@ -746,86 +1612,20 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
 "choices": {
-"A": "dismantle",
-"B": "extirpate",
-"C": "mettle",
-"D": "obdurate",
-"E": "environs",
-"F": "obstinate"
+"A": "predecessor",
+"B": "mobile",
+"C": "exalt",
+"D": "pugnacious",
+"E": "peremptory",
+"F": "bellicose"
 },
 "answer": [
 "D",
 "F"
-],
-"explanation": "'obdurate' and 'obstinate' are synonyms.",
-"source": "generated-verbal",
-"id": "v-gen-39"
-},
-{
-"type": "se",
-"section": "Verbal",
-"topic": "Sentence Equivalence",
-"difficulty": "medium",
-"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
-"choices": {
-"A": "miserly",
-"B": "gusto",
-"C": "flamboyant",
-"D": "heterogeneous",
-"E": "refresh",
-"F": "parsimonious"
-},
-"answer": [
-"A",
-"F"
-],
-"explanation": "'parsimonious' and 'miserly' are synonyms.",
-"source": "generated-verbal",
-"id": "v-gen-40"
-},
-{
-"type": "se",
-"section": "Verbal",
-"topic": "Sentence Equivalence",
-"difficulty": "medium",
-"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
-"choices": {
-"A": "dismantle",
-"B": "orator",
-"C": "prize",
-"D": "reflux",
-"E": "limpid",
-"F": "pellucid"
-},
-"answer": [
-"E",
-"F"
-],
-"explanation": "'pellucid' and 'limpid' are synonyms.",
-"source": "generated-verbal",
-"id": "v-gen-41"
-},
-{
-"type": "se",
-"section": "Verbal",
-"topic": "Sentence Equivalence",
-"difficulty": "medium",
-"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
-"choices": {
-"A": "presentiment",
-"B": "pugnacious",
-"C": "insular",
-"D": "panorama",
-"E": "bellicose",
-"F": "evanescent"
-},
-"answer": [
-"B",
-"E"
 ],
 "explanation": "'pugnacious' and 'bellicose' are synonyms.",
 "source": "generated-verbal",
-"id": "v-gen-42"
+"id": "v-gen-83"
 },
 {
 "type": "se",
@@ -834,20 +1634,42 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
 "choices": {
-"A": "bilk",
-"B": "deign",
-"C": "neurasthenic",
-"D": "caustic",
-"E": "mordant",
-"F": "elucidate"
+"A": "defiant",
+"B": "apothegm",
+"C": "entreat",
+"D": "recalcitrant",
+"E": "omniscient",
+"F": "percolate"
+},
+"answer": [
+"A",
+"D"
+],
+"explanation": "'recalcitrant' and 'defiant' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-84"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "arid",
+"B": "contiguous",
+"C": "quantum",
+"D": "sanguine",
+"E": "lambent",
+"F": "optimistic"
 },
 "answer": [
 "D",
-"E"
+"F"
 ],
-"explanation": "'caustic' and 'mordant' are synonyms.",
+"explanation": "'sanguine' and 'optimistic' are synonyms.",
 "source": "generated-verbal",
-"id": "v-gen-43"
+"id": "v-gen-85"
 },
 {
 "type": "se",
@@ -856,20 +1678,86 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
 "choices": {
-"A": "catharsis",
-"B": "conciliate",
-"C": "benevolent",
-"D": "proviso",
-"E": "banal",
-"F": "mollify"
+"A": "rattle",
+"B": "pervasive",
+"C": "increment",
+"D": "disinterested",
+"E": "ubiquitous",
+"F": "ostracize"
 },
 "answer": [
 "B",
+"E"
+],
+"explanation": "'ubiquitous' and 'pervasive' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-86"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "abstruse",
+"B": "caustic",
+"C": "mordant",
+"D": "regale",
+"E": "raconteur",
+"F": "gratis"
+},
+"answer": [
+"B",
+"C"
+],
+"explanation": "'caustic' and 'mordant' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-87"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "persuasive",
+"B": "porous",
+"C": "inane",
+"D": "contagion",
+"E": "cogent",
+"F": "epithet"
+},
+"answer": [
+"A",
+"E"
+],
+"explanation": "'cogent' and 'persuasive' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-88"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "defiant",
+"B": "kaleidoscope",
+"C": "dismal",
+"D": "mollify",
+"E": "antipathy",
+"F": "conciliate"
+},
+"answer": [
+"D",
 "F"
 ],
 "explanation": "'conciliate' and 'mollify' are synonyms.",
 "source": "generated-verbal",
-"id": "v-gen-44"
+"id": "v-gen-89"
 },
 {
 "type": "se",
@@ -878,108 +1766,240 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
 "choices": {
-"A": "maverick",
-"B": "quixotic",
-"C": "penitent",
-"D": "contrite",
-"E": "daunt",
-"F": "nihilism"
-},
-"answer": [
-"C",
-"D"
-],
-"explanation": "'contrite' and 'penitent' are synonyms.",
-"source": "generated-verbal",
-"id": "v-gen-45"
-},
-{
-"type": "se",
-"section": "Verbal",
-"topic": "Sentence Equivalence",
-"difficulty": "medium",
-"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
-"choices": {
-"A": "denigrate",
-"B": "forbearance",
-"C": "antipathy",
-"D": "partial",
-"E": "comeliness",
-"F": "disparage"
-},
-"answer": [
-"A",
-"F"
-],
-"explanation": "'disparage' and 'denigrate' are synonyms.",
-"source": "generated-verbal",
-"id": "v-gen-46"
-},
-{
-"type": "se",
-"section": "Verbal",
-"topic": "Sentence Equivalence",
-"difficulty": "medium",
-"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
-"choices": {
-"A": "esoteric",
-"B": "epitaph",
-"C": "perverse",
-"D": "recondite",
-"E": "detractor",
-"F": "neurasthenic"
-},
-"answer": [
-"A",
-"D"
-],
-"explanation": "'esoteric' and 'recondite' are synonyms.",
-"source": "generated-verbal",
-"id": "v-gen-47"
-},
-{
-"type": "se",
-"section": "Verbal",
-"topic": "Sentence Equivalence",
-"difficulty": "medium",
-"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
-"choices": {
-"A": "knave",
-"B": "fortuitous",
-"C": "fatuous",
-"D": "inane",
-"E": "placid",
-"F": "platitude"
-},
-"answer": [
-"C",
-"D"
-],
-"explanation": "'fatuous' and 'inane' are synonyms.",
-"source": "generated-verbal",
-"id": "v-gen-48"
-},
-{
-"type": "se",
-"section": "Verbal",
-"topic": "Sentence Equivalence",
-"difficulty": "medium",
-"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
-"choices": {
-"A": "propitious",
-"B": "rectify",
-"C": "rebuff",
-"D": "contiguous",
-"E": "fortuitous",
-"F": "manumit"
+"A": "contrite",
+"B": "raffish",
+"C": "munificent",
+"D": "timid",
+"E": "penitent",
+"F": "hackneyed"
 },
 "answer": [
 "A",
 "E"
 ],
+"explanation": "'contrite' and 'penitent' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-90"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "migratory",
+"B": "amalgam",
+"C": "parse",
+"D": "denigrate",
+"E": "incorporate",
+"F": "disparage"
+},
+"answer": [
+"D",
+"F"
+],
+"explanation": "'disparage' and 'denigrate' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-91"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "enervate",
+"B": "generous",
+"C": "distill",
+"D": "weaken",
+"E": "shrewd",
+"F": "protocol"
+},
+"answer": [
+"A",
+"D"
+],
+"explanation": "'enervate' and 'weaken' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-92"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "prodigious",
+"B": "malfeasance",
+"C": "complacent",
+"D": "ephemeral",
+"E": "evanescent",
+"F": "prevaricate"
+},
+"answer": [
+"D",
+"E"
+],
+"explanation": "'ephemeral' and 'evanescent' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-93"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "passive",
+"B": "winsome",
+"C": "equivocal",
+"D": "ambiguous",
+"E": "orthodox",
+"F": "divulge"
+},
+"answer": [
+"C",
+"D"
+],
+"explanation": "'equivocal' and 'ambiguous' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-94"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "erudite",
+"B": "frenetic",
+"C": "learned",
+"D": "desecrate",
+"E": "proviso",
+"F": "incorporate"
+},
+"answer": [
+"A",
+"C"
+],
+"explanation": "'erudite' and 'learned' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-95"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "amicable",
+"B": "esoteric",
+"C": "recondite",
+"D": "pugnacious",
+"E": "denouement",
+"F": "chimerical"
+},
+"answer": [
+"B",
+"C"
+],
+"explanation": "'esoteric' and 'recondite' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-96"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "perverse",
+"B": "inane",
+"C": "odyssey",
+"D": "guileless",
+"E": "fatuous",
+"F": "blandishments"
+},
+"answer": [
+"B",
+"E"
+],
+"explanation": "'fatuous' and 'inane' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-97"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "ineffective",
+"B": "volatile",
+"C": "feckless",
+"D": "polar",
+"E": "bucolic",
+"F": "contumacious"
+},
+"answer": [
+"A",
+"C"
+],
+"explanation": "'feckless' and 'ineffective' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-98"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "ragged",
+"B": "propitious",
+"C": "acute",
+"D": "cozen",
+"E": "manumit",
+"F": "fortuitous"
+},
+"answer": [
+"B",
+"F"
+],
 "explanation": "'fortuitous' and 'propitious' are synonyms.",
 "source": "generated-verbal",
-"id": "v-gen-49"
+"id": "v-gen-99"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "raft",
+"B": "obsequious",
+"C": "sociable",
+"D": "gregarious",
+"E": "optician",
+"F": "apocryphal"
+},
+"answer": [
+"C",
+"D"
+],
+"explanation": "'gregarious' and 'sociable' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-100"
 },
 {
 "type": "se",
@@ -989,19 +2009,19 @@ var GRE_VERBAL_GEN = [
 "stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
 "choices": {
 "A": "incisive",
-"B": "lascivious",
-"C": "forgo",
-"D": "acute",
-"E": "apropos",
-"F": "dispel"
+"B": "condescend",
+"C": "necromancer",
+"D": "censorious",
+"E": "cleave",
+"F": "acute"
 },
 "answer": [
 "A",
-"D"
+"F"
 ],
 "explanation": "'incisive' and 'acute' are synonyms.",
 "source": "generated-verbal",
-"id": "v-gen-50"
+"id": "v-gen-101"
 },
 {
 "type": "se",
@@ -1010,11 +2030,77 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
 "choices": {
-"A": "debutant",
+"A": "lascivious",
+"B": "pithy",
+"C": "purvey",
+"D": "unyielding",
+"E": "quell",
+"F": "intransigent"
+},
+"answer": [
+"D",
+"F"
+],
+"explanation": "'intransigent' and 'unyielding' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-102"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "mercenary",
+"B": "inextricable",
+"C": "habitual",
+"D": "nadir",
+"E": "natter",
+"F": "inveterate"
+},
+"answer": [
+"C",
+"F"
+],
+"explanation": "'inveterate' and 'habitual' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-103"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "insubordinate",
+"B": "nurture",
+"C": "meticulous",
+"D": "enigma",
+"E": "phlegmatic",
+"F": "fastidious"
+},
+"answer": [
+"C",
+"F"
+],
+"explanation": "'meticulous' and 'fastidious' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-104"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "maxim",
 "B": "placate",
-"C": "insipid",
-"D": "irony",
-"E": "inveterate",
+"C": "conformist",
+"D": "ellipsis",
+"E": "plod",
 "F": "propitiate"
 },
 "answer": [
@@ -1023,7 +2109,7 @@ var GRE_VERBAL_GEN = [
 ],
 "explanation": "'placate' and 'propitiate' are synonyms.",
 "source": "generated-verbal",
-"id": "v-gen-51"
+"id": "v-gen-105"
 },
 {
 "type": "se",
@@ -1032,20 +2118,20 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
 "choices": {
-"A": "prodigal",
+"A": "terse",
 "B": "monolithic",
-"C": "noisome",
-"D": "profligate",
-"E": "plumber",
-"F": "region"
+"C": "prodigal",
+"D": "polar",
+"E": "profligate",
+"F": "nasal"
 },
 "answer": [
-"A",
-"D"
+"C",
+"E"
 ],
 "explanation": "'prodigal' and 'profligate' are synonyms.",
 "source": "generated-verbal",
-"id": "v-gen-52"
+"id": "v-gen-106"
 },
 {
 "type": "se",
@@ -1054,42 +2140,526 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
 "choices": {
-"A": "parquet",
-"B": "capricious",
-"C": "minutiae",
-"D": "petulant",
-"E": "dispatch",
-"F": "querulous"
-},
-"answer": [
-"D",
-"F"
-],
-"explanation": "'querulous' and 'petulant' are synonyms.",
-"source": "generated-verbal",
-"id": "v-gen-53"
-},
-{
-"type": "se",
-"section": "Verbal",
-"topic": "Sentence Equivalence",
-"difficulty": "medium",
-"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
-"choices": {
-"A": "progenitor",
-"B": "limber",
-"C": "ebullient",
-"D": "refulgent",
-"E": "radiant",
-"F": "disparate"
+"A": "incisive",
+"B": "referee",
+"C": "lascivious",
+"D": "querulous",
+"E": "petulant",
+"F": "canine"
 },
 "answer": [
 "D",
 "E"
 ],
+"explanation": "'querulous' and 'petulant' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-107"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "vilify",
+"B": "feisty",
+"C": "apprehensive",
+"D": "epigram",
+"E": "dispirit",
+"F": "malign"
+},
+"answer": [
+"A",
+"F"
+],
+"explanation": "'vilify' and 'malign' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-108"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "candor",
+"B": "palliative",
+"C": "frankness",
+"D": "polyglot",
+"E": "reflex",
+"F": "ragged"
+},
+"answer": [
+"A",
+"C"
+],
+"explanation": "'candor' and 'frankness' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-109"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "shy",
+"B": "diffident",
+"C": "chaste",
+"D": "issue",
+"E": "discord",
+"F": "commensurate"
+},
+"answer": [
+"A",
+"B"
+],
+"explanation": "'diffident' and 'shy' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-110"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "decorous",
+"B": "expiate",
+"C": "seemly",
+"D": "purge",
+"E": "miscible",
+"F": "recline"
+},
+"answer": [
+"A",
+"C"
+],
+"explanation": "'decorous' and 'seemly' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-111"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "founder",
+"B": "pristine",
+"C": "demure",
+"D": "daunt",
+"E": "feckless",
+"F": "modest"
+},
+"answer": [
+"C",
+"F"
+],
+"explanation": "'demure' and 'modest' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-112"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "rational",
+"B": "winsome",
+"C": "prevaricate",
+"D": "miserly",
+"E": "engaging",
+"F": "obsolete"
+},
+"answer": [
+"B",
+"E"
+],
+"explanation": "'winsome' and 'engaging' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-113"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "bucolic",
+"B": "deference",
+"C": "urbane",
+"D": "suave",
+"E": "embezzle",
+"F": "blatant"
+},
+"answer": [
+"C",
+"D"
+],
+"explanation": "'urbane' and 'suave' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-114"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "abet",
+"B": "queue",
+"C": "talkative",
+"D": "astute",
+"E": "shrewd",
+"F": "propensity"
+},
+"answer": [
+"D",
+"E"
+],
+"explanation": "'astute' and 'shrewd' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-115"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "digression",
+"B": "nebulous",
+"C": "dispel",
+"D": "assiduous",
+"E": "quarantine",
+"F": "sedulous"
+},
+"answer": [
+"D",
+"F"
+],
+"explanation": "'sedulous' and 'assiduous' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-116"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "brilliant",
+"B": "kaleidoscope",
+"C": "regale",
+"D": "livid",
+"E": "scintillating",
+"F": "chafe"
+},
+"answer": [
+"A",
+"E"
+],
+"explanation": "'scintillating' and 'brilliant' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-117"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "refulgent",
+"B": "radiant",
+"C": "hibernal",
+"D": "aggressive",
+"E": "feckless",
+"F": "lexical"
+},
+"answer": [
+"A",
+"B"
+],
 "explanation": "'refulgent' and 'radiant' are synonyms.",
 "source": "generated-verbal",
-"id": "v-gen-54"
+"id": "v-gen-118"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "redolent",
+"B": "adverse",
+"C": "ostensible",
+"D": "perfumed",
+"E": "consummate",
+"F": "fallow"
+},
+"answer": [
+"A",
+"D"
+],
+"explanation": "'redolent' and 'perfumed' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-119"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "inimical",
+"B": "reactionary",
+"C": "beauty",
+"D": "dilettante",
+"E": "pulchritude",
+"F": "ardent"
+},
+"answer": [
+"C",
+"E"
+],
+"explanation": "'pulchritude' and 'beauty' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-120"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "lithe",
+"B": "mollify",
+"C": "mellifluous",
+"D": "sweet",
+"E": "nascent",
+"F": "parody"
+},
+"answer": [
+"C",
+"D"
+],
+"explanation": "'mellifluous' and 'sweet' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-121"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "nullify",
+"B": "gratis",
+"C": "prognosis",
+"D": "cosmopolitan",
+"E": "bombastic",
+"F": "grandiloquent"
+},
+"answer": [
+"E",
+"F"
+],
+"explanation": "'grandiloquent' and 'bombastic' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-122"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "awkward",
+"B": "inclusive",
+"C": "predecessor",
+"D": "verbose",
+"E": "gauche",
+"F": "puissant"
+},
+"answer": [
+"A",
+"E"
+],
+"explanation": "'gauche' and 'awkward' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-123"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "counterfeit",
+"B": "minion",
+"C": "mollify",
+"D": "milieu",
+"E": "halcyon",
+"F": "peaceful"
+},
+"answer": [
+"E",
+"F"
+],
+"explanation": "'halcyon' and 'peaceful' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-124"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "ambivalent",
+"B": "fetid",
+"C": "erudite",
+"D": "aggrandize",
+"E": "malodorous",
+"F": "parsimonious"
+},
+"answer": [
+"B",
+"E"
+],
+"explanation": "'fetid' and 'malodorous' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-125"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "quart",
+"B": "sullen",
+"C": "clamor",
+"D": "rattle",
+"E": "inimical",
+"F": "morose"
+},
+"answer": [
+"B",
+"F"
+],
+"explanation": "'morose' and 'sullen' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-126"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "aggressive",
+"B": "rein",
+"C": "truculent",
+"D": "insolent",
+"E": "phlegmatic",
+"F": "profuse"
+},
+"answer": [
+"A",
+"C"
+],
+"explanation": "'truculent' and 'aggressive' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-127"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "complacent",
+"B": "abstruse",
+"C": "deprecate",
+"D": "smug",
+"E": "fecund",
+"F": "phobic"
+},
+"answer": [
+"A",
+"D"
+],
+"explanation": "'complacent' and 'smug' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-128"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "jaunty",
+"B": "nihilism",
+"C": "molt",
+"D": "mundane",
+"E": "benign",
+"F": "harmless"
+},
+"answer": [
+"E",
+"F"
+],
+"explanation": "'benign' and 'harmless' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-129"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "harmful",
+"B": "malign",
+"C": "edify",
+"D": "tenacious",
+"E": "concord",
+"F": "attenuate"
+},
+"answer": [
+"A",
+"B"
+],
+"explanation": "'malign' and 'harmful' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-130"
 },
 {
 "type": "se",
@@ -1099,19 +2669,85 @@ var GRE_VERBAL_GEN = [
 "stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
 "choices": {
 "A": "gullible",
-"B": "credulous",
-"C": "heterogeneous",
-"D": "necromancer",
-"E": "malapropism",
-"F": "quantum"
+"B": "execrate",
+"C": "dispel",
+"D": "impeach",
+"E": "credulous",
+"F": "founder"
 },
 "answer": [
 "A",
-"B"
+"E"
 ],
 "explanation": "'credulous' and 'gullible' are synonyms.",
 "source": "generated-verbal",
-"id": "v-gen-55"
+"id": "v-gen-131"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "gullible",
+"B": "harvest",
+"C": "referee",
+"D": "banal",
+"E": "bland",
+"F": "insipid"
+},
+"answer": [
+"E",
+"F"
+],
+"explanation": "'insipid' and 'bland' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-132"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "percolate",
+"B": "forecast",
+"C": "meander",
+"D": "invariable",
+"E": "loquacious",
+"F": "talkative"
+},
+"answer": [
+"E",
+"F"
+],
+"explanation": "'loquacious' and 'talkative' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-133"
+},
+{
+"type": "se",
+"section": "Verbal",
+"topic": "Sentence Equivalence",
+"difficulty": "medium",
+"stem": "Select the TWO words that best complete the sentence and produce sentences with similar meanings: The committee found the proposal ___ , agreeing it lacked both clarity and rigor.",
+"choices": {
+"A": "rankle",
+"B": "wordy",
+"C": "regress",
+"D": "ineffective",
+"E": "garrulous",
+"F": "lascivious"
+},
+"answer": [
+"B",
+"E"
+],
+"explanation": "'garrulous' and 'wordy' are synonyms.",
+"source": "generated-verbal",
+"id": "v-gen-134"
 },
 {
 "type": "rc",
@@ -1130,7 +2766,7 @@ var GRE_VERBAL_GEN = [
 "answer": "B",
 "explanation": "The passage outlines the shift from seasonal to clock-driven work and notes its lasting social consequences.",
 "source": "generated-verbal",
-"id": "v-gen-56"
+"id": "v-gen-135"
 },
 {
 "type": "rc",
@@ -1149,7 +2785,7 @@ var GRE_VERBAL_GEN = [
 "answer": "B",
 "explanation": "Alienated = made to feel disconnected / estranged from one's labor.",
 "source": "generated-verbal",
-"id": "v-gen-57"
+"id": "v-gen-136"
 },
 {
 "type": "rc",
@@ -1168,7 +2804,7 @@ var GRE_VERBAL_GEN = [
 "answer": "C",
 "explanation": "Directly stated: 'work was governed by the seasons and daylight'.",
 "source": "generated-verbal",
-"id": "v-gen-58"
+"id": "v-gen-137"
 },
 {
 "type": "rc",
@@ -1187,7 +2823,7 @@ var GRE_VERBAL_GEN = [
 "answer": "B",
 "explanation": "Stated: chlorophyll absorbs red/blue and reflects green.",
 "source": "generated-verbal",
-"id": "v-gen-59"
+"id": "v-gen-138"
 },
 {
 "type": "rc",
@@ -1206,7 +2842,7 @@ var GRE_VERBAL_GEN = [
 "answer": "C",
 "explanation": "Stated: glucose forms the energy foundation.",
 "source": "generated-verbal",
-"id": "v-gen-60"
+"id": "v-gen-139"
 },
 {
 "type": "rc",
@@ -1225,7 +2861,7 @@ var GRE_VERBAL_GEN = [
 "answer": "A",
 "explanation": "Primarily = mainly / mostly.",
 "source": "generated-verbal",
-"id": "v-gen-61"
+"id": "v-gen-140"
 },
 {
 "type": "rc",
@@ -1244,7 +2880,7 @@ var GRE_VERBAL_GEN = [
 "answer": "B",
 "explanation": "The passage's concern is fragmented media eroding shared facts.",
 "source": "generated-verbal",
-"id": "v-gen-62"
+"id": "v-gen-141"
 },
 {
 "type": "rc",
@@ -1263,7 +2899,7 @@ var GRE_VERBAL_GEN = [
 "answer": "B",
 "explanation": "Confirmation bias = seeking info that confirms prior beliefs.",
 "source": "generated-verbal",
-"id": "v-gen-63"
+"id": "v-gen-142"
 },
 {
 "type": "rc",
@@ -1282,7 +2918,7 @@ var GRE_VERBAL_GEN = [
 "answer": "B",
 "explanation": "Stated as the requirement that fragmentation erodes.",
 "source": "generated-verbal",
-"id": "v-gen-64"
+"id": "v-gen-143"
 },
 {
 "type": "rc",
@@ -1301,7 +2937,7 @@ var GRE_VERBAL_GEN = [
 "answer": "A",
 "explanation": "The passage explains negative selection that prevents self-attack.",
 "source": "generated-verbal",
-"id": "v-gen-65"
+"id": "v-gen-144"
 },
 {
 "type": "rc",
@@ -1320,7 +2956,7 @@ var GRE_VERBAL_GEN = [
 "answer": "B",
 "explanation": "Preserved = kept / retained.",
 "source": "generated-verbal",
-"id": "v-gen-66"
+"id": "v-gen-145"
 },
 {
 "type": "rc",
@@ -1339,7 +2975,7 @@ var GRE_VERBAL_GEN = [
 "answer": "B",
 "explanation": "Stated: some self-reactive cells escape, causing autoimmunity.",
 "source": "generated-verbal",
-"id": "v-gen-67"
+"id": "v-gen-146"
 },
 {
 "type": "rc",
@@ -1358,7 +2994,7 @@ var GRE_VERBAL_GEN = [
 "answer": "B",
 "explanation": "Stated: milder than latitude would predict.",
 "source": "generated-verbal",
-"id": "v-gen-68"
+"id": "v-gen-147"
 },
 {
 "type": "rc",
@@ -1377,7 +3013,7 @@ var GRE_VERBAL_GEN = [
 "answer": "B",
 "explanation": "Stated: redistribute heat around the planet.",
 "source": "generated-verbal",
-"id": "v-gen-69"
+"id": "v-gen-148"
 },
 {
 "type": "rc",
@@ -1396,6 +3032,6 @@ var GRE_VERBAL_GEN = [
 "answer": "B",
 "explanation": "Redistribute = disperse / spread again.",
 "source": "generated-verbal",
-"id": "v-gen-70"
+"id": "v-gen-149"
 }
 ];

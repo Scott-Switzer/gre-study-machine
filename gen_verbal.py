@@ -86,6 +86,13 @@ rebuff rebuke recalcitrant recant recluse recompense recondite recount recourse 
 redoubtable refer referee refinery reflect reflex reform refrain refresh refugee reflux refund refusal refute
 regale regard regime region register regress rehabilitate rehearsal reign rein reimburse reinstate reject
 rejuvenate relapse rapport rapt rasp rather rational ravel""".split()
+# ---- ADDITIONAL GRE WORDS (expansion) ----
+WORDS += """aggressive ambiguous awkward beauty bland bombastic brilliant decorous defiant engaging ephemeral
+fastidious frankness generous habitual harmful harmless ineffective learned malodorous modest noxious optimistic
+peaceful perfumed persuasive reticent sanguine scholarly scintillating sedulous seemly shrewd shy silent smug
+sociable stolid suave sullen surreptitious sweet sycophant talkative tenacious terse timid tranquil truculent
+ubiquitous unyielding urbane verbose vilify volatile waver weaken winsome wordy worsen""".split()
+WORDS = [w.strip().lower() for w in WORDS if w.strip().isalpha()]
 WORDS = [w.strip().lower() for w in WORDS if w.strip().isalpha()]
 WORDS = list(dict.fromkeys(WORDS))
 WSET = set(WORDS)
@@ -163,6 +170,40 @@ TC = [
  ("The ___ king ruled with absolute, unquestioned authority.", "autocratic" if 'autocratic' in WSET else "absolute"),
  ("Her ___ wit made the dullest meeting bearable.", "scintillating"),
  ("The ___ lawyer dismantled the witness's testimony point by point.", "incisive"),
+ ("The ___ wind of opinion shifted the committee's decision overnight.", "capricious"),
+ ("Her ___ refusal to acknowledge the error only deepened the rift.", "obstinate"),
+ ("The diplomat's ___ manner defused the hostage situation with quiet grace.", "urbane"),
+ ("A ___ chill settled over the room as the verdict was read.", "surreptitious"),
+ ("The ___ philanthropist funded the hospital without seeking credit.", "munificent"),
+ ("His ___ logic laid bare the flaw in the opponent's argument.", "incisive"),
+ ("The ___ child greeted every stranger with a disarming smile.", "winsome"),
+ ("A ___ scent of jasmine drifted through the open window.", "redolent"),
+ ("The ___ monarch ruled with unquestioned, absolute authority.", "urbane"),
+ ("Her ___ wit made even the dullest briefing bearable.", "scintillating"),
+ ("The ___ professor could recall every case from a decade past.", "erudite"),
+ ("After the loss, he remained ___, showing no outward grief.", "phlegmatic"),
+ ("The ___ explanation wandered so far that the point was lost.", "convoluted"),
+ ("His ___ stance left no room for negotiation or compromise.", "intransigent"),
+ ("The ___ servant anticipated every need before it was spoken.", "obsequious" if 'obsequious' in WSET else "assiduous"),
+ ("A ___ glow spread across the horizon at dawn.", "refulgent"),
+ ("The ___ debater reduced the complex issue to its essence.", "cogent"),
+ ("She tried to ___ the angry crowd with soothing words.", "mollify"),
+ ("The critic sought to ___ the artist's reputation with cruel reviews.", "denigrate"),
+ ("His ___ behavior at the gala scandalized the older guests.", "raffish" if 'raffish' in WSET else "boorish"),
+ ("The ___ student finished the assignment days early, flawless.", "assiduous"),
+ ("Her ___ tone hinted she doubted every word he said.", "glib"),
+ ("The ___ village enjoyed decades of peace and prosperity.", "halcyon"),
+ ("A ___ odor of sulfur leaked from the laboratory.", "malodorous" if 'malodorous' in WSET else "fetid"),
+ ("The ___ old man grumbled at every noise the children made.", "curmudgeon" if 'curmudgeon' in WSET else "morose"),
+ ("His ___ spending drained the inheritance within a year.", "prodigal"),
+ ("The ___ smile never reached her cold, calculating eyes.", "winsome"),
+ ("A ___ hush fell as the conductor raised the baton.", "tranquil"),
+ ("The ___ toddler screamed when told to leave the playground.", "irascible"),
+ ("Her ___ perseverance carried the project through every setback.", "tenacious"),
+ ("The ___ statement clarified the previously murky policy.", "pellucid"),
+ ("He was ___ about the surprise, telling no one of the plan.", "surreptitious"),
+ ("The ___ professor's lecture, thick with jargon, lost the freshmen.", "esoteric"),
+ ("A ___ calm held the ship steady through the storm.", "phlegmatic"),
 ]
 for sent, corr in TC:
     if corr not in WSET: corr = random.choice(list(WSET))
@@ -219,6 +260,42 @@ for p in RC:
     for stem, ch, ans, expl in p["qs"]:
         add({"type":"rc","section":"Verbal","topic":"Reading Comp","difficulty":"medium",
              "passage":p["passage"],"stem":stem,"choices":ch,"answer":ans,"explanation":expl,"source":"generated-verbal"})
+
+# ---- MORE RC PASSAGES (expansion) ----
+RC += [
+ {"passage":"The printing press, introduced in Europe in the 15th century, did more than multiply books; it transformed the conditions of knowledge itself. Before print, a scholar's authority rested on rare manuscripts guarded in monasteries. After print, texts could be copied exactly and distributed widely, enabling shared reference points across cities and eventually across nations. Critics at the time feared that cheap printed matter would spread error and vulgarity, yet the press proved indispensable to the scientific revolution that followed.",
+  "qs":[("The passage primarily suggests that the printing press", {"A":"destroyed monasteries","B":"changed how knowledge was stored and shared","C":"reduced the number of books","D":"caused the scientific revolution directly","E":"spread only error"}, "B", "The passage argues print changed the conditions of knowledge via exact, wide distribution."),
+   ("The word 'indispensable' most nearly means", {"A":"unnecessary","B":"essential","C":"harmful","D":"rare","E":"optional"}, "B", "Indispensable = absolutely necessary / essential."),
+   ("According to the passage, a scholar's authority before print rested on", {"A":"widely distributed texts","B":"rare guarded manuscripts","C":"printed books","D":"scientific data","E":"shared reference points"}, "B", "Stated: authority rested on rare manuscripts in monasteries.")]},
+ {"passage":"Migration shapes both the places people leave and the places they enter. Remittances sent home by migrants can lift families out of poverty, funding education and small businesses. Meanwhile, destination cities gain workers but may strain housing and services. The net effect on any single community depends on policy, timing, and the skills migrants bring, making simple claims about migration's impact misleading.",
+  "qs":[("The passage suggests that the impact of migration is", {"A":"always positive","B":"always negative","C":"dependent on context and policy","D":"irrelevant to cities","E":"limited to remittances"}, "C", "Stated: the net effect depends on policy, timing, and skills."),
+   ("The word 'remittances' most nearly refers to", {"A":"taxes paid to governments","B":"money sent home by migrants","C":"loans from banks","D":"goods traded abroad","E":"skills brought to cities"}, "B", "Remittances = funds migrants send back home."),
+   ("According to the passage, destination cities may experience", {"A":"no change","B":"strain on housing and services","C":"loss of workers","D":"collapse of education","E":"reduction in population"}, "B", "Stated: cities may strain housing and services.")]},
+ {"passage":"Coral reefs cover a tiny fraction of the ocean floor yet shelter roughly a quarter of all marine species. They build their limestone skeletons slowly, over centuries, in warm shallow water. When ocean temperatures rise even slightly, the symbiotic algae that give corals color and food exit, leaving bleached, starving reefs. Because reefs protect coastlines from storms and support fisheries, their decline threatens both biodiversity and human livelihoods.",
+  "qs":[("The passage indicates that coral reefs are significant because they", {"A":"cover most of the ocean","B":"support a large share of marine species","C":"grow quickly","D":"require cold water","E":"lack biodiversity"}, "B", "Stated: reefs shelter ~25% of marine species despite tiny area."),
+   ("The word 'symbiotic' most nearly means", {"A":"competing","B":"mutually dependent","C":"unrelated","D":"parasitic only","E":"dead"}, "B", "Symbiotic = mutually beneficial relationship."),
+   ("According to the passage, coral bleaching occurs when", {"A":"water cools","B":"algae leave due to warming","C":"fish arrive","D":"limestone builds","E":"storms stop"}, "B", "Stated: warming causes algae to exit, bleaching reefs.")]},
+]
+
+# ---- MORE SYNONYM CLUSTERS (expansion) ----
+CLUSTERS += [
+ ["obsequious","sycophant","servile"],["refulgent","radiant","luminous"],
+ ["cogent","persuasive","telling"],["mollify","appease","placate"],
+ ["denigrate","malign","asperse"],["halcyon","peaceful","serene"],
+ ["curmudgeon","grouch","misanthrope"],["raffish","rakish","raffish"],
+ ["refulgent","luminous","shining"],["boorish","crass","uncouth"],
+ ["tenacious","dogged","unyielding"],["pellucid","limpid","clear"],
+ ["esoteric","abstruse","recondite"],["intransigent","adamant","obdurate"],
+ ["winsome","engaging","charming"],["scintillating","brilliant","sparkling"],
+ ["surreptitious","furtive","covert"],["redolent","fragrant","perfumed"],
+ ["phlegmatic","impassive","stolid"],["convoluted","tortuous","byzantine"],
+ ["incisive","acute","keen"],["urbane","suave","courtliness"],
+ ["erudite","learned","scholarly"],["assiduous","sedulous","diligent"],
+ ["glib","facile","smooth"],["prodigal","wasteful","extravagant"],
+ ["irascible","testy","cantankerous"],["tranquil","calm","serene"],
+ ["malodorous","fetid","noisome"],["morose","sullen","dismal"],
+ ["capricious","fickle","mercurial"],["obstinate","stubborn","mulish"]
+]
 
 out="var GRE_VERBAL_GEN = "+json.dumps(Q,indent=0)+";\n"
 with open('gre_verbal_gen.js','w') as f:
