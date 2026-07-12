@@ -1,0 +1,14 @@
+{
+  "name": "GRE Study Machine",
+  "short_name": "GRE Study",
+  "description": "Offline GRE prep: 2,300+ practice questions, vocab SRS, mocks, AWA, analytics.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0b0f1a",
+  "theme_color": "#7c5cff",
+  "icons": [
+    {"src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}
+  ]
+}

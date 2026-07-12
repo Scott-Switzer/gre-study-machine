@@ -112,12 +112,14 @@ function finishFullTest(){
   renderDash();
 }
 function qsplit(sec){ var ks=Object.keys(FULL.results).filter(k=>k.indexOf(sec)>=0); var c=0,t=0; ks.forEach(k=>{var p=FULL.results[k].split('/');c+=+p[0];t+=+p[1];}); return {c:c,t:t,txt:t?Math.round(c/t*100)+'%':'-'}; }
-function estFromRaw(c,t){ if(!t) return 150; return Math.max(130,Math.min(170,Math.round(130+(c/t)*40))); }
+// Real GRE raw->scaled using the ETS table in engine_a.js
+function estFromRaw(section,c,t){ if(!t) return '—'; var raw=Math.min(20,Math.round(c/t*20)); var tbl=GRE_SCORE_TABLE[section]||GRE_SCORE_TABLE.Verbal; var lo=Math.floor(raw),hi=Math.min(20,lo+1),frac=raw-lo; return Math.max(130,Math.min(170,Math.round(tbl[lo]+(tbl[hi]-tbl[lo])*frac))); }
 function showFullStatus(){
   if(!FULL){ document.getElementById('full-status').innerHTML='<p class="muted">No full test in progress. Start one above.</p>'; return; }
-  var html='<div class="card"><h2>Current Full Test</h2><div class="small">';
-  ['Verbal','Quant'].forEach(s=>{ var ks=Object.keys(FULL.results).filter(k=>k.indexOf(s)>=0); html+=s+': '+(ks.length?ks.map(k=>FULL.results[k]).join(', '):'not started')+'<br>'; });
-  html+='</div></div>'; document.getElementById('full-status').innerHTML=html;
+  var html='<div class="card"><h2>Current Full Test</h2>';
+  ['Verbal','Quant'].forEach(s=>{ var sp=qsplit(s); html+='<div class="secrow"><span class="name"><b>'+s+'</b></span><span class="pct">'+sp.txt+' raw &rarr; <b>'+estFromRaw(s,sp.c,sp.t)+'</b> scaled</span></div>'; });
+  html+='<div class="small" style="margin-top:6px">Scaled scores use the ETS raw&rarr;130-170 conversion curve.</div></div>';
+  document.getElementById('full-status').innerHTML=html;
 }
 
 /* ================= AWA ================= */
@@ -295,9 +297,19 @@ function doImport(previewOnly){
 function exportBank(){ var data=JSON.stringify({questions:GRE_QUESTIONS, vocab:GRE_VOCAB},null,2); var b=new Blob([data],{type:'application/json'}); var u=URL.createObjectURL(b); var a=document.createElement('a'); a.href=u; a.download='gre_export.json'; a.click(); URL.revokeObjectURL(u); toast('Exported'); }
 function loadFile(ev){ var f=ev.target.files[0]; if(!f) return; var r=new FileReader(); r.onload=function(){ var txt=String(r.result).trim(); var m=txt.match(/=\s*(\[[\s\S]*\])\s*;?\s*$/); if(m) txt=m[1]; document.getElementById('imp-text').value=txt; doImport(true); }; r.readAsText(f); ev.target.value=''; }
 
+/* ================= PWA / INSTALL ================= */
+var deferredPrompt=null;
+window.addEventListener('beforeinstallprompt', function(e){ e.preventDefault(); deferredPrompt=e; var b=document.getElementById('btn-install'); if(b) b.style.display='block'; });
+window.addEventListener('appinstalled', function(){ var b=document.getElementById('btn-install'); if(b) b.style.display='none'; toast('Installed — opens offline from home screen'); });
+function doInstall(){ if(deferredPrompt){ deferredPrompt.prompt(); deferredPrompt.userChoice.finally(function(){ deferredPrompt=null; var b=document.getElementById('btn-install'); if(b) b.style.display='none'; }); } else { toast('Use your browser menu → Add to Home Screen'); } }
+if('serviceWorker' in navigator){ window.addEventListener('load', function(){ navigator.serviceWorker.register('sw.js').then(function(){ console.log('SW registered'); }).catch(function(e){ console.log('SW fail', e.message); }); }); }
+
 /* ================= INIT ================= */
 window.addEventListener('DOMContentLoaded', function(){
   renderDash(); renderPracQuick(); renderCustom(); renderVocabList();
   // default plan date 60 days out
   var d=new Date(Date.now()+60*86400000); document.getElementById('plan-date').value=d.toISOString().slice(0,10);
+  // offline-aware toast
+  window.addEventListener('offline', function(){ toast('Offline — app still works (cached)'); });
+  window.addEventListener('online', function(){ toast('Back online'); });
 });

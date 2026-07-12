@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GRE Study Machine</title>
+<meta name="theme-color" content="#7c5cff">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <style>
   :root{
     --bg:#0b1020; --panel:#141b2e; --panel2:#1c2740; --line:#26344f;
@@ -159,7 +164,9 @@
       <button class="navbtn" id="nav-res" onclick="show('res')"><span class="ic">🔗</span> Free Resources</button>
     </div>
 
-    <div class="sidefoot"><span id="side-count">— questions · — words</span><br>Offline · auto-saved locally</div>
+    <div class="sidefoot"><span id="side-count">— questions · — words</span><br>Offline · auto-saved locally<br>
+      <button class="btn" id="btn-install" style="display:none;margin-top:8px;width:100%" onclick="doInstall()">📲 Install app</button>
+    </div>
   </aside>
 
   <!-- MAIN -->
@@ -405,12 +412,12 @@
 </div>
 <div class="toast" id="toast"></div>
 
-<script src="gre_quant_gen.js?v=4"></script>
-<script src="gre_verbal_gen.js?v=4"></script>
-<script src="gre_questions_curated.js?v=4"></script>
-<script src="gre_questions_seed.js?v=4"></script>
-<script src="gre_vocab.js?v=4"></script>
-<script src="gre_engine_a.js?v=4"></script>
-<script src="gre_engine_b.js?v=4"></script>
+<script src="gre_quant_gen.js?v=5"></script>
+<script src="gre_verbal_gen.js?v=5"></script>
+<script src="gre_questions_curated.js?v=5"></script>
+<script src="gre_questions_seed.js?v=5"></script>
+<script src="gre_vocab.js?v=5"></script>
+<script src="gre_engine_a.js?v=5"></script>
+<script src="gre_engine_b.js?v=5"></script>
 </body>
 </html>

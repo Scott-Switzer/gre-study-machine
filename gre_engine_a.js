@@ -65,14 +65,27 @@ function accFor(filterFn){
   ids.forEach(id=>{ if(filterFn && !filterFn(qOf(id))) return; var s=state[id]; c+=(s.correct||0); t+=(s.correct||0)+(s.wrong||0); });
   return t? c/t : 0;
 }
+// Real GRE raw->scaled shape (ETS). Values approximate the published
+// conversion curves: verbal is harsher per-correct, quant is generous.
+// Keyed by raw correct out of 20 (a standard section length); interpolated.
+var GRE_SCORE_TABLE = {
+  Verbal: [ // raw 0..20 -> scaled 130..170
+    130,131,133,135,137,138,140,141,143,144,146,147,149,150,152,153,155,158,160,163,170],
+  Quant: [ // raw 0..20
+    130,131,132,134,135,137,138,140,141,143,144,146,147,149,150,152,153,155,157,160,170]
+};
 function estScore(section){
-  // crude mapping: 0%->130, 100%->170 linear, floor 130
-  var a=accFor(q=>q.section===section);
-  if(a===0 && !GRE_QUESTIONS.some(q=>q.section===section)) return null;
-  // require at least a few seen
-  var seen=GRE_QUESTIONS.filter(q=>q.section===section && state[q.id]).length;
-  if(seen<3) return null;
-  return Math.max(130, Math.min(170, Math.round(130 + a*40)));
+  var seen=GRE_QUESTIONS.filter(q=>q.section===section && state[q.id]);
+  if(!seen.length) return null;
+  var c=seen.reduce((s,q)=>s+((state[q.id].correct||0)>0?1:0),0);
+  var t=seen.reduce((s,q)=>s+((state[q.id].correct||0)+(state[q.id].wrong||0)),0);
+  if(t===0) return null;
+  // Normalize to a 20-question section so the table applies, then interpolate.
+  var raw = Math.min(20, Math.round(c / t * 20));
+  var tbl = GRE_SCORE_TABLE[section] || GRE_SCORE_TABLE.Verbal;
+  var lo = Math.floor(raw), hi = Math.min(20, lo+1), frac = raw-lo;
+  var score = tbl[lo] + (tbl[hi]-tbl[lo])*frac;
+  return Math.max(130, Math.min(170, Math.round(score)));
 }
 function renderDash(){
   document.getElementById('st-total').textContent=GRE_QUESTIONS.length;
