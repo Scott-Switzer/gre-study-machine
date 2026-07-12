@@ -362,12 +362,14 @@
         <code>{"type":"tc|se|qc|multi|numeric|mc|rc","section":"Verbal|Quant","topic":"...","difficulty":"easy|medium|hard","stem":"...","choices":{"A":"..."},"answer":"A" or ["B","E"],"explanation":"...","passage":"... (rc only)"}</code></p>
         <textarea id="imp-text" placeholder='[{"type":"mc","section":"Quant","topic":"Algebra","difficulty":"medium","stem":"...","choices":{"A":"...","B":"..."},"answer":"A","explanation":"..."}]'></textarea>
         <div class="row" style="margin-top:10px">
-          <button class="btn primary" onclick="doImport()">Add to Bank</button>
+          <button class="btn primary" onclick="doImport(false)">Add to Bank</button>
+          <button class="btn" onclick="doImport(true)">Check only</button>
           <button class="btn" onclick="exportBank()">Export Bank</button>
           <button class="btn" onclick="document.getElementById('imp-file').click()">Load .js</button>
-          <input type="file" id="imp-file" accept=".js,.json" style="display:none" onchange="loadFile(event)">
+          <input type="file" id="imp-file" accept=".js,.json,.txt" style="display:none" onchange="loadFile(event)">
         </div>
         <p class="small" id="imp-msg" style="margin-top:9px"></p>
+        <div id="imp-report"></div>
       </div>
     </section>
 
@@ -403,12 +405,12 @@
 </div>
 <div class="toast" id="toast"></div>
 
-<script src="gre_quant_gen.js?v=3"></script>
-<script src="gre_verbal_gen.js?v=3"></script>
-<script src="gre_questions_curated.js?v=3"></script>
-<script src="gre_questions_seed.js?v=3"></script>
-<script src="gre_vocab.js?v=3"></script>
-<script src="gre_engine_a.js?v=3"></script>
-<script src="gre_engine_b.js?v=3"></script>
+<script src="gre_quant_gen.js?v=4"></script>
+<script src="gre_verbal_gen.js?v=4"></script>
+<script src="gre_questions_curated.js?v=4"></script>
+<script src="gre_questions_seed.js?v=4"></script>
+<script src="gre_vocab.js?v=4"></script>
+<script src="gre_engine_a.js?v=4"></script>
+<script src="gre_engine_b.js?v=4"></script>
 </body>
 </html>

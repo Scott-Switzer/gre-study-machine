@@ -181,21 +181,119 @@ function genPlan(){
 }
 
 /* ================= IMPORT / EXPORT ================= */
-function doImport(){
-  var txt=document.getElementById('imp-text').value.trim();
-  if(!txt){ document.getElementById('imp-msg').textContent='Paste JSON first.'; return; }
-  try{
-    var arr=JSON.parse(txt); if(!Array.isArray(arr)) throw new Error('not an array');
-    arr.forEach((q,i)=>{ if(!q.id) q.id='imp-'+Date.now()+'-'+i; if(!q.type) q.type='mc'; if(!q.section) q.section='Verbal'; if(!q.difficulty) q.difficulty='medium'; if(!q.topic) q.topic='General'; });
-    GRE_IMPORTED=GRE_IMPORTED.concat(arr);
-    localStorage.setItem('gre_imported_bank', JSON.stringify(GRE_IMPORTED));
-    GRE_QUESTIONS=GRE_QUESTIONS.concat(arr);
-    document.getElementById('imp-msg').textContent='Imported '+arr.length+'. Bank now '+GRE_QUESTIONS.length+'.';
-    renderDash();
-  }catch(e){ document.getElementById('imp-msg').textContent='Invalid JSON: '+e.message; }
+var GRE_TYPES=['mc','tc','se','qc','multi','numeric','rc'];
+function validateQuestion(q){
+  if(!q || typeof q!=='object' || Array.isArray(q)) return ['not an object'];
+  if(!q.type || !GRE_TYPES.includes(q.type)) return ['type must be one of '+GRE_TYPES.join('/')];
+  if(!q.stem || !String(q.stem).trim()) return ['missing stem'];
+  if(q.type==='rc'){ if(!q.passage || !String(q.passage).trim()) return ['rc needs passage']; }
+  if(q.type==='qc'){ if(!'ABCD'.includes(q.answer)) return ['qc answer must be A-D']; return []; }
+  if(q.type==='numeric'){ if(q.answer==null || q.answer==='') return ['numeric answer missing']; return []; }
+  if(!q.choices || typeof q.choices!=='object' || Object.keys(q.choices).length<2) return ['needs >=2 choices'];
+  var ans=Array.isArray(q.answer)?q.answer:[q.answer];
+  if((q.type==='se'||q.type==='multi') && !Array.isArray(q.answer)) return [q.type+' needs array answer'];
+  var bad=ans.filter(a=>!(a in q.choices));
+  if(bad.length) return ['answer '+bad.join(',')+' not in choices'];
+  // duplicate option labels?
+  var vals=Object.values(q.choices);
+  if(vals.length!==new Set(vals).size) return ['duplicate choice text'];
+  return [];
 }
-function exportBank(){ var data=JSON.stringify(GRE_QUESTIONS,null,2); var b=new Blob([data],{type:'application/json'}); var u=URL.createObjectURL(b); var a=document.createElement('a'); a.href=u; a.download='gre_bank_export.json'; a.click(); URL.revokeObjectURL(u); toast('Exported'); }
-function loadFile(ev){ var f=ev.target.files[0]; if(!f) return; var r=new FileReader(); r.onload=function(){ var txt=String(r.result).trim(); var m=txt.match(/=\s*(\[[\s\S]*\])\s*;?\s*$/); if(m) txt=m[1]; document.getElementById('imp-text').value=txt; doImport(); }; r.readAsText(f); ev.target.value=''; }
+function looksLikeVocab(arr){
+  return Array.isArray(arr) && arr.length>0 && arr.every(o=>o && (o.word||o.term) && (o.def||o.definition) && !o.stem);
+}
+function parsePlainText(txt){
+  // Best-effort parser for copy-paste MCQ blocks, e.g.:
+  //   Q: What is 2+2?
+  //   A) 3   B) 4   C) 5
+  //   Answer: B
+  var out=[], i=0, lines=txt.split(/\r?\n/);
+  function letterOf(s){ var m=s.match(/^\s*([A-E])[\.\)\:]/); return m?m[1]:null; }
+  while(i<lines.length){
+    var ln=lines[i];
+    if(/^\s*(q|question|\d+[\.\)]\s|stem)/i.test(ln) || (ln.trim() && letterOf(ln)===null && i+1<lines.length && letterOf(lines[i+1]))){
+      // start of a question: gather stem until first option line
+      var stem='', opts={}, ans=[];
+      stem=ln.replace(/^\s*(q|question|\d+[\.\)]\s|\:)\s*/i,'').trim();
+      i++;
+      while(i<lines.length){
+        var l=lines[i];
+        if(/answer\s*[:=]/i.test(l)){ var am=l.match(/answer\s*[:=]\s*(.+)/i); if(am){ am[1].split(/[\s,]+/).forEach(x=>{var L=x.trim().toUpperCase(); if(L&&'ABCDE'.includes(L)) ans.push(L);}); } i++; break; }
+        var ll=letterOf(l);
+        if(ll){ l.replace(/([A-E])[\.\)\:]\s*([^\sA-E][^A-E]*?)(?=\s+[A-E][\.\)\:]|$)/g,function(_,L,text){ opts[L]=text.trim(); }); if(!opts[ll]){ var t=l.replace(/^\s*[A-E][\.\)\:]\s*/,'').trim(); if(t) opts[ll]=t; } i++; }
+        else if(!l.trim()){ i++; break; } // blank line ends block
+        else { stem+=' '+l.trim(); i++; }
+      }
+      if(stem && Object.keys(opts).length>=2){
+        var type = ans.length>1 ? 'multi' : 'mc';
+        out.push({type:type, section: ans.length>1?'Verbal':'Verbal', topic:'Imported', difficulty:'medium', stem:stem, choices:opts, answer: type==='multi'?ans:ans[0], explanation:''});
+      }
+      continue;
+    }
+    i++;
+  }
+  return out;
+}
+function parseInput(txt){
+  txt=txt.trim();
+  // JSON array?
+  if(txt[0]==='['){
+    try{ var a=JSON.parse(txt); if(Array.isArray(a)) return {parsed:a, kind:'json'}; }catch(e){}
+    return {parsed:[], kind:'json', parseError:e?e.message:''};
+  }
+  // .js assignment: var X = [...]; or X = [...]
+  var m=txt.match(/=\s*(\[[\s\S]*\])\s*;?\s*$/);
+  if(m){ try{ var a=JSON.parse(m[1]); if(Array.isArray(a)) return {parsed:a, kind:'js'}; }catch(e){ return {parsed:[], kind:'js', parseError:e.message}; } }
+  // plain text MCQ
+  var pt=parsePlainText(txt);
+  if(pt.length) return {parsed:pt, kind:'text'};
+  return {parsed:[], kind:'unknown', parseError:'Unrecognized format (need JSON array, .js bank, or text MCQ blocks).'};
+}
+function doImport(previewOnly){
+  var txt=document.getElementById('imp-text').value.trim();
+  var msg=document.getElementById('imp-msg'), rep=document.getElementById('imp-report');
+  if(!txt){ msg.textContent='Paste JSON, a .js bank, or text questions first.'; if(rep) rep.innerHTML=''; return; }
+  var res=parseInput(txt);
+  if(!res.parsed.length){ msg.textContent='Parse error: '+(res.parseError||'nothing parsed'); if(rep) rep.innerHTML=''; return; }
+  // vocab?
+  if(looksLikeVocab(res.parsed)){
+    var added=0, skipped=0; var known=new Set(GRE_VOCAB.map(w=>w.word.toLowerCase()));
+    res.parsed.forEach(o=>{ var w=(o.word||o.term).trim(); if(known.has(w.toLowerCase())){skipped++;return;} GRE_VOCAB.push({word:w, pos:o.pos||'n.', def:o.def||o.definition, ex:o.ex||''}); known.add(w.toLowerCase()); added++; });
+    if(!previewOnly){ localStorage.setItem('gre_vocab', JSON.stringify(GRE_VOCAB)); }
+    msg.textContent=(previewOnly?'Preview: ':'Imported ')+added+' vocab words'+(skipped?', skipped '+skipped+' duplicates.':'.')+' Bank vocab now '+GRE_VOCAB.length+'.';
+    if(rep) rep.innerHTML=''; renderDash(); return;
+  }
+  // questions: validate + dedup
+  var ok=[], rejected=[], seen=new Set(GRE_QUESTIONS.map(q=>q.id));
+  res.parsed.forEach((q,idx)=>{
+    var q2=Object.assign({},q);
+    if(!q2.id) q2.id='imp-'+Date.now()+'-'+idx;
+    if(q2.type==='qc'||q2.type==='numeric') q2.section='Quant';
+    else if(!q2.section) q2.section='Verbal';
+    if(!q2.topic) q2.topic='Imported';
+    if(!q2.difficulty) q2.difficulty='medium';
+    // numeric may legitimately have no choices
+    var errs=validateQuestion(q2);
+    if(errs.length){ rejected.push({id:q2.id, reason:errs.join('; ')}); return; }
+    if(seen.has(q2.id)){ rejected.push({id:q2.id, reason:'duplicate id'}); return; }
+    seen.add(q2.id); ok.push(q2);
+  });
+  if(previewOnly){
+    msg.textContent='Preview: '+ok.length+' valid, '+rejected.length+' rejected (not added).';
+  } else {
+    GRE_IMPORTED=GRE_IMPORTED.concat(ok);
+    localStorage.setItem('gre_imported_bank', JSON.stringify(GRE_IMPORTED));
+    GRE_QUESTIONS=GRE_QUESTIONS.concat(ok);
+    msg.textContent='Imported '+ok.length+' questions. Bank now '+GRE_QUESTIONS.length+'.'+(rejected.length?' '+rejected.length+' rejected.':'');
+    renderDash();
+  }
+  if(rep){
+    rep.innerHTML = (rejected.length? '<div class="small" style="margin-top:8px;color:var(--bad)">Rejected ('+rejected.length+'):</div>'+
+      rejected.slice(0,12).map(r=>'<div class="small">• '+r.id+': '+r.reason+'</div>').join('') : '<div class="small" style="margin-top:8px;color:var(--good)">All '+ok.length+' passed validation.</div>');
+  }
+}
+function exportBank(){ var data=JSON.stringify({questions:GRE_QUESTIONS, vocab:GRE_VOCAB},null,2); var b=new Blob([data],{type:'application/json'}); var u=URL.createObjectURL(b); var a=document.createElement('a'); a.href=u; a.download='gre_export.json'; a.click(); URL.revokeObjectURL(u); toast('Exported'); }
+function loadFile(ev){ var f=ev.target.files[0]; if(!f) return; var r=new FileReader(); r.onload=function(){ var txt=String(r.result).trim(); var m=txt.match(/=\s*(\[[\s\S]*\])\s*;?\s*$/); if(m) txt=m[1]; document.getElementById('imp-text').value=txt; doImport(true); }; r.readAsText(f); ev.target.value=''; }
 
 /* ================= INIT ================= */
 window.addEventListener('DOMContentLoaded', function(){
