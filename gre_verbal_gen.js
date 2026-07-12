@@ -215,15 +215,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: His ___ wealth could not buy him genuine friends.",
 "choices": {
-"A": "ensconce",
+"A": "hoodwink",
 "B": "amenable",
 "C": "protean",
 "D": "demure",
-"E": "fawn",
+"E": "fathom",
 "F": "predilection"
 },
 "answer": "A",
-"explanation": "'ensconce' fits the context.",
+"explanation": "'hoodwink' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-12"
 },
@@ -388,13 +388,13 @@ var GRE_VERBAL_GEN = [
 "choices": {
 "A": "ire",
 "B": "insular",
-"C": "bias",
+"C": "berserk",
 "D": "raffish",
 "E": "discern",
-"F": "bellicose"
+"F": "carping"
 },
 "answer": "F",
-"explanation": "'bellicose' fits the context.",
+"explanation": "'carping' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-21"
 },
@@ -558,14 +558,14 @@ var GRE_VERBAL_GEN = [
 "stem": "Fill the blank: The ___ king ruled with absolute, unquestioned authority.",
 "choices": {
 "A": "grandiloquent",
-"B": "qualm",
-"C": "propensity",
+"B": "quantum",
+"C": "propitiate",
 "D": "clamorous",
-"E": "privation",
-"F": "ravenous"
+"E": "privy",
+"F": "presentiment"
 },
 "answer": "F",
-"explanation": "'ravenous' fits the context.",
+"explanation": "'presentiment' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-30"
 },
@@ -3432,5 +3432,233 @@ var GRE_VERBAL_GEN = [
 "explanation": "Stated: warming causes algae to exit, bleaching reefs.",
 "source": "generated-verbal",
 "id": "v-gen-170"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The Green Revolution of the mid-20th century introduced high-yield crop varieties, synthetic fertilizers, and irrigation to developing nations, averting the mass famine many had predicted. Yet the same package increased dependence on fossil-fuel inputs and eroded traditional seed diversity. Historians now weigh its legacy as both a triumph over hunger and a cautionary tale about technological lock-in.",
+"stem": "The passage suggests the Green Revolution",
+"choices": {
+"A": "caused mass famine",
+"B": "both prevented famine and created new dependencies",
+"C": "rejected irrigation",
+"D": "preserved seed diversity",
+"E": "ended synthetic fertilizer use"
+},
+"answer": "B",
+"explanation": "The passage credits it with averting famine while noting fossil-fuel dependence.",
+"source": "generated-verbal",
+"id": "v-gen-171"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The Green Revolution of the mid-20th century introduced high-yield crop varieties, synthetic fertilizers, and irrigation to developing nations, averting the mass famine many had predicted. Yet the same package increased dependence on fossil-fuel inputs and eroded traditional seed diversity. Historians now weigh its legacy as both a triumph over hunger and a cautionary tale about technological lock-in.",
+"stem": "The word 'eroded' most nearly means",
+"choices": {
+"A": "strengthened",
+"B": "gradually weakened/diminished",
+"C": "planted",
+"D": "measured",
+"E": "celebrated"
+},
+"answer": "B",
+"explanation": "Eroded = gradually worn away / diminished.",
+"source": "generated-verbal",
+"id": "v-gen-172"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The Green Revolution of the mid-20th century introduced high-yield crop varieties, synthetic fertilizers, and irrigation to developing nations, averting the mass famine many had predicted. Yet the same package increased dependence on fossil-fuel inputs and eroded traditional seed diversity. Historians now weigh its legacy as both a triumph over hunger and a cautionary tale about technological lock-in.",
+"stem": "According to the passage, a downside was",
+"choices": {
+"A": "more famine",
+"B": "loss of traditional seed diversity",
+"C": "less irrigation",
+"D": "lower yields",
+"E": "abandoned fertilizers"
+},
+"answer": "B",
+"explanation": "Stated: it eroded traditional seed diversity.",
+"source": "generated-verbal",
+"id": "v-gen-173"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Networks exhibit surprising robustness: removing random nodes rarely collapses a large network, because most nodes are peripheral. But targeted removal of highly connected hubs can fragment it swiftly. This asymmetry explains why the internet survives outages yet power grids are vulnerable to coordinated attacks on key substations.",
+"stem": "The passage primarily explains",
+"choices": {
+"A": "why all networks collapse easily",
+"B": "why random failures are tolerable but hub attacks are devastating",
+"C": "that the internet is fragile",
+"D": "how substations are built",
+"E": "why grids never fail"
+},
+"answer": "B",
+"explanation": "The passage contrasts random-node tolerance with hub-targeted vulnerability.",
+"source": "generated-verbal",
+"id": "v-gen-174"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Networks exhibit surprising robustness: removing random nodes rarely collapses a large network, because most nodes are peripheral. But targeted removal of highly connected hubs can fragment it swiftly. This asymmetry explains why the internet survives outages yet power grids are vulnerable to coordinated attacks on key substations.",
+"stem": "The word 'fragment' most nearly means",
+"choices": {
+"A": "strengthen",
+"B": "break into pieces",
+"C": "connect",
+"D": "improve",
+"E": "measure"
+},
+"answer": "B",
+"explanation": "Fragment = break apart.",
+"source": "generated-verbal",
+"id": "v-gen-175"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Networks exhibit surprising robustness: removing random nodes rarely collapses a large network, because most nodes are peripheral. But targeted removal of highly connected hubs can fragment it swiftly. This asymmetry explains why the internet survives outages yet power grids are vulnerable to coordinated attacks on key substations.",
+"stem": "According to the passage, power grids are vulnerable to",
+"choices": {
+"A": "random node loss",
+"B": "coordinated attacks on key substations",
+"C": "internet outages",
+"D": "peripheral failures",
+"E": "more nodes"
+},
+"answer": "B",
+"explanation": "Stated: grids are vulnerable to coordinated attacks on key substations.",
+"source": "generated-verbal",
+"id": "v-gen-176"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Cognitive biases systematically skew human judgment: confirmation bias leads us to favor confirming evidence, while the availability heuristic makes vivid recent events seem more common than they are. Recognizing these patterns does not eliminate them, but labeling them can reduce their sway over decisions from hiring to investing.",
+"stem": "The passage suggests cognitive biases",
+"choices": {
+"A": "are easily eliminated",
+"B": "persist but can be partly mitigated by awareness",
+"C": "only affect hiring",
+"D": "improve investing",
+"E": "are purely beneficial"
+},
+"answer": "B",
+"explanation": "The passage says recognition does not eliminate them but can reduce their sway.",
+"source": "generated-verbal",
+"id": "v-gen-177"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Cognitive biases systematically skew human judgment: confirmation bias leads us to favor confirming evidence, while the availability heuristic makes vivid recent events seem more common than they are. Recognizing these patterns does not eliminate them, but labeling them can reduce their sway over decisions from hiring to investing.",
+"stem": "The word 'mitigated' most nearly means",
+"choices": {
+"A": "worsened",
+"B": "lessened/reduced",
+"C": "caused",
+"D": "ignored",
+"E": "measured"
+},
+"answer": "B",
+"explanation": "Mitigated = reduced / lessened.",
+"source": "generated-verbal",
+"id": "v-gen-178"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Cognitive biases systematically skew human judgment: confirmation bias leads us to favor confirming evidence, while the availability heuristic makes vivid recent events seem more common than they are. Recognizing these patterns does not eliminate them, but labeling them can reduce their sway over decisions from hiring to investing.",
+"stem": "According to the passage, the availability heuristic causes",
+"choices": {
+"A": "accurate probability estimates",
+"B": "vivid events to seem more common",
+"C": "better hiring",
+"D": "confirmation of beliefs",
+"E": "less bias"
+},
+"answer": "B",
+"explanation": "Stated: vivid recent events seem more common than they are.",
+"source": "generated-verbal",
+"id": "v-gen-179"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Renewable energy's intermittency - the sun does not always shine, the wind does not always blow - demands storage or backup. Batteries are improving but remain costly; grids therefore blend renewables with flexible natural-gas plants and, increasingly, demand response that shifts load to off-peak hours. The transition is less a switch than a careful balancing act.",
+"stem": "The passage suggests the renewable transition requires",
+"choices": {
+"A": "only batteries",
+"B": "balancing storage, backup, and demand management",
+"C": "ending all gas use immediately",
+"D": "ignoring intermittency",
+"E": "no planning"
+},
+"answer": "B",
+"explanation": "The passage describes blending storage, gas backup, and demand response.",
+"source": "generated-verbal",
+"id": "v-gen-180"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Renewable energy's intermittency - the sun does not always shine, the wind does not always blow - demands storage or backup. Batteries are improving but remain costly; grids therefore blend renewables with flexible natural-gas plants and, increasingly, demand response that shifts load to off-peak hours. The transition is less a switch than a careful balancing act.",
+"stem": "The word 'intermittency' most nearly means",
+"choices": {
+"A": "constant supply",
+"B": "irregular/stop-start availability",
+"C": "low cost",
+"D": "high output",
+"E": "reliability"
+},
+"answer": "B",
+"explanation": "Intermittency = stop-start / irregular availability.",
+"source": "generated-verbal",
+"id": "v-gen-181"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Renewable energy's intermittency - the sun does not always shine, the wind does not always blow - demands storage or backup. Batteries are improving but remain costly; grids therefore blend renewables with flexible natural-gas plants and, increasingly, demand response that shifts load to off-peak hours. The transition is less a switch than a careful balancing act.",
+"stem": "According to the passage, demand response",
+"choices": {
+"A": "raises peak load",
+"B": "shifts load to off-peak hours",
+"C": "replaces all backup",
+"D": "eliminates batteries",
+"E": "increases cost only"
+},
+"answer": "B",
+"explanation": "Stated: demand response shifts load to off-peak hours.",
+"source": "generated-verbal",
+"id": "v-gen-182"
 }
 ];

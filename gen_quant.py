@@ -35,7 +35,7 @@ def add(q):
     Q.append(q)
 
 # ---------------- ARITHMETIC ----------------
-for _ in range(240):
+for _ in range(340):
     k=random.choice(["pct","disc","ratio","avg","exp","root","div","prime","seq","seq2"])
     if k=="pct":
         a=random.randint(15,90); b=random.randint(20,200)
@@ -104,7 +104,7 @@ for _ in range(240):
                f"a_n = a_1 x r^(n-1) = {a0} x {r}^({n}-1) = {terms[-1]}."))
 
 # ---------------- ALGEBRA ----------------
-for _ in range(240):
+for _ in range(340):
     k=random.choice(["lin","two","quad","ineq","func","wp","absval","expo"])
     if k=="lin":
         a=random.randint(2,9); c=random.randint(1,30); x=random.randint(1,12)
@@ -153,7 +153,7 @@ for _ in range(240):
                f"{base}^{e} = {val}; so x = {e}."))
 
 # ---------------- GEOMETRY ----------------
-for _ in range(220):
+for _ in range(300):
     k=random.choice(["rect","tri","circ","pyth","vol","ang","coord","insc"])
     if k=="rect":
         w=random.randint(3,15); h=random.randint(3,15)
@@ -196,7 +196,7 @@ for _ in range(220):
                f"Diagonal of square = diameter = 2r, so side = 2r/√2 = r√2 = {r}·√2 = {side}."))
 
 # ---------------- DATA ----------------
-for _ in range(220):
+for _ in range(320):
     k=random.choice(["mean","median","prob","comb","venn","unionprob"])
     if k=="mean":
         n=random.randint(4,7); base=random.randint(10,30)
@@ -231,7 +231,7 @@ for _ in range(220):
                f"P(A or B)=P(A)+P(B)-P(A and B)={pA}+{pB}-{pAB}={punion}."))
 
 # ---------------- HARD quant (multi-step / traps) ----------------
-for _ in range(260):
+for _ in range(360):
     k=random.choice(["work","invest","mixture","combo2","qc-hard1","qc-hard2","percentchange","seqsum","gcdlcm","dataint","condprob","sys3","funccomp","expval","vol3d"])
     if k=="work":
         a=random.randint(2,6); b=random.randint(2,6)
@@ -337,7 +337,7 @@ for _ in range(260):
                f"V = pi r^2 h = 3.14*{r}^2*{h} = {vcyl}."))
 
 # ---------------- QUANTITATIVE COMPARISON ----------------
-for _ in range(340):
+for _ in range(480):
     k=random.choice(["qc-arith","qc-alg","qc-geo","qc-var","qc-frac"])
     if k=="qc-arith":
         a=random.randint(2,9); b=random.randint(2,9)

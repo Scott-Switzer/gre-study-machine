@@ -8,6 +8,7 @@ if (typeof GRE_VERBAL_GEN !== "undefined") GRE_QUESTIONS = GRE_QUESTIONS.concat(
 if (typeof GRE_QUESTIONS_CURATED !== "undefined") GRE_QUESTIONS = GRE_QUESTIONS.concat(GRE_QUESTIONS_CURATED);
 if (typeof GRE_QUESTIONS_SEED !== "undefined") GRE_QUESTIONS = GRE_QUESTIONS.concat(GRE_QUESTIONS_SEED);
 GRE_QUESTIONS = GRE_QUESTIONS.concat(GRE_IMPORTED);
+if (document.getElementById('side-count')) document.getElementById('side-count').textContent = GRE_QUESTIONS.length + ' questions · ' + (typeof GRE_VOCAB!=='undefined'?GRE_VOCAB.length:'—') + ' words';
 
 var TYPE_LABEL = {mc:"Multiple Choice", tc:"Text Completion", se:"Sentence Equivalence",
   qc:"Quant Comparison", multi:"Select All", numeric:"Numeric Entry", rc:"Reading Comp"};
@@ -34,7 +35,7 @@ function diffBadge(d){ return '<span class="diffbadge diff-'+d+'">'+d+'</span>';
 function typeBadge(t){ return '<span class="typebadge">'+TYPE_LABEL[t]+'</span>'; }
 
 /* ================= NAV ================= */
-var PAGES=['dash','prac','custom','vocab','mock','full','awa','plan','imp'];
+var PAGES=['dash','prac','custom','vocab','mock','full','awa','plan','imp','res'];
 function show(page){
   PAGES.forEach(p=>{
     var el=document.getElementById(p); if(el) el.classList.toggle('hidden', p!==page);
@@ -49,6 +50,7 @@ function show(page){
   if(page==='full') showFullStatus();
   if(page==='awa'){ document.getElementById('awa-area').classList.add('hidden'); document.getElementById('awa-bank').innerHTML=''; }
   if(page==='plan'){ /* keep plan-out */ }
+  if(page==='res') renderResources();
 }
 function enterRun(navPage){
   PAGES.forEach(p=>{ var el=document.getElementById(p); if(el) el.classList.add('hidden'); var nav=document.getElementById('nav-'+p); if(nav) nav.classList.toggle('active', p===navPage); });
@@ -402,3 +404,42 @@ function showRunReview(auto){
 }
 function renderRunReviewList(){ var el=document.getElementById('run-reviewlist'); if(el){ el.classList.remove('hidden'); el.innerHTML='<h2>Review</h2>'+window._runReviewRows; } }
 function runDone(){ if(RUN.onDone) RUN.onDone(RUN); else show('dash'); }
+
+/* ================= RESOURCES ================= */
+function renderResources(){
+  var RES=[
+    {cat:'official', items:[
+      ['POWERPREP Online (free practice tests)', 'https://www.ets.org/gre/test-takers/general-test/prepare/powerprep.html', 'Two free full-length adaptive tests from ETS - the gold standard for calibrating your real score.'],
+      ['ETS GRE Paper Practice Book (PDF)', 'https://www.ets.org/content/dam/ets-india/pdfs/gre/paper-delivered-test-practice-book.pdf', 'Free official practice test with real questions and scoring guide.'],
+      ['ETS Quantitative Reasoning Practice Questions', 'https://hiast.edu.sy/sites/default/files/general/ETS-GRE%20Quantitative%20Reasoning.pdf', 'Official 150 quant questions with explanations (mirrors the paid book).']
+    ]},
+    {cat:'practice', items:[
+      ['GregMat (free + low-cost)', 'https://www.gregmat.com/', 'Extremely popular GRE prep - free vocab groups, study plans, and video walkthroughs.'],
+      ['Magoosh GRE eBook (free)', 'https://gre.magoosh.com/gre-ebook', 'Complete free strategy guide covering all sections.'],
+      ['Magoosh 1000-Word GRE List (PDF)', 'https://s3.amazonaws.com/magoosh.resources/magoosh-gre-1000-words_oct01.pdf', 'Free high-frequency vocab list - pair with this app’s flashcards.'],
+      ['The GRE Big Book (27 tests)', 'https://drive.google.com/drive/u/0/folders/0Bwy2T5wsuholfmtwMEJDN1JLZXd6UmhEd1dXWW10cTYwV3d4dkJ3UHF5czNVeThMaWg4WWc', 'Out-of-print ETS old tests - tons of real practice questions (use for drilling, not scoring).'],
+      ['Mometrix Free Quant Practice', 'https://www.mometrix.com/academy/gre-quantitative-practice-test/', 'Free practice test with answer explanations.'],
+      ['Kaplan Free GRE Questions', 'https://www.kaptest.com/gre/free/gre-20-minute-workout', 'Short free workout of mixed questions.']
+    ]},
+    {cat:'vocab', items:[
+      ['Magoosh Vocabulary Builder (app)', 'https://play.google.com/store/apps/details?id=com.magoosh.gre.quiz.vocabulary', 'Free spaced-repetition vocab app from Magoosh.'],
+      ['Quizlet 500 GRE Words', 'https://quizlet.com/14840887/500-practice-gre-vocabulary-words-flash-cards/', 'Free community flashcard deck of 500 words.'],
+      ['Barron’s 800 Essential (Memrise)', 'https://www.memrise.com/course/121215/barrons-800-essential-word-list-gre/', 'Free public deck of Barron’s 800 core words.'],
+      ['Kaplan Top 500 GRE Words (video)', 'https://www.youtube.com/watch?v=9fz456TIdJs', 'Free video list of 500 words with definitions.']
+    ]},
+    {cat:'video', items:[
+      ['Awesome GRE Materials (curated index)', 'https://github.com/rishiloyola/Awesome-GRE-Materials', 'Community list of free blogs, apps, books, and video lectures.'],
+      ['ETS GRE YouTube', 'https://www.youtube.com/user/GREtestprep', 'Official ETS channel with question walkthroughs.'],
+      ['Khan Academy (math foundations)', 'https://www.khanacademy.org/math', 'Free refresher on the algebra/geometry/arithmetic the quant section tests.']
+    ]}
+  ];
+  var map={official:'res-official', practice:'res-practice', vocab:'res-vocab', video:'res-video'};
+  RES.forEach(function(g){
+    var html='';
+    g.items.forEach(function(it){
+      html+='<div class="revrow" style="border-color:var(--line)"><div style="flex:1"><a href="'+it[1]+'" target="_blank" rel="noopener" style="font-weight:700;font-size:13.5px">'+it[0]+'</a><div class="small" style="margin-top:3px">'+it[2]+'</div><div class="small" style="margin-top:2px;opacity:.7">'+it[1]+'</div></div></div>';
+    });
+    document.getElementById(map[g.cat]).innerHTML=html;
+  });
+  document.getElementById('res-banksize').textContent='This app currently holds '+GRE_QUESTIONS.length+' questions and '+GRE_VOCAB.length+' vocabulary words, all generated and free to use.';
+}

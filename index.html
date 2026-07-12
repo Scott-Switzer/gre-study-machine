@@ -156,9 +156,10 @@
       <button class="navbtn" id="nav-plan" onclick="show('plan')"><span class="ic">🗓</span> Study Plan</button>
       <button class="navbtn" id="nav-dash" onclick="show('dash')"><span class="ic">▤</span> Dashboard</button>
       <button class="navbtn" id="nav-imp" onclick="show('imp')"><span class="ic">⇪</span> Import / Export</button>
+      <button class="navbtn" id="nav-res" onclick="show('res')"><span class="ic">🔗</span> Free Resources</button>
     </div>
 
-    <div class="sidefoot">520 questions · 256 words<br>Offline · auto-saved locally</div>
+    <div class="sidefoot"><span id="side-count">— questions · — words</span><br>Offline · auto-saved locally</div>
   </aside>
 
   <!-- MAIN -->
@@ -370,18 +371,44 @@
       </div>
     </section>
 
+    <!-- RESOURCES -->
+    <section id="res" class="hidden">
+      <div class="topbar"><div><div class="crumb">Free</div><h1>Free Resources</h1><div class="blurb">Curated free, official, and open GRE material. These are external references — use them alongside the drills in this app. (Official ETS questions are kept here as links, not copied, to respect copyright.)</div></div></div>
+      <div class="card">
+        <h2>Official ETS (free)</h2>
+        <div id="res-official"></div>
+      </div>
+      <div class="card">
+        <h2>Practice Tests &amp; Question Banks</h2>
+        <div id="res-practice"></div>
+      </div>
+      <div class="card">
+        <h2>Vocabulary</h2>
+        <div id="res-vocab"></div>
+      </div>
+      <div class="card">
+        <h2>Video Lectures &amp; Strategy</h2>
+        <div id="res-video"></div>
+      </div>
+      <div class="card">
+        <h2>This app's question bank</h2>
+        <p class="muted" id="res-banksize"></p>
+        <p class="small">All questions in this app are generated/derived (answers computed, not hand-typed) so they're free to use and redistribute. To add your own, see <b>Import / Export</b>.</p>
+      </div>
+    </section>
+
     <!-- SHARED RUN CONTAINER -->
     <section id="run" class="hidden"></section>
   </main>
 </div>
 <div class="toast" id="toast"></div>
 
-<script src="gre_quant_gen.js?v=2"></script>
-<script src="gre_verbal_gen.js?v=2"></script>
-<script src="gre_questions_curated.js?v=2"></script>
-<script src="gre_questions_seed.js?v=2"></script>
-<script src="gre_vocab.js?v=2"></script>
-<script src="gre_engine_a.js?v=2"></script>
-<script src="gre_engine_b.js?v=2"></script>
+<script src="gre_quant_gen.js?v=3"></script>
+<script src="gre_verbal_gen.js?v=3"></script>
+<script src="gre_questions_curated.js?v=3"></script>
+<script src="gre_questions_seed.js?v=3"></script>
+<script src="gre_vocab.js?v=3"></script>
+<script src="gre_engine_a.js?v=3"></script>
+<script src="gre_engine_b.js?v=3"></script>
 </body>
 </html>

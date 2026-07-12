@@ -312,6 +312,48 @@ CLUSTERS += [
  ["capricious","fickle","mercurial"],["obstinate","stubborn","mulish"]
 ]
 
+# ---- MORE RC PASSAGES (volume round) ----
+RC += [
+ {"passage":"The Green Revolution of the mid-20th century introduced high-yield crop varieties, synthetic fertilizers, and irrigation to developing nations, averting the mass famine many had predicted. Yet the same package increased dependence on fossil-fuel inputs and eroded traditional seed diversity. Historians now weigh its legacy as both a triumph over hunger and a cautionary tale about technological lock-in.",
+  "qs":[("The passage suggests the Green Revolution", {"A":"caused mass famine","B":"both prevented famine and created new dependencies","C":"rejected irrigation","D":"preserved seed diversity","E":"ended synthetic fertilizer use"}, "B", "The passage credits it with averting famine while noting fossil-fuel dependence."),
+   ("The word 'eroded' most nearly means", {"A":"strengthened","B":"gradually weakened/diminished","C":"planted","D":"measured","E":"celebrated"}, "B", "Eroded = gradually worn away / diminished."),
+   ("According to the passage, a downside was", {"A":"more famine","B":"loss of traditional seed diversity","C":"less irrigation","D":"lower yields","E":"abandoned fertilizers"}, "B", "Stated: it eroded traditional seed diversity.")]},
+ {"passage":"Networks exhibit surprising robustness: removing random nodes rarely collapses a large network, because most nodes are peripheral. But targeted removal of highly connected hubs can fragment it swiftly. This asymmetry explains why the internet survives outages yet power grids are vulnerable to coordinated attacks on key substations.",
+  "qs":[("The passage primarily explains", {"A":"why all networks collapse easily","B":"why random failures are tolerable but hub attacks are devastating","C":"that the internet is fragile","D":"how substations are built","E":"why grids never fail"}, "B", "The passage contrasts random-node tolerance with hub-targeted vulnerability."),
+   ("The word 'fragment' most nearly means", {"A":"strengthen","B":"break into pieces","C":"connect","D":"improve","E":"measure"}, "B", "Fragment = break apart."),
+   ("According to the passage, power grids are vulnerable to", {"A":"random node loss","B":"coordinated attacks on key substations","C":"internet outages","D":"peripheral failures","E":"more nodes"}, "B", "Stated: grids are vulnerable to coordinated attacks on key substations.")]},
+ {"passage":"Cognitive biases systematically skew human judgment: confirmation bias leads us to favor confirming evidence, while the availability heuristic makes vivid recent events seem more common than they are. Recognizing these patterns does not eliminate them, but labeling them can reduce their sway over decisions from hiring to investing.",
+  "qs":[("The passage suggests cognitive biases", {"A":"are easily eliminated","B":"persist but can be partly mitigated by awareness","C":"only affect hiring","D":"improve investing","E":"are purely beneficial"}, "B", "The passage says recognition does not eliminate them but can reduce their sway."),
+   ("The word 'mitigated' most nearly means", {"A":"worsened","B":"lessened/reduced","C":"caused","D":"ignored","E":"measured"}, "B", "Mitigated = reduced / lessened."),
+   ("According to the passage, the availability heuristic causes", {"A":"accurate probability estimates","B":"vivid events to seem more common","C":"better hiring","D":"confirmation of beliefs","E":"less bias"}, "B", "Stated: vivid recent events seem more common than they are.")]},
+ {"passage":"Renewable energy's intermittency - the sun does not always shine, the wind does not always blow - demands storage or backup. Batteries are improving but remain costly; grids therefore blend renewables with flexible natural-gas plants and, increasingly, demand response that shifts load to off-peak hours. The transition is less a switch than a careful balancing act.",
+  "qs":[("The passage suggests the renewable transition requires", {"A":"only batteries","B":"balancing storage, backup, and demand management","C":"ending all gas use immediately","D":"ignoring intermittency","E":"no planning"}, "B", "The passage describes blending storage, gas backup, and demand response."),
+   ("The word 'intermittency' most nearly means", {"A":"constant supply","B":"irregular/stop-start availability","C":"low cost","D":"high output","E":"reliability"}, "B", "Intermittency = stop-start / irregular availability."),
+   ("According to the passage, demand response", {"A":"raises peak load","B":"shifts load to off-peak hours","C":"replaces all backup","D":"eliminates batteries","E":"increases cost only"}, "B", "Stated: demand response shifts load to off-peak hours.")]},
+]
+
+# ---- MORE SYNONYM CLUSTERS (volume round) ----
+CLUSTERS += [
+ ["abrasive","harsh","caustic"],["equable","even-tempered","placid"],["insouciant","carefree","nonchalant"],
+ ["lugubrious","mournful","melancholy"],["panegyric","praise","encomium"],["recalcitrant","stubborn","obstinate"],
+ ["sanguine","hopeful","optimistic"],["vituperate","berate","revile"],["vociferous","loud","clamorous"],
+ ["zeitgeist","spirit of the age","ethos"],["abstemious","temperate","abstinent"],["crapulous","intemperate","dissolute"],
+ ["defenestrate","throw out window","eject"],["ebullient","joyful","exuberant"],["fatuous","foolish","inane"],
+ ["garrulous","talkative","loquacious"],["hirsute","hairy","shaggy"],["iconoclast","dissenter","heretic"],
+ ["jejune","immature","puerile"],["knavish","dishonest","roguish"],["limpid","clear","pellucid"],
+ ["meretricious","gaudy","tawdry"],["obtuse","dull","stupid"],["pacific","peaceful","tranquil"],
+ ["querulous","complaining","petulant"],["refulgent","shining","radiant"],["saturate","soak","drench"],
+ ["taciturn","silent","reticent"],["urbane","polished","suave"],["verisimilitude","realism","truth"],
+ ["winsome","charming","engaging"],["yearn","long","crave"],["zephyr","breeze","gentle wind"],
+ ["ascetic","austere","abstemious"],["bilious","irritable","peevish"],["castigate","rebuke","chastise"],
+ ["desultory","random","aimless"],["effusive","gushing","expressive"],["fortuitous","lucky","propitious"],
+ ["gregarious","social","outgoing"],["impecunious","poor","penniless"],["inveterate","habitual","chronic"],
+ ["laconic","terse","concise"],["mellifluous","sweet-sounding","honeyed"],["obstreperous","unruly","noisy"],
+ ["pellucid","clear","limpid"],["prevaricate","lie","equivocate"],["quiescent","dormant","still"],
+ ["recalcitrant","defiant","stubborn"],["surreptitious","secret","covert"],["truculent","aggressive","belligerent"],
+ ["ubiquitous","everywhere","pervasive"],["valedictory","farewell","parting"],["wither","shrivel","fade"]
+]
+
 # Generate RC questions (all passages now appended)
 for p in RC:
     for stem, ch, ans, expl in p["qs"]:
