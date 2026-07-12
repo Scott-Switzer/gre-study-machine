@@ -35,7 +35,7 @@ function diffBadge(d){ return '<span class="diffbadge diff-'+d+'">'+d+'</span>';
 function typeBadge(t){ return '<span class="typebadge">'+TYPE_LABEL[t]+'</span>'; }
 
 /* ================= NAV ================= */
-var PAGES=['dash','prac','custom','vocab','mock','full','awa','plan','imp','res'];
+var PAGES=['dash','prac','custom','vocab','mock','full','awa','plan','imp','res','learn'];
 function show(page){
   PAGES.forEach(p=>{
     var el=document.getElementById(p); if(el) el.classList.toggle('hidden', p!==page);
@@ -51,6 +51,7 @@ function show(page){
   if(page==='awa'){ document.getElementById('awa-area').classList.add('hidden'); document.getElementById('awa-bank').innerHTML=''; }
   if(page==='plan'){ /* keep plan-out */ }
   if(page==='res') renderResources();
+  if(page==='learn') renderLearn();
 }
 function enterRun(navPage){
   PAGES.forEach(p=>{ var el=document.getElementById(p); if(el) el.classList.add('hidden'); var nav=document.getElementById('nav-'+p); if(nav) nav.classList.toggle('active', p===navPage); });
@@ -329,6 +330,22 @@ function correctKeys(q){
   if(q.type==='numeric') return null;
   return [q.answer];
 }
+// Enrich an explanation into a teaching note (pulls vocab definitions for verbal answers).
+function wordDef(w){
+  var key=String(w||'').replace(/[^A-Za-z]/g,'').toLowerCase();
+  if(!key) return '';
+  for(var i=0;i<GRE_VOCAB.length;i++){ var v=GRE_VOCAB[i]; if(v.word.replace(/[^A-Za-z]/g,'').toLowerCase()===key) return v.word+' ('+v.pos+'): '+v.def+'.'; }
+  return '';
+}
+function teachNote(q){
+  var base=(q.explanation||'').trim();
+  if((q.type==='tc'||q.type==='se') && q.choices){
+    var ans=Array.isArray(q.answer)?q.answer:[q.answer];
+    var defs=ans.map(function(k){ return wordDef(q.choices[k]); }).filter(Boolean);
+    if(defs.length){ base += (base? ' ' : '') + 'Word meaning — ' + defs.join(' '); }
+  }
+  return base || 'No explanation on file — review the answer and topic.';
+}
 function answerRun(q){
   if(!document.getElementById('run-exp').classList.contains('hidden')) return;
   var isCorrect;
@@ -359,7 +376,7 @@ function answerRun(q){
   e.innerHTML='<div class="exp-head '+(isCorrect?'ok':'no')+'">'+(isCorrect?'✓ Correct':'✗ Incorrect')+'</div>'+
     '<div class="exp-why"><b>You:</b> '+esc(youTxt)+'</div>'+
     '<div class="exp-why"><b>Answer:</b> '+esc(ansTxt)+'</div>'+
-    '<div class="exp-why"><b>Why:</b> '+esc(q.explanation||'')+'</div>'+
+    '<div class="exp-why"><b>Why:</b> '+esc(teachNote(q))+'</div>'+
     '<div class="exp-src muted">Source: '+(q.source||'bank')+(q.topic?' · '+esc(q.topic):'')+'</div>';
   e.classList.remove('hidden');
   if(RUN.mode==='practice'){
@@ -416,9 +433,14 @@ function showRunReview(auto){
     }
     var ansTxt=q.type==='numeric'?String(q.answer):(q.type==='multi'||q.type==='se')?correctKeys(q).map(k=>k+'. '+q.choices[k]).join('; '):(q.choices[q.answer]||q.answer);
     var youTxt=a==null?'(blank)':q.type==='numeric'?String(a):(Array.isArray(a)?a:[a]).map(k=>k+'. '+(q.choices[k]||k)).join('; ');
-    rows+='<div class="revrow"><span class="'+(ok?'ok':'no')+'">'+(ok?'✓':'✗')+'</span><div style="flex:1"><div class="muted small">'+esc(q.section)+' · '+TYPE_LABEL[q.type]+'</div>'+
-      '<div>'+esc(q.stem.slice(0,110))+(q.stem.length>110?'…':'')+'</div><div class="small">You: '+esc(youTxt)+'</div>'+
-      '<div class="small" style="color:var(--good)">Answer: '+esc(ansTxt)+'</div></div></div>';
+    var teach=teachNote(q);
+    rows+='<div class="revrow"><span class="'+(ok?'ok':'no')+'">'+(ok?'✓':'✗')+'</span><div style="flex:1"><div class="muted small">'+esc(q.section)+' · '+TYPE_LABEL[q.type]+(q.topic?' · '+esc(q.topic):'')+'</div>'+
+      '<div>'+esc(q.stem.slice(0,110))+(q.stem.length>110?'…':'')+'</div>'+
+      '<div class="small">You: '+esc(youTxt)+'</div>'+
+      '<div class="small" style="color:var(--good)">Answer: '+esc(ansTxt)+'</div>'+
+      (teach?'<div class="small exp-teach">💡 '+esc(teach)+'</div>':'')+
+      (!ok?'<button class="btn small" style="margin-top:5px" onclick="markUnderstood(\''+q.id+'\')">I understand this ✓</button>':'')+
+      '</div></div>';
   });
   var html='<div class="card"><div class="result-big"><div class="score" style="font-size:46px;font-weight:800">'+pct+'%</div>'+
     '<div class="muted">'+correct+' / '+RUN.qs.length+' · '+(RUN.sectionLabel||RUN.label)+(auto?' (time up)':'')+'</div></div>'+
@@ -431,6 +453,53 @@ function showRunReview(auto){
 }
 function renderRunReviewList(){ var el=document.getElementById('run-reviewlist'); if(el){ el.classList.remove('hidden'); el.innerHTML='<h2>Review</h2>'+window._runReviewRows; } }
 function runDone(){ if(RUN.onDone) RUN.onDone(RUN); else show('dash'); }
+function markUnderstood(qid){
+  if(!state[qid]) state[qid]={seen:0,correct:0,wrong:0,box:0,due:0};
+  // understood => keep progress but resurface in ~10 min for reinforcement, bump box lightly
+  state[qid].box=Math.min(5,(state[qid].box||0)+1);
+  state[qid].due=Date.now()+10*60000;
+  saveState();
+  toast('Added to review queue (resurfaces soon) ✓');
+}
+
+/* ================= LEARN CONCEPTS ================= */
+var CONCEPT_NOTES={
+  'Arithmetic':{t:'Arithmetic',n:'Percents, ratios, averages, exponents, roots, primes, remainders, sequences. Core quant floor — most errors come from careless arithmetic, not concepts. Drill daily.'},
+  'Algebra':{t:'Algebra',n:'Solve linear/quadratic equations, manipulate inequalities, work with functions and systems. Isolate the variable; check domain restrictions on functions.'},
+  'Geometry':{t:'Geometry',n:'Lines, angles, triangles, circles, area, volume, coordinate geometry. Memorize the Pythagorean triples and circle formulas; most GRE geometry is plug-and-chug after you see the shape.'},
+  'Data':{t:'Data Analysis',n:'Probability, counting (permutations/combinations), sets, statistics (mean/median/mode/SD). For probability, count favorable / total outcomes; watch "with vs without replacement".'},
+  'QC':{t:'Quant Comparison',n:'Decide A > B, B > A, equal, or cannot determine. Try to prove they could differ before picking "cannot determine". Plug in 0, 1, a negative, and a fraction.'},
+  'tc':{t:'Text Completion',n:'Read for the logic signal (contrast "but"/"yet", support "therefore"). Predict the blank before looking at choices; pick the word whose meaning fits your prediction.'},
+  'se':{t:'Sentence Equivalence',n:'Find TWO words that fit the blank AND are near-synonyms. If the two answers don\'t mean roughly the same thing, one is wrong. Build vocab daily.'},
+  'rc':{t:'Reading Comp',n:'Read the first/last sentence of each paragraph for structure. Questions test main point, inference, and detail — go back to the text; don\'t rely on memory.'},
+  'verbal-strategy':{t:'Verbal Strategy',n:'Your likely weaker section (quant majors). Spend 60% of verbal time on vocab SRS; learn 15 words/day. TC/SE reward pattern recognition, not deep reading.'}
+};
+function conceptAccFor(prefix){
+  var qs=GRE_QUESTIONS.filter(q=>{ var tp=q.topic||''; return tp.indexOf(prefix)===0 || (prefix==='tc'&&q.type==='tc') || (prefix==='se'&&q.type==='se') || (prefix==='rc'&&q.type==='rc'); });
+  if(!qs.length) return null;
+  var c=0,t=0; qs.forEach(q=>{var s=state[q.id]; if(s){c+=s.correct||0; t+=(s.correct||0)+(s.wrong||0);}});
+  return t? c/t : null;
+}
+function renderLearn(){
+  var groups=[
+    {label:'Quant Concepts', keys:['Arithmetic','Algebra','Geometry','Data','QC']},
+    {label:'Verbal Concepts', keys:['tc','se','rc','verbal-strategy']}
+  ];
+  var html='';
+  groups.forEach(function(g){
+    html+='<h2 style="margin:16px 0 8px">'+g.label+'</h2>';
+    g.keys.forEach(function(k){
+      var note=CONCEPT_NOTES[k]; if(!note) return;
+      var acc=conceptAccFor(k);
+      var flag = acc===null ? '' : (acc<0.6 ? ' <span class="pill" style="background:var(--bad);color:#fff">weak ('+Math.round(acc*100)+'%)</span>' : ' <span class="pill" style="background:var(--good);color:#fff">'+Math.round(acc*100)+'%</span>');
+      var drill = k==='tc'||k==='se'||k==='rc' ? 'startQuizWith(\'type:'+k+'\')' : 'startQuizWith(\'topic:'+k+'\')';
+      html+='<div class="card" style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;align-items:center"><b>'+note.t+'</b>'+flag+'</div>'+
+        '<p class="small" style="margin:6px 0 10px">'+note.n+'</p>'+
+        '<button class="btn small" onclick="'+drill+'">Drill '+note.t+' →</button></div>';
+    });
+  });
+  document.getElementById('learn-body').innerHTML=html;
+}
 
 /* ================= RESOURCES ================= */
 function renderResources(){

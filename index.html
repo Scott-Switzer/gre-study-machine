@@ -69,6 +69,7 @@
   .exp-head.ok{color:var(--good)}
   .exp-head.no{color:var(--bad)}
   .exp-why{margin-bottom:6px}
+  .exp-teach{margin-top:5px;padding:7px 9px;background:rgba(124,92,246,0.10);border-left:3px solid var(--violet);border-radius:6px;color:#dcd7ff}
   .exp-src{border-top:1px dashed var(--line);padding-top:7px;margin-top:4px}
   .qmeta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--mut);margin-bottom:5px}
   .row{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:9px}
@@ -147,6 +148,7 @@
       <button class="navbtn" id="nav-prac" onclick="show('prac')"><span class="ic">▸</span> Practice</button>
       <button class="navbtn" id="nav-custom" onclick="show('custom')"><span class="ic">⚙</span> Custom Quiz</button>
       <button class="navbtn" id="nav-vocab" onclick="show('vocab')"><span class="ic">📘</span> Vocab Drill</button>
+      <button class="navbtn" id="nav-learn" onclick="show('learn')"><span class="ic">🧠</span> Learn Concepts</button>
     </div>
 
     <div class="navgroup">
@@ -407,18 +409,24 @@
       </div>
     </section>
 
+    <!-- LEARN CONCEPTS -->
+    <section id="learn" class="hidden">
+      <div class="topbar"><div><div class="crumb">Study</div><h1>Learn Concepts</h1><div class="blurb">Short concept notes for every GRE topic, with weak-area flags from your own accuracy. Read, then drill the linked questions.</div></div></div>
+      <div id="learn-body"></div>
+    </section>
+
     <!-- SHARED RUN CONTAINER -->
     <section id="run" class="hidden"></section>
   </main>
 </div>
 <div class="toast" id="toast"></div>
 
-<script src="gre_quant_gen.js?v=7"></script>
-<script src="gre_verbal_gen.js?v=7"></script>
-<script src="gre_questions_curated.js?v=7"></script>
-<script src="gre_questions_seed.js?v=7"></script>
-<script src="gre_vocab.js?v=7"></script>
-<script src="gre_engine_a.js?v=7"></script>
-<script src="gre_engine_b.js?v=7"></script>
+<script src="gre_quant_gen.js?v=8"></script>
+<script src="gre_verbal_gen.js?v=8"></script>
+<script src="gre_questions_curated.js?v=8"></script>
+<script src="gre_questions_seed.js?v=8"></script>
+<script src="gre_vocab.js?v=8"></script>
+<script src="gre_engine_a.js?v=8"></script>
+<script src="gre_engine_b.js?v=8"></script>
 </body>
 </html>
