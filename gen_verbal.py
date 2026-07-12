@@ -256,10 +256,25 @@ RC = [
    ("According to the passage, ocean currents primarily function to", {"A":"create ice","B":"redistribute heat","C":"cool the tropics only","D":"warm the Caribbean","E":"predict weather"}, "B", "Stated: redistribute heat around the planet."),
    ("The word 'redistribute' most nearly means", {"A":"concentrate","B":"spread out again","C":"destroy","D":"measure","E":"freeze"}, "B", "Redistribute = disperse / spread again.")]},
 ]
-for p in RC:
-    for stem, ch, ans, expl in p["qs"]:
-        add({"type":"rc","section":"Verbal","topic":"Reading Comp","difficulty":"medium",
-             "passage":p["passage"],"stem":stem,"choices":ch,"answer":ans,"explanation":expl,"source":"generated-verbal"})
+# ---- EVEN MORE RC PASSAGES ----
+RC += [
+ {"passage":"The 2008 financial crisis revealed how tightly global markets are coupled: a collapse in U.S. subprime mortgages propagated within months to banks in Europe and export demand in Asia. Economists debated whether tighter capital requirements or simpler financial products would best prevent recurrence. What is clear is that no economy remained an island; interdependence cut both ways, transmitting shocks and, eventually, recoveries.",
+  "qs":[("The passage primarily illustrates that", {"A":"mortgages caused the crisis alone","B":"global markets are interdependent","C":"Asia caused the recession","D":"recovery was impossible","E":"banks are unnecessary"}, "B", "The passage shows shocks propagated globally, illustrating interdependence."),
+   ("The word 'propagated' most nearly means", {"A":"stopped","B":"spread","C":"reversed","D":"hidden","E":"fund"}, "B", "Propagated = spread / transmitted."),
+   ("According to the passage, interdependence", {"A":"only transmitted shocks","B":"only helped recoveries","C":"cut both ways","D":"was avoided","E":"ended trade"}, "C", "Stated: interdependence cut both ways, transmitting shocks and recoveries.")]},
+ {"passage":"Machine learning models often excel at prediction but struggle to explain their reasoning, a problem known as the opacity of black-box systems. Regulators in finance and medicine increasingly demand interpretability: a model that denies a loan or misdiagnoses a patient should justify itself. Researchers respond with techniques that approximate a model's decisions using simpler, human-readable rules, trading some accuracy for trust.",
+  "qs":[("The passage suggests that black-box models are problematic because they", {"A":"are always wrong","B":"lack explainability","C":"are too simple","D":"cost nothing","E":"never predict well"}, "B", "The passage frames opacity / lack of interpretability as the core issue."),
+   ("The word 'opacity' most nearly means", {"A":"clarity","B":"lack of transparency","C":"speed","D":"accuracy","E":"color"}, "B", "Opacity = lack of transparency / unexplainability."),
+   ("According to the passage, researchers trade accuracy for", {"A":"speed","B":"trust via interpretability","C":"cost","D":"size","E":"data"}, "B", "Stated: they trade some accuracy for trust (interpretability).")]},
+ {"passage":"Urban density, long criticized for congestion and cost, also yields efficiencies that sprawl cannot: shorter commutes, shared transit, and the spontaneous exchange of ideas that fuels innovation. Economists note that productivity rises with city size even as amenities concentrate. The challenge for planners is capturing density's benefits without its downsides of inequality and displacement.",
+  "qs":[("The passage suggests urban density", {"A":"is purely harmful","B":"produces efficiencies sprawl lacks","C":"eliminates inequality","D":"reduces innovation","E":"requires no planning"}, "B", "The passage credits density with efficiencies and idea exchange sprawl cannot match."),
+   ("The word 'spontaneous' most nearly means", {"A":"planned","B":"unplanned / natural","C":"expensive","D":"forced","E":"rare"}, "B", "Spontaneous = occurring naturally without planning."),
+   ("According to the passage, planners must balance density's benefits against", {"A":"its downsides of inequality and displacement","B":"lower productivity","C":"fewer amenities","D":"longer commutes","E":"less transit"}, "A", "Stated: capture benefits without inequality/displacement downsides.")]},
+ {"passage":"Antibiotic resistance arises when bacteria exposed to a drug evolve to survive it; the survivors reproduce, and the resistant strain dominates. Overuse in medicine and agriculture accelerates this process, shrinking the arsenal effective against infection. Public health authorities urge restraint and rotation of drugs, yet economic incentives often pull in the opposite direction, rewarding volume over stewardship.",
+  "qs":[("The passage primarily explains", {"A":"how antibiotics cure disease","B":"how resistance evolves and why overuse worsens it","C":"why bacteria are harmless","D":"that drugs are unlimited","E":"how to make antibiotics"}, "B", "The passage explains evolution of resistance and the role of overuse."),
+   ("The word 'stewardship' most nearly means", {"A":"waste","B":"careful management","C":"sales","D":"ignorance","E":"profit"}, "B", "Stewardship = responsible management."),
+   ("According to the passage, economic incentives often", {"A":"support restraint","B":"reward volume over stewardship","C":"eliminate resistance","D":"fund research","E":"reduce use"}, "B", "Stated: incentives reward volume over stewardship.")]},
+]
 
 # ---- MORE RC PASSAGES (expansion) ----
 RC += [
@@ -296,6 +311,12 @@ CLUSTERS += [
  ["malodorous","fetid","noisome"],["morose","sullen","dismal"],
  ["capricious","fickle","mercurial"],["obstinate","stubborn","mulish"]
 ]
+
+# Generate RC questions (all passages now appended)
+for p in RC:
+    for stem, ch, ans, expl in p["qs"]:
+        add({"type":"rc","section":"Verbal","topic":"Reading Comp","difficulty":"medium",
+             "passage":p["passage"],"stem":stem,"choices":ch,"answer":ans,"explanation":expl,"source":"generated-verbal"})
 
 out="var GRE_VERBAL_GEN = "+json.dumps(Q,indent=0)+";\n"
 with open('gre_verbal_gen.js','w') as f:

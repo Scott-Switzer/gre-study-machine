@@ -215,15 +215,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: His ___ wealth could not buy him genuine friends.",
 "choices": {
-"A": "practical",
+"A": "ensconce",
 "B": "amenable",
 "C": "protean",
 "D": "demure",
-"E": "fathom",
+"E": "fawn",
 "F": "predilection"
 },
 "answer": "A",
-"explanation": "'practical' fits the context.",
+"explanation": "'ensconce' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-12"
 },
@@ -388,13 +388,13 @@ var GRE_VERBAL_GEN = [
 "choices": {
 "A": "ire",
 "B": "insular",
-"C": "berserk",
+"C": "bias",
 "D": "raffish",
-"E": "disabuse",
-"F": "enrage"
+"E": "discern",
+"F": "bellicose"
 },
 "answer": "F",
-"explanation": "'enrage' fits the context.",
+"explanation": "'bellicose' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-21"
 },
@@ -557,15 +557,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: The ___ king ruled with absolute, unquestioned authority.",
 "choices": {
-"A": "grapple",
-"B": "quantum",
-"C": "propitiate",
-"D": "clarify",
-"E": "privy",
-"F": "bellwether"
+"A": "grandiloquent",
+"B": "qualm",
+"C": "propensity",
+"D": "clamorous",
+"E": "privation",
+"F": "ravenous"
 },
 "answer": "F",
-"explanation": "'bellwether' fits the context.",
+"explanation": "'ravenous' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-30"
 },
@@ -3033,5 +3033,404 @@ var GRE_VERBAL_GEN = [
 "explanation": "Redistribute = disperse / spread again.",
 "source": "generated-verbal",
 "id": "v-gen-149"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The 2008 financial crisis revealed how tightly global markets are coupled: a collapse in U.S. subprime mortgages propagated within months to banks in Europe and export demand in Asia. Economists debated whether tighter capital requirements or simpler financial products would best prevent recurrence. What is clear is that no economy remained an island; interdependence cut both ways, transmitting shocks and, eventually, recoveries.",
+"stem": "The passage primarily illustrates that",
+"choices": {
+"A": "mortgages caused the crisis alone",
+"B": "global markets are interdependent",
+"C": "Asia caused the recession",
+"D": "recovery was impossible",
+"E": "banks are unnecessary"
+},
+"answer": "B",
+"explanation": "The passage shows shocks propagated globally, illustrating interdependence.",
+"source": "generated-verbal",
+"id": "v-gen-150"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The 2008 financial crisis revealed how tightly global markets are coupled: a collapse in U.S. subprime mortgages propagated within months to banks in Europe and export demand in Asia. Economists debated whether tighter capital requirements or simpler financial products would best prevent recurrence. What is clear is that no economy remained an island; interdependence cut both ways, transmitting shocks and, eventually, recoveries.",
+"stem": "The word 'propagated' most nearly means",
+"choices": {
+"A": "stopped",
+"B": "spread",
+"C": "reversed",
+"D": "hidden",
+"E": "fund"
+},
+"answer": "B",
+"explanation": "Propagated = spread / transmitted.",
+"source": "generated-verbal",
+"id": "v-gen-151"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The 2008 financial crisis revealed how tightly global markets are coupled: a collapse in U.S. subprime mortgages propagated within months to banks in Europe and export demand in Asia. Economists debated whether tighter capital requirements or simpler financial products would best prevent recurrence. What is clear is that no economy remained an island; interdependence cut both ways, transmitting shocks and, eventually, recoveries.",
+"stem": "According to the passage, interdependence",
+"choices": {
+"A": "only transmitted shocks",
+"B": "only helped recoveries",
+"C": "cut both ways",
+"D": "was avoided",
+"E": "ended trade"
+},
+"answer": "C",
+"explanation": "Stated: interdependence cut both ways, transmitting shocks and recoveries.",
+"source": "generated-verbal",
+"id": "v-gen-152"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Machine learning models often excel at prediction but struggle to explain their reasoning, a problem known as the opacity of black-box systems. Regulators in finance and medicine increasingly demand interpretability: a model that denies a loan or misdiagnoses a patient should justify itself. Researchers respond with techniques that approximate a model's decisions using simpler, human-readable rules, trading some accuracy for trust.",
+"stem": "The passage suggests that black-box models are problematic because they",
+"choices": {
+"A": "are always wrong",
+"B": "lack explainability",
+"C": "are too simple",
+"D": "cost nothing",
+"E": "never predict well"
+},
+"answer": "B",
+"explanation": "The passage frames opacity / lack of interpretability as the core issue.",
+"source": "generated-verbal",
+"id": "v-gen-153"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Machine learning models often excel at prediction but struggle to explain their reasoning, a problem known as the opacity of black-box systems. Regulators in finance and medicine increasingly demand interpretability: a model that denies a loan or misdiagnoses a patient should justify itself. Researchers respond with techniques that approximate a model's decisions using simpler, human-readable rules, trading some accuracy for trust.",
+"stem": "The word 'opacity' most nearly means",
+"choices": {
+"A": "clarity",
+"B": "lack of transparency",
+"C": "speed",
+"D": "accuracy",
+"E": "color"
+},
+"answer": "B",
+"explanation": "Opacity = lack of transparency / unexplainability.",
+"source": "generated-verbal",
+"id": "v-gen-154"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Machine learning models often excel at prediction but struggle to explain their reasoning, a problem known as the opacity of black-box systems. Regulators in finance and medicine increasingly demand interpretability: a model that denies a loan or misdiagnoses a patient should justify itself. Researchers respond with techniques that approximate a model's decisions using simpler, human-readable rules, trading some accuracy for trust.",
+"stem": "According to the passage, researchers trade accuracy for",
+"choices": {
+"A": "speed",
+"B": "trust via interpretability",
+"C": "cost",
+"D": "size",
+"E": "data"
+},
+"answer": "B",
+"explanation": "Stated: they trade some accuracy for trust (interpretability).",
+"source": "generated-verbal",
+"id": "v-gen-155"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Urban density, long criticized for congestion and cost, also yields efficiencies that sprawl cannot: shorter commutes, shared transit, and the spontaneous exchange of ideas that fuels innovation. Economists note that productivity rises with city size even as amenities concentrate. The challenge for planners is capturing density's benefits without its downsides of inequality and displacement.",
+"stem": "The passage suggests urban density",
+"choices": {
+"A": "is purely harmful",
+"B": "produces efficiencies sprawl lacks",
+"C": "eliminates inequality",
+"D": "reduces innovation",
+"E": "requires no planning"
+},
+"answer": "B",
+"explanation": "The passage credits density with efficiencies and idea exchange sprawl cannot match.",
+"source": "generated-verbal",
+"id": "v-gen-156"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Urban density, long criticized for congestion and cost, also yields efficiencies that sprawl cannot: shorter commutes, shared transit, and the spontaneous exchange of ideas that fuels innovation. Economists note that productivity rises with city size even as amenities concentrate. The challenge for planners is capturing density's benefits without its downsides of inequality and displacement.",
+"stem": "The word 'spontaneous' most nearly means",
+"choices": {
+"A": "planned",
+"B": "unplanned / natural",
+"C": "expensive",
+"D": "forced",
+"E": "rare"
+},
+"answer": "B",
+"explanation": "Spontaneous = occurring naturally without planning.",
+"source": "generated-verbal",
+"id": "v-gen-157"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Urban density, long criticized for congestion and cost, also yields efficiencies that sprawl cannot: shorter commutes, shared transit, and the spontaneous exchange of ideas that fuels innovation. Economists note that productivity rises with city size even as amenities concentrate. The challenge for planners is capturing density's benefits without its downsides of inequality and displacement.",
+"stem": "According to the passage, planners must balance density's benefits against",
+"choices": {
+"A": "its downsides of inequality and displacement",
+"B": "lower productivity",
+"C": "fewer amenities",
+"D": "longer commutes",
+"E": "less transit"
+},
+"answer": "A",
+"explanation": "Stated: capture benefits without inequality/displacement downsides.",
+"source": "generated-verbal",
+"id": "v-gen-158"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Antibiotic resistance arises when bacteria exposed to a drug evolve to survive it; the survivors reproduce, and the resistant strain dominates. Overuse in medicine and agriculture accelerates this process, shrinking the arsenal effective against infection. Public health authorities urge restraint and rotation of drugs, yet economic incentives often pull in the opposite direction, rewarding volume over stewardship.",
+"stem": "The passage primarily explains",
+"choices": {
+"A": "how antibiotics cure disease",
+"B": "how resistance evolves and why overuse worsens it",
+"C": "why bacteria are harmless",
+"D": "that drugs are unlimited",
+"E": "how to make antibiotics"
+},
+"answer": "B",
+"explanation": "The passage explains evolution of resistance and the role of overuse.",
+"source": "generated-verbal",
+"id": "v-gen-159"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Antibiotic resistance arises when bacteria exposed to a drug evolve to survive it; the survivors reproduce, and the resistant strain dominates. Overuse in medicine and agriculture accelerates this process, shrinking the arsenal effective against infection. Public health authorities urge restraint and rotation of drugs, yet economic incentives often pull in the opposite direction, rewarding volume over stewardship.",
+"stem": "The word 'stewardship' most nearly means",
+"choices": {
+"A": "waste",
+"B": "careful management",
+"C": "sales",
+"D": "ignorance",
+"E": "profit"
+},
+"answer": "B",
+"explanation": "Stewardship = responsible management.",
+"source": "generated-verbal",
+"id": "v-gen-160"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Antibiotic resistance arises when bacteria exposed to a drug evolve to survive it; the survivors reproduce, and the resistant strain dominates. Overuse in medicine and agriculture accelerates this process, shrinking the arsenal effective against infection. Public health authorities urge restraint and rotation of drugs, yet economic incentives often pull in the opposite direction, rewarding volume over stewardship.",
+"stem": "According to the passage, economic incentives often",
+"choices": {
+"A": "support restraint",
+"B": "reward volume over stewardship",
+"C": "eliminate resistance",
+"D": "fund research",
+"E": "reduce use"
+},
+"answer": "B",
+"explanation": "Stated: incentives reward volume over stewardship.",
+"source": "generated-verbal",
+"id": "v-gen-161"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The printing press, introduced in Europe in the 15th century, did more than multiply books; it transformed the conditions of knowledge itself. Before print, a scholar's authority rested on rare manuscripts guarded in monasteries. After print, texts could be copied exactly and distributed widely, enabling shared reference points across cities and eventually across nations. Critics at the time feared that cheap printed matter would spread error and vulgarity, yet the press proved indispensable to the scientific revolution that followed.",
+"stem": "The passage primarily suggests that the printing press",
+"choices": {
+"A": "destroyed monasteries",
+"B": "changed how knowledge was stored and shared",
+"C": "reduced the number of books",
+"D": "caused the scientific revolution directly",
+"E": "spread only error"
+},
+"answer": "B",
+"explanation": "The passage argues print changed the conditions of knowledge via exact, wide distribution.",
+"source": "generated-verbal",
+"id": "v-gen-162"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The printing press, introduced in Europe in the 15th century, did more than multiply books; it transformed the conditions of knowledge itself. Before print, a scholar's authority rested on rare manuscripts guarded in monasteries. After print, texts could be copied exactly and distributed widely, enabling shared reference points across cities and eventually across nations. Critics at the time feared that cheap printed matter would spread error and vulgarity, yet the press proved indispensable to the scientific revolution that followed.",
+"stem": "The word 'indispensable' most nearly means",
+"choices": {
+"A": "unnecessary",
+"B": "essential",
+"C": "harmful",
+"D": "rare",
+"E": "optional"
+},
+"answer": "B",
+"explanation": "Indispensable = absolutely necessary / essential.",
+"source": "generated-verbal",
+"id": "v-gen-163"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The printing press, introduced in Europe in the 15th century, did more than multiply books; it transformed the conditions of knowledge itself. Before print, a scholar's authority rested on rare manuscripts guarded in monasteries. After print, texts could be copied exactly and distributed widely, enabling shared reference points across cities and eventually across nations. Critics at the time feared that cheap printed matter would spread error and vulgarity, yet the press proved indispensable to the scientific revolution that followed.",
+"stem": "According to the passage, a scholar's authority before print rested on",
+"choices": {
+"A": "widely distributed texts",
+"B": "rare guarded manuscripts",
+"C": "printed books",
+"D": "scientific data",
+"E": "shared reference points"
+},
+"answer": "B",
+"explanation": "Stated: authority rested on rare manuscripts in monasteries.",
+"source": "generated-verbal",
+"id": "v-gen-164"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Migration shapes both the places people leave and the places they enter. Remittances sent home by migrants can lift families out of poverty, funding education and small businesses. Meanwhile, destination cities gain workers but may strain housing and services. The net effect on any single community depends on policy, timing, and the skills migrants bring, making simple claims about migration's impact misleading.",
+"stem": "The passage suggests that the impact of migration is",
+"choices": {
+"A": "always positive",
+"B": "always negative",
+"C": "dependent on context and policy",
+"D": "irrelevant to cities",
+"E": "limited to remittances"
+},
+"answer": "C",
+"explanation": "Stated: the net effect depends on policy, timing, and skills.",
+"source": "generated-verbal",
+"id": "v-gen-165"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Migration shapes both the places people leave and the places they enter. Remittances sent home by migrants can lift families out of poverty, funding education and small businesses. Meanwhile, destination cities gain workers but may strain housing and services. The net effect on any single community depends on policy, timing, and the skills migrants bring, making simple claims about migration's impact misleading.",
+"stem": "The word 'remittances' most nearly refers to",
+"choices": {
+"A": "taxes paid to governments",
+"B": "money sent home by migrants",
+"C": "loans from banks",
+"D": "goods traded abroad",
+"E": "skills brought to cities"
+},
+"answer": "B",
+"explanation": "Remittances = funds migrants send back home.",
+"source": "generated-verbal",
+"id": "v-gen-166"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Migration shapes both the places people leave and the places they enter. Remittances sent home by migrants can lift families out of poverty, funding education and small businesses. Meanwhile, destination cities gain workers but may strain housing and services. The net effect on any single community depends on policy, timing, and the skills migrants bring, making simple claims about migration's impact misleading.",
+"stem": "According to the passage, destination cities may experience",
+"choices": {
+"A": "no change",
+"B": "strain on housing and services",
+"C": "loss of workers",
+"D": "collapse of education",
+"E": "reduction in population"
+},
+"answer": "B",
+"explanation": "Stated: cities may strain housing and services.",
+"source": "generated-verbal",
+"id": "v-gen-167"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Coral reefs cover a tiny fraction of the ocean floor yet shelter roughly a quarter of all marine species. They build their limestone skeletons slowly, over centuries, in warm shallow water. When ocean temperatures rise even slightly, the symbiotic algae that give corals color and food exit, leaving bleached, starving reefs. Because reefs protect coastlines from storms and support fisheries, their decline threatens both biodiversity and human livelihoods.",
+"stem": "The passage indicates that coral reefs are significant because they",
+"choices": {
+"A": "cover most of the ocean",
+"B": "support a large share of marine species",
+"C": "grow quickly",
+"D": "require cold water",
+"E": "lack biodiversity"
+},
+"answer": "B",
+"explanation": "Stated: reefs shelter ~25% of marine species despite tiny area.",
+"source": "generated-verbal",
+"id": "v-gen-168"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Coral reefs cover a tiny fraction of the ocean floor yet shelter roughly a quarter of all marine species. They build their limestone skeletons slowly, over centuries, in warm shallow water. When ocean temperatures rise even slightly, the symbiotic algae that give corals color and food exit, leaving bleached, starving reefs. Because reefs protect coastlines from storms and support fisheries, their decline threatens both biodiversity and human livelihoods.",
+"stem": "The word 'symbiotic' most nearly means",
+"choices": {
+"A": "competing",
+"B": "mutually dependent",
+"C": "unrelated",
+"D": "parasitic only",
+"E": "dead"
+},
+"answer": "B",
+"explanation": "Symbiotic = mutually beneficial relationship.",
+"source": "generated-verbal",
+"id": "v-gen-169"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Coral reefs cover a tiny fraction of the ocean floor yet shelter roughly a quarter of all marine species. They build their limestone skeletons slowly, over centuries, in warm shallow water. When ocean temperatures rise even slightly, the symbiotic algae that give corals color and food exit, leaving bleached, starving reefs. Because reefs protect coastlines from storms and support fisheries, their decline threatens both biodiversity and human livelihoods.",
+"stem": "According to the passage, coral bleaching occurs when",
+"choices": {
+"A": "water cools",
+"B": "algae leave due to warming",
+"C": "fish arrive",
+"D": "limestone builds",
+"E": "storms stop"
+},
+"answer": "B",
+"explanation": "Stated: warming causes algae to exit, bleaching reefs.",
+"source": "generated-verbal",
+"id": "v-gen-170"
 }
 ];

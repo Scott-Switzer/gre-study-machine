@@ -35,7 +35,7 @@ def add(q):
     Q.append(q)
 
 # ---------------- ARITHMETIC ----------------
-for _ in range(110):
+for _ in range(240):
     k=random.choice(["pct","disc","ratio","avg","exp","root","div","prime","seq","seq2"])
     if k=="pct":
         a=random.randint(15,90); b=random.randint(20,200)
@@ -104,7 +104,7 @@ for _ in range(110):
                f"a_n = a_1 x r^(n-1) = {a0} x {r}^({n}-1) = {terms[-1]}."))
 
 # ---------------- ALGEBRA ----------------
-for _ in range(110):
+for _ in range(240):
     k=random.choice(["lin","two","quad","ineq","func","wp","absval","expo"])
     if k=="lin":
         a=random.randint(2,9); c=random.randint(1,30); x=random.randint(1,12)
@@ -153,7 +153,7 @@ for _ in range(110):
                f"{base}^{e} = {val}; so x = {e}."))
 
 # ---------------- GEOMETRY ----------------
-for _ in range(100):
+for _ in range(220):
     k=random.choice(["rect","tri","circ","pyth","vol","ang","coord","insc"])
     if k=="rect":
         w=random.randint(3,15); h=random.randint(3,15)
@@ -196,7 +196,7 @@ for _ in range(100):
                f"Diagonal of square = diameter = 2r, so side = 2r/√2 = r√2 = {r}·√2 = {side}."))
 
 # ---------------- DATA ----------------
-for _ in range(100):
+for _ in range(220):
     k=random.choice(["mean","median","prob","comb","venn","unionprob"])
     if k=="mean":
         n=random.randint(4,7); base=random.randint(10,30)
@@ -231,8 +231,8 @@ for _ in range(100):
                f"P(A or B)=P(A)+P(B)-P(A and B)={pA}+{pB}-{pAB}={punion}."))
 
 # ---------------- HARD quant (multi-step / traps) ----------------
-for _ in range(110):
-    k=random.choice(["work","invest","mixture","combo2","qc-hard1","qc-hard2","percentchange","seqsum","gcdlcm","dataint"])
+for _ in range(260):
+    k=random.choice(["work","invest","mixture","combo2","qc-hard1","qc-hard2","percentchange","seqsum","gcdlcm","dataint","condprob","sys3","funccomp","expval","vol3d"])
     if k=="work":
         a=random.randint(2,6); b=random.randint(2,6)
         t=round(a*b/(a+b),2)
@@ -294,8 +294,50 @@ for _ in range(110):
                pct,[round(vals[(tgt+1)%4]/tot*100),100-pct,vals[tgt],round(tot/vals[tgt])],"Data: Statistics","hard",
                f"pct = {vals[tgt]}/{tot} x 100 = {pct}%."))
 
+    elif k=="condprob":
+        # conditional probability: P(A|B) = P(A and B)/P(B)
+        a=random.randint(2,6); b=random.randint(2,6); c=random.randint(1,4)
+        na=round(a/(a+b),3); nb=round(b/(a+b),3); nab=round(a/(a+b)*c/(c+1),3)
+        pab=round(nab/na,3)
+        add(mc(f"A box has {a} red and {b} blue balls. You draw one, note it is red, then draw a second without replacement from the remaining. If {c} of the {a} red were marked, what is P(second is marked | first was red)?", pab,
+               [round(c/(a+b),3),round(a/(a+b),3),nab,round(1-pab,3)],"Data: Probability","hard",
+               f"P(marked|red)=P(marked and red)/P(red)=({c}/{a})/1={c}/{a}={pab} (drawing from red subset)."))
+    elif k=="sys3":
+        # 3-variable linear system, ask for a combination
+        x=random.randint(1,5); y=random.randint(1,5); z=random.randint(1,5)
+        a1,a2,a3=random.randint(1,3),random.randint(1,3),random.randint(1,3)
+        b1,b2,b3=random.randint(1,3),random.randint(1,3),random.randint(1,3)
+        c1,c2,c3=random.randint(1,3),random.randint(1,3),random.randint(1,3)
+        s1=a1*x+b1*y+c1*z; s2=a2*x+b2*y+c2*z; s3=a3*x+b3*y+c3*z
+        tgt=2*x+3*y-z
+        add(mc(f"Given:\n{a1}x+{b1}y+{c1}z = {s1}\n{a2}x+{b2}y+{c2}z = {s2}\n{a3}x+{b3}y+{c3}z = {s3}\nWhat is 2x + 3y - z?", tgt,
+               [x+y+z, x*y*z, 3*x+2*y, tgt+random.choice([1,-1,2])],"Algebra: System","hard",
+               f"Solving the system gives x={x}, y={y}, z={z}. So 2x+3y-z = {tgt}."))
+    elif k=="funccomp":
+        # function composition
+        a=random.randint(2,4); b=random.randint(1,5); c=random.randint(1,4); d=random.randint(2,4)
+        f=lambda t: a*t+b; g=lambda t: c*t+d
+        comp=g(f(2))
+        add(mc(f"f(t) = {a}t + {b}, g(t) = {c}t + {d}. What is g(f(2))?", comp,
+               [f(2), g(2), a*c*2+b+d, comp+random.choice([1,-1])],"Algebra: Functions","hard",
+               f"f(2) = {a}*2+{b} = {f(2)}; g({f(2)}) = {c}*{f(2)}+{d} = {comp}."))
+    elif k=="expval":
+        # expected value
+        vals=[random.randint(1,6) for _ in range(3)]; probs=[1,1,1]
+        ev=round(sum(v*p for v,p in zip(vals,probs))/sum(probs),2)
+        add(mc(f"A game pays ${vals[0]}, ${vals[1]}, or ${vals[2]} with equal probability. What is the expected payout?", ev,
+               [max(vals),min(vals),sum(vals),round(sum(vals)/2,2)],"Data: Probability","hard",
+               f"E = ({vals[0]}+{vals[1]}+{vals[2]})/3 = {ev}."))
+    elif k=="vol3d":
+        # volume of cylinder / sphere comparison
+        r=random.randint(2,6); h=random.randint(3,10)
+        vcyl=round(3.14*r*r*h,2)
+        add(mc(f"A cylinder has radius {r} and height {h}. What is its volume? (use 3.14 for pi)", vcyl,
+               [round(2*3.14*r*h,2),round(3.14*r*r,2),round(4/3*3.14*r**3,2),round(vcyl*2,2)],"Geometry: 3D","hard",
+               f"V = pi r^2 h = 3.14*{r}^2*{h} = {vcyl}."))
+
 # ---------------- QUANTITATIVE COMPARISON ----------------
-for _ in range(150):
+for _ in range(340):
     k=random.choice(["qc-arith","qc-alg","qc-geo","qc-var","qc-frac"])
     if k=="qc-arith":
         a=random.randint(2,9); b=random.randint(2,9)
