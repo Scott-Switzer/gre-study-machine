@@ -354,6 +354,56 @@ CLUSTERS += [
  ["ubiquitous","everywhere","pervasive"],["valedictory","farewell","parting"],["wither","shrivel","fade"]
 ]
 
+# ---- RC PASSAGES (volume 2) ----
+RC += [
+ {"passage":"The Enlightenment prized reason and individual liberty, yet many of its thinkers held views now seen as contradictory: advocating universal rights while owning enslaved people or excluding women. Historians caution that the era's legacy is not a simple triumph of progress but a complex inheritance in which lofty principles coexisted with glaring exclusions that later movements would spend centuries correcting.",
+  "qs":[("The passage suggests the Enlightenment's legacy is", {"A":"an unqualified triumph","B":"principled yet marked by contradictions and exclusions","C":"solely about slavery","D":"irrelevant today","E":"opposed to liberty"}, "B", "The passage frames it as lofty principles coexisting with exclusions."),
+   ("The word 'coexisted' most nearly means", {"A":"conflicted","B":"existed together","C":"vanished","D":"preceded","E":"ended"}, "B", "Coexisted = existed at the same time."),
+   ("According to the passage, later movements worked to", {"A":"restore slavery","B":"correct the exclusions","C":"reject reason","D":"abolish liberty","E":"ignore history"}, "B", "Stated: later movements spent centuries correcting the exclusions.")]},
+ {"passage":"Supply chains stretched across continents mean a factory's output depends on components from dozens of countries. A pandemic, a war, or a single port bottleneck can halt production thousands of miles away. Firms once optimized purely for low cost now prize resilience, holding extra inventory and qualifying alternate suppliers even at higher expense, accepting that efficiency and robustness sometimes pull in opposite directions.",
+  "qs":[("The passage suggests firms now value", {"A":"cost alone","B":"resilience alongside cost","C":"fewer suppliers","D":"no inventory","E":"single sourcing"}, "B", "The passage says firms now prize resilience, not just low cost."),
+   ("The word 'resilience' most nearly means", {"A":"fragility","B":"ability to recover from shocks","C":"cheapness","D":"speed","E":"isolation"}, "B", "Resilience = capacity to withstand / recover from disruption."),
+   ("According to the passage, efficiency and robustness", {"A":"always align","B":"can conflict","C":"are identical","D":"never matter","E":"only help ports"}, "B", "Stated: they sometimes pull in opposite directions.")]},
+ {"passage":"Language shapes but does not imprison thought. Speakers of languages with rich spatial frames of reference navigate differently than those who rely on absolute compass directions, yet all humans share the cognitive capacity to learn any system. The Sapir-Whorf hypothesis, in its strong form, overstated linguistic determinism; in its weak form, it correctly notes that habitual vocabulary nudges attention toward some distinctions over others.",
+  "qs":[("The passage suggests language", {"A":"fully determines thought","B":"influences but does not imprison thought","C":"is irrelevant to cognition","D":"only uses compass directions","E":"prevents learning"}, "B", "The passage's opening line states language shapes but does not imprison thought."),
+   ("The word 'determinism' most nearly means", {"A":"freedom","B":"the view that language fixes thought","C":"learning","D":"translation","E":"grammar"}, "B", "Linguistic determinism = language determines thought."),
+   ("According to the passage, the weak form of Sapir-Whorf holds that vocabulary", {"A":"controls everything","B":"nudges attention toward certain distinctions","C":"is meaningless","D":"eliminates thought","E":"uses only compass terms"}, "B", "Stated: habitual vocabulary nudges attention toward some distinctions.")]},
+ {"passage":"Biodiversity stabilizes ecosystems: when many species fill similar roles, the loss of one is buffered by others. Monocultures, by contrast, are productive until a single pest or drought cascades through the uniform stand. Ecologists therefore warn that optimizing short-term yield by simplifying nature trades long-term stability for immediate gain, a bargain that climate change is making riskier by the year.",
+  "qs":[("The passage suggests biodiversity", {"A":"reduces stability","B":"buffers ecosystems against species loss","C":"causes monocultures","D":"lowers yield always","E":"is irrelevant"}, "B", "Stated: many species buffer the loss of one."),
+   ("The word 'cascades' most nearly means", {"A":"stops","B":"spreads downward through","C":"helps","D":"isolates","E":"reverses"}, "B", "Cascades = spreads through the stand like a waterfall."),
+   ("According to the passage, monocultures are", {"A":"always stable","B":"vulnerable to a single shock","C":"biodiverse","D":"climate-proof","E":"low yield"}, "B", "Stated: a single pest or drought cascades through the uniform stand.")]},
+ {"passage":"The right to privacy is not enumerated in many constitutions yet is inferred from broader guarantees of liberty and security. Courts have extended it to contraception, marriage, and data, even as technology erodes the factual boundary between public and private. Critics argue that a right nowhere written should be narrower; defenders reply that liberty without a sphere of privacy is hollow.",
+  "qs":[("The passage suggests the right to privacy is", {"A":"explicitly listed everywhere","B":"inferred rather than enumerated","C":"rejected by courts","D":"about property only","E":"a modern invention with no basis"}, "B", "Stated: it is inferred from broader guarantees, not enumerated."),
+   ("The word 'hollow' most nearly means", {"A":"strong","B":"empty / meaningless","C":"private","D":"secure","E":"written"}, "B", "Hollow = empty / without substance."),
+   ("According to the passage, technology", {"A":"strengthens privacy","B":"erodes the public-private boundary","C":"writes the right","D":"ignores courts","E":"creates liberty"}, "B", "Stated: technology erodes the boundary between public and private.")]},
+ {"passage":"Nuclear fusion promises nearly limitless clean energy by fusing light atoms the way stars do, but the engineering challenge is immense: containing a 100-million-degree plasma long enough for net energy gain. Decades of investment have brought breakthroughs in magnetic confinement, yet commercial plants remain distant. Proponents argue the payoff justifies the cost; skeptics note that renewables already scale without fusion's unresolved hurdles.",
+  "qs":[("The passage suggests fusion's main challenge is", {"A":"finding fuel","B":"confining extreme plasma for net gain","C":"public opposition","D":"lack of interest","E":"too much energy"}, "B", "Stated: containing 100M-degree plasma long enough for net gain."),
+   ("The word 'immense' most nearly means", {"A":"tiny","B":"enormous","C":"solved","D":"irrelevant","E":"cheap"}, "B", "Immense = extremely large / great."),
+   ("According to the passage, skeptics point out that", {"A":"fusion is commercial now","B":"renewables already scale without fusion's hurdles","C":"fusion is cheap","D":"plasma is cold","E":"no breakthroughs exist"}, "B", "Stated: renewables already scale without fusion's unresolved hurdles.")]}
+]
+
+# ---- SYNONYM CLUSTERS (volume 2) ----
+CLUSTERS += [
+ ["quixotic","impractical","romantic"],["umbrage","offense","resentment"],
+ ["perspicacious","astute","discerning"],["proclivity","inclination","bent"],
+ ["sanctimonious","hypocritical","self-righteous"],["tacit","implied","unspoken"],
+ ["propensity","tendency","leaning"],["candor","frankness","honesty"],
+ ["voluble","talkative","verbose"],[["pithy","concise","succinct"]],
+ ["sedulous","diligent","assiduous"],[["recalcitrant","stubborn","defiant"]],
+ ["sanguine","optimistic","hopeful"],["pugnacious","aggressive","combative"],
+ ["vicarious","secondhand","indirect"],[["ebullient","exuberant","joyful"]],
+ ["insidious","stealthy","creeping"],[["brazen","bold","shameless"]],
+ ["brusque","abrupt","curt"],["demure","modest","reserved"],
+ ["garrulous","loquacious","talkative"],[["laconic","terse","concise"]],
+ ["reverent","respectful","adoring"],["cynical","skeptical","distrustful"],
+ ["impervious","unaffected","resistant"],[["pliable","flexible","yielding"]],
+ ["assuage","soothe","relieve"],[["exacerbate","worsen","aggravate"]],
+ ["candid","open","honest"],["guileless","naive","innocent"],
+ ["profligate","wasteful","extravagant"],["parsimonious","frugal","stingy"],
+ ["resilient","tough","recovering"],["fragile","brittle","delicate"],
+ ["adroit","skillful","dexterous"],["maladroit","clumsy","awkward"]
+]
+
 # Generate RC questions (all passages now appended)
 for p in RC:
     for stem, ch, ans, expl in p["qs"]:

@@ -35,7 +35,7 @@ def add(q):
     Q.append(q)
 
 # ---------------- ARITHMETIC ----------------
-for _ in range(340):
+for _ in range(460):
     k=random.choice(["pct","disc","ratio","avg","exp","root","div","prime","seq","seq2"])
     if k=="pct":
         a=random.randint(15,90); b=random.randint(20,200)
@@ -104,7 +104,7 @@ for _ in range(340):
                f"a_n = a_1 x r^(n-1) = {a0} x {r}^({n}-1) = {terms[-1]}."))
 
 # ---------------- ALGEBRA ----------------
-for _ in range(340):
+for _ in range(460):
     k=random.choice(["lin","two","quad","ineq","func","wp","absval","expo"])
     if k=="lin":
         a=random.randint(2,9); c=random.randint(1,30); x=random.randint(1,12)
@@ -231,7 +231,7 @@ for _ in range(320):
                f"P(A or B)=P(A)+P(B)-P(A and B)={pA}+{pB}-{pAB}={punion}."))
 
 # ---------------- HARD quant (multi-step / traps) ----------------
-for _ in range(360):
+for _ in range(460):
     k=random.choice(["work","invest","mixture","combo2","qc-hard1","qc-hard2","percentchange","seqsum","gcdlcm","dataint","condprob","sys3","funccomp","expval","vol3d"])
     if k=="work":
         a=random.randint(2,6); b=random.randint(2,6)

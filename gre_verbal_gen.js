@@ -215,15 +215,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: His ___ wealth could not buy him genuine friends.",
 "choices": {
-"A": "hoodwink",
+"A": "rabble",
 "B": "amenable",
-"C": "protean",
+"C": "prospect",
 "D": "demure",
 "E": "fathom",
-"F": "predilection"
+"F": "predecessor"
 },
 "answer": "A",
-"explanation": "'hoodwink' fits the context.",
+"explanation": "'rabble' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-12"
 },
@@ -390,11 +390,11 @@ var GRE_VERBAL_GEN = [
 "B": "insular",
 "C": "berserk",
 "D": "raffish",
-"E": "discern",
-"F": "carping"
+"E": "disabuse",
+"F": "dogmatic"
 },
 "answer": "F",
-"explanation": "'carping' fits the context.",
+"explanation": "'dogmatic' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-21"
 },
@@ -557,15 +557,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: The ___ king ruled with absolute, unquestioned authority.",
 "choices": {
-"A": "grandiloquent",
+"A": "grapple",
 "B": "quantum",
 "C": "propitiate",
-"D": "clamorous",
+"D": "clarify",
 "E": "privy",
-"F": "presentiment"
+"F": "canine"
 },
 "answer": "F",
-"explanation": "'presentiment' fits the context.",
+"explanation": "'canine' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-30"
 },
@@ -3660,5 +3660,347 @@ var GRE_VERBAL_GEN = [
 "explanation": "Stated: demand response shifts load to off-peak hours.",
 "source": "generated-verbal",
 "id": "v-gen-182"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The Enlightenment prized reason and individual liberty, yet many of its thinkers held views now seen as contradictory: advocating universal rights while owning enslaved people or excluding women. Historians caution that the era's legacy is not a simple triumph of progress but a complex inheritance in which lofty principles coexisted with glaring exclusions that later movements would spend centuries correcting.",
+"stem": "The passage suggests the Enlightenment's legacy is",
+"choices": {
+"A": "an unqualified triumph",
+"B": "principled yet marked by contradictions and exclusions",
+"C": "solely about slavery",
+"D": "irrelevant today",
+"E": "opposed to liberty"
+},
+"answer": "B",
+"explanation": "The passage frames it as lofty principles coexisting with exclusions.",
+"source": "generated-verbal",
+"id": "v-gen-183"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The Enlightenment prized reason and individual liberty, yet many of its thinkers held views now seen as contradictory: advocating universal rights while owning enslaved people or excluding women. Historians caution that the era's legacy is not a simple triumph of progress but a complex inheritance in which lofty principles coexisted with glaring exclusions that later movements would spend centuries correcting.",
+"stem": "The word 'coexisted' most nearly means",
+"choices": {
+"A": "conflicted",
+"B": "existed together",
+"C": "vanished",
+"D": "preceded",
+"E": "ended"
+},
+"answer": "B",
+"explanation": "Coexisted = existed at the same time.",
+"source": "generated-verbal",
+"id": "v-gen-184"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The Enlightenment prized reason and individual liberty, yet many of its thinkers held views now seen as contradictory: advocating universal rights while owning enslaved people or excluding women. Historians caution that the era's legacy is not a simple triumph of progress but a complex inheritance in which lofty principles coexisted with glaring exclusions that later movements would spend centuries correcting.",
+"stem": "According to the passage, later movements worked to",
+"choices": {
+"A": "restore slavery",
+"B": "correct the exclusions",
+"C": "reject reason",
+"D": "abolish liberty",
+"E": "ignore history"
+},
+"answer": "B",
+"explanation": "Stated: later movements spent centuries correcting the exclusions.",
+"source": "generated-verbal",
+"id": "v-gen-185"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Supply chains stretched across continents mean a factory's output depends on components from dozens of countries. A pandemic, a war, or a single port bottleneck can halt production thousands of miles away. Firms once optimized purely for low cost now prize resilience, holding extra inventory and qualifying alternate suppliers even at higher expense, accepting that efficiency and robustness sometimes pull in opposite directions.",
+"stem": "The passage suggests firms now value",
+"choices": {
+"A": "cost alone",
+"B": "resilience alongside cost",
+"C": "fewer suppliers",
+"D": "no inventory",
+"E": "single sourcing"
+},
+"answer": "B",
+"explanation": "The passage says firms now prize resilience, not just low cost.",
+"source": "generated-verbal",
+"id": "v-gen-186"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Supply chains stretched across continents mean a factory's output depends on components from dozens of countries. A pandemic, a war, or a single port bottleneck can halt production thousands of miles away. Firms once optimized purely for low cost now prize resilience, holding extra inventory and qualifying alternate suppliers even at higher expense, accepting that efficiency and robustness sometimes pull in opposite directions.",
+"stem": "The word 'resilience' most nearly means",
+"choices": {
+"A": "fragility",
+"B": "ability to recover from shocks",
+"C": "cheapness",
+"D": "speed",
+"E": "isolation"
+},
+"answer": "B",
+"explanation": "Resilience = capacity to withstand / recover from disruption.",
+"source": "generated-verbal",
+"id": "v-gen-187"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Supply chains stretched across continents mean a factory's output depends on components from dozens of countries. A pandemic, a war, or a single port bottleneck can halt production thousands of miles away. Firms once optimized purely for low cost now prize resilience, holding extra inventory and qualifying alternate suppliers even at higher expense, accepting that efficiency and robustness sometimes pull in opposite directions.",
+"stem": "According to the passage, efficiency and robustness",
+"choices": {
+"A": "always align",
+"B": "can conflict",
+"C": "are identical",
+"D": "never matter",
+"E": "only help ports"
+},
+"answer": "B",
+"explanation": "Stated: they sometimes pull in opposite directions.",
+"source": "generated-verbal",
+"id": "v-gen-188"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Language shapes but does not imprison thought. Speakers of languages with rich spatial frames of reference navigate differently than those who rely on absolute compass directions, yet all humans share the cognitive capacity to learn any system. The Sapir-Whorf hypothesis, in its strong form, overstated linguistic determinism; in its weak form, it correctly notes that habitual vocabulary nudges attention toward some distinctions over others.",
+"stem": "The passage suggests language",
+"choices": {
+"A": "fully determines thought",
+"B": "influences but does not imprison thought",
+"C": "is irrelevant to cognition",
+"D": "only uses compass directions",
+"E": "prevents learning"
+},
+"answer": "B",
+"explanation": "The passage's opening line states language shapes but does not imprison thought.",
+"source": "generated-verbal",
+"id": "v-gen-189"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Language shapes but does not imprison thought. Speakers of languages with rich spatial frames of reference navigate differently than those who rely on absolute compass directions, yet all humans share the cognitive capacity to learn any system. The Sapir-Whorf hypothesis, in its strong form, overstated linguistic determinism; in its weak form, it correctly notes that habitual vocabulary nudges attention toward some distinctions over others.",
+"stem": "The word 'determinism' most nearly means",
+"choices": {
+"A": "freedom",
+"B": "the view that language fixes thought",
+"C": "learning",
+"D": "translation",
+"E": "grammar"
+},
+"answer": "B",
+"explanation": "Linguistic determinism = language determines thought.",
+"source": "generated-verbal",
+"id": "v-gen-190"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Language shapes but does not imprison thought. Speakers of languages with rich spatial frames of reference navigate differently than those who rely on absolute compass directions, yet all humans share the cognitive capacity to learn any system. The Sapir-Whorf hypothesis, in its strong form, overstated linguistic determinism; in its weak form, it correctly notes that habitual vocabulary nudges attention toward some distinctions over others.",
+"stem": "According to the passage, the weak form of Sapir-Whorf holds that vocabulary",
+"choices": {
+"A": "controls everything",
+"B": "nudges attention toward certain distinctions",
+"C": "is meaningless",
+"D": "eliminates thought",
+"E": "uses only compass terms"
+},
+"answer": "B",
+"explanation": "Stated: habitual vocabulary nudges attention toward some distinctions.",
+"source": "generated-verbal",
+"id": "v-gen-191"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Biodiversity stabilizes ecosystems: when many species fill similar roles, the loss of one is buffered by others. Monocultures, by contrast, are productive until a single pest or drought cascades through the uniform stand. Ecologists therefore warn that optimizing short-term yield by simplifying nature trades long-term stability for immediate gain, a bargain that climate change is making riskier by the year.",
+"stem": "The passage suggests biodiversity",
+"choices": {
+"A": "reduces stability",
+"B": "buffers ecosystems against species loss",
+"C": "causes monocultures",
+"D": "lowers yield always",
+"E": "is irrelevant"
+},
+"answer": "B",
+"explanation": "Stated: many species buffer the loss of one.",
+"source": "generated-verbal",
+"id": "v-gen-192"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Biodiversity stabilizes ecosystems: when many species fill similar roles, the loss of one is buffered by others. Monocultures, by contrast, are productive until a single pest or drought cascades through the uniform stand. Ecologists therefore warn that optimizing short-term yield by simplifying nature trades long-term stability for immediate gain, a bargain that climate change is making riskier by the year.",
+"stem": "The word 'cascades' most nearly means",
+"choices": {
+"A": "stops",
+"B": "spreads downward through",
+"C": "helps",
+"D": "isolates",
+"E": "reverses"
+},
+"answer": "B",
+"explanation": "Cascades = spreads through the stand like a waterfall.",
+"source": "generated-verbal",
+"id": "v-gen-193"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Biodiversity stabilizes ecosystems: when many species fill similar roles, the loss of one is buffered by others. Monocultures, by contrast, are productive until a single pest or drought cascades through the uniform stand. Ecologists therefore warn that optimizing short-term yield by simplifying nature trades long-term stability for immediate gain, a bargain that climate change is making riskier by the year.",
+"stem": "According to the passage, monocultures are",
+"choices": {
+"A": "always stable",
+"B": "vulnerable to a single shock",
+"C": "biodiverse",
+"D": "climate-proof",
+"E": "low yield"
+},
+"answer": "B",
+"explanation": "Stated: a single pest or drought cascades through the uniform stand.",
+"source": "generated-verbal",
+"id": "v-gen-194"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The right to privacy is not enumerated in many constitutions yet is inferred from broader guarantees of liberty and security. Courts have extended it to contraception, marriage, and data, even as technology erodes the factual boundary between public and private. Critics argue that a right nowhere written should be narrower; defenders reply that liberty without a sphere of privacy is hollow.",
+"stem": "The passage suggests the right to privacy is",
+"choices": {
+"A": "explicitly listed everywhere",
+"B": "inferred rather than enumerated",
+"C": "rejected by courts",
+"D": "about property only",
+"E": "a modern invention with no basis"
+},
+"answer": "B",
+"explanation": "Stated: it is inferred from broader guarantees, not enumerated.",
+"source": "generated-verbal",
+"id": "v-gen-195"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The right to privacy is not enumerated in many constitutions yet is inferred from broader guarantees of liberty and security. Courts have extended it to contraception, marriage, and data, even as technology erodes the factual boundary between public and private. Critics argue that a right nowhere written should be narrower; defenders reply that liberty without a sphere of privacy is hollow.",
+"stem": "The word 'hollow' most nearly means",
+"choices": {
+"A": "strong",
+"B": "empty / meaningless",
+"C": "private",
+"D": "secure",
+"E": "written"
+},
+"answer": "B",
+"explanation": "Hollow = empty / without substance.",
+"source": "generated-verbal",
+"id": "v-gen-196"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The right to privacy is not enumerated in many constitutions yet is inferred from broader guarantees of liberty and security. Courts have extended it to contraception, marriage, and data, even as technology erodes the factual boundary between public and private. Critics argue that a right nowhere written should be narrower; defenders reply that liberty without a sphere of privacy is hollow.",
+"stem": "According to the passage, technology",
+"choices": {
+"A": "strengthens privacy",
+"B": "erodes the public-private boundary",
+"C": "writes the right",
+"D": "ignores courts",
+"E": "creates liberty"
+},
+"answer": "B",
+"explanation": "Stated: technology erodes the boundary between public and private.",
+"source": "generated-verbal",
+"id": "v-gen-197"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Nuclear fusion promises nearly limitless clean energy by fusing light atoms the way stars do, but the engineering challenge is immense: containing a 100-million-degree plasma long enough for net energy gain. Decades of investment have brought breakthroughs in magnetic confinement, yet commercial plants remain distant. Proponents argue the payoff justifies the cost; skeptics note that renewables already scale without fusion's unresolved hurdles.",
+"stem": "The passage suggests fusion's main challenge is",
+"choices": {
+"A": "finding fuel",
+"B": "confining extreme plasma for net gain",
+"C": "public opposition",
+"D": "lack of interest",
+"E": "too much energy"
+},
+"answer": "B",
+"explanation": "Stated: containing 100M-degree plasma long enough for net gain.",
+"source": "generated-verbal",
+"id": "v-gen-198"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Nuclear fusion promises nearly limitless clean energy by fusing light atoms the way stars do, but the engineering challenge is immense: containing a 100-million-degree plasma long enough for net energy gain. Decades of investment have brought breakthroughs in magnetic confinement, yet commercial plants remain distant. Proponents argue the payoff justifies the cost; skeptics note that renewables already scale without fusion's unresolved hurdles.",
+"stem": "The word 'immense' most nearly means",
+"choices": {
+"A": "tiny",
+"B": "enormous",
+"C": "solved",
+"D": "irrelevant",
+"E": "cheap"
+},
+"answer": "B",
+"explanation": "Immense = extremely large / great.",
+"source": "generated-verbal",
+"id": "v-gen-199"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Nuclear fusion promises nearly limitless clean energy by fusing light atoms the way stars do, but the engineering challenge is immense: containing a 100-million-degree plasma long enough for net energy gain. Decades of investment have brought breakthroughs in magnetic confinement, yet commercial plants remain distant. Proponents argue the payoff justifies the cost; skeptics note that renewables already scale without fusion's unresolved hurdles.",
+"stem": "According to the passage, skeptics point out that",
+"choices": {
+"A": "fusion is commercial now",
+"B": "renewables already scale without fusion's hurdles",
+"C": "fusion is cheap",
+"D": "plasma is cold",
+"E": "no breakthroughs exist"
+},
+"answer": "B",
+"explanation": "Stated: renewables already scale without fusion's unresolved hurdles.",
+"source": "generated-verbal",
+"id": "v-gen-200"
 }
 ];
