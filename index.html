@@ -6,46 +6,56 @@
 <title>GRE Study Machine</title>
 <style>
   :root{
-    --bg:#0d1117; --panel:#161b22; --panel2:#1c2330; --line:#30363d;
-    --txt:#e6edf3; --mut:#8b949e; --acc:#388bfd; --acc2:#3fb950;
-    --bad:#f85149; --warn:#d29922; --good:#3fb950; --pur:#bc8cff;
+    --bg:#0b1020; --panel:#141b2e; --panel2:#1c2740; --line:#26344f;
+    --txt:#e8edf7; --mut:#93a1bd; --acc:#7c5cff; --acc2:#2dd4bf;
+    --bad:#fb7185; --warn:#fbbf24; --good:#34d399; --pur:#c084fc;
   }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-  header{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:20}
-  header h1{font-size:17px;margin:0;font-weight:700;letter-spacing:.3px}
-  header h1 span{color:var(--acc)}
-  nav{display:flex;gap:6px;flex-wrap:wrap}
-  .btn{background:var(--panel2);border:1px solid var(--line);color:var(--txt);padding:6px 11px;border-radius:7px;cursor:pointer;font-size:12.5px;font-weight:600}
-  .btn:hover{border-color:var(--acc)}
-  .btn.primary{background:var(--acc);border-color:var(--acc);color:#fff}
-  .btn.primary:hover{filter:brightness(1.1)}
-  .btn.ghost{background:transparent}
-  .btn.sm{padding:4px 8px;font-size:11px}
-  .btn.flagged{background:var(--bad);border-color:var(--bad);color:#fff}
-  .btn.active{background:var(--acc);border-color:var(--acc);color:#fff}
-  .btn.pur{background:var(--pur);border-color:var(--pur);color:#1a0b2e}
-  main{max-width:1000px;margin:0 auto;padding:20px 16px 90px}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:14px}
+  body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--acc)}
+  .app{display:flex;min-height:100vh}
+  /* ---------- SIDEBAR ---------- */
+  .sidebar{width:236px;flex:0 0 236px;background:linear-gradient(180deg,#0e1426,#0b1020);border-right:1px solid var(--line);position:sticky;top:0;height:100vh;display:flex;flex-direction:column;padding:18px 14px;overflow:auto}
+  .brand{font-size:19px;font-weight:800;letter-spacing:.3px;margin:2px 6px 4px}
+  .brand b{color:var(--acc)}
+  .brand .sub{display:block;font-size:10.5px;font-weight:600;color:var(--mut);letter-spacing:1.2px;text-transform:uppercase;margin-top:2px}
+  .navgroup{margin-top:18px}
+  .navgroup .gl{font-size:10px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:var(--mut);padding:0 8px 7px;opacity:.8}
+  .navbtn{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:transparent;border:1px solid transparent;color:var(--txt);padding:9px 11px;border-radius:9px;cursor:pointer;font-size:13.5px;font-weight:600;margin-bottom:3px}
+  .navbtn .ic{width:20px;text-align:center;font-size:14px;opacity:.85}
+  .navbtn:hover{background:var(--panel);border-color:var(--line)}
+  .navbtn.active{background:var(--acc);border-color:var(--acc);color:#fff;box-shadow:0 4px 16px -6px var(--acc)}
+  .navbtn.active .ic{opacity:1}
+  .sidefoot{margin-top:auto;padding:10px 8px 0;font-size:10.5px;color:var(--mut);border-top:1px solid var(--line)}
+  /* ---------- MAIN ---------- */
+  main{flex:1;max-width:1040px;margin:0 auto;padding:26px 26px 90px;width:100%}
+  .topbar{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:18px;gap:16px;flex-wrap:wrap}
+  .topbar h1{font-size:25px;margin:0;font-weight:800}
+  .topbar .crumb{font-size:12px;color:var(--mut);font-weight:600;letter-spacing:.5px;text-transform:uppercase}
+  .topbar .blurb{font-size:13px;color:var(--mut);max-width:560px;margin-top:4px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px}
+  .card.hero{background:linear-gradient(120deg,#1a1330,#10231f);border-color:#2c2350}
+  .card.hero h2{color:var(--txt)}
   .muted{color:var(--mut)}
   .pill{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;border:1px solid var(--line);color:var(--mut);margin-bottom:10px}
-  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:8px}
-  .stat{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px}
-  .stat .n{font-size:24px;font-weight:800}
-  .stat .l{font-size:10.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px}
-  .bar{height:8px;background:var(--panel2);border-radius:6px;overflow:hidden;margin-top:6px}
-  .bar > i{display:block;height:100%;background:var(--acc)}
-  .secrow{display:flex;align-items:center;gap:9px;margin:8px 0;font-size:13px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:11px;margin-bottom:6px}
+  .stat{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:13px}
+  .stat .n{font-size:26px;font-weight:800;line-height:1}
+  .stat .l{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.6px;margin-top:6px}
+  .bar{height:8px;background:var(--panel2);border-radius:6px;overflow:hidden;margin-top:7px}
+  .bar > i{display:block;height:100%;background:var(--acc);border-radius:6px}
+  .secrow{display:flex;align-items:center;gap:9px;margin:9px 0;font-size:13px}
   .secrow .name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .secrow .pct{width:50px;text-align:right;color:var(--mut)}
+  .secrow .pct{width:64px;text-align:right;color:var(--mut)}
+  .secrow .pill{border-color:var(--warn);color:var(--warn);margin:0}
   .qstem{font-size:16.5px;font-weight:600;margin:12px 0 16px;line-height:1.5;white-space:pre-wrap}
   .passage{background:var(--panel2);border:1px solid var(--line);border-left:3px solid var(--acc2);padding:12px 14px;border-radius:0 9px 9px 0;margin:0 0 14px;font-size:13.5px;line-height:1.55}
   .choice{display:block;width:100%;text-align:left;background:var(--panel2);border:1px solid var(--line);color:var(--txt);padding:12px 14px;border-radius:9px;margin-bottom:9px;cursor:pointer;font-size:14px}
   .choice:hover{border-color:var(--acc)}
   .choice .lk{font-weight:800;color:var(--acc);margin-right:8px}
-  .choice.sel{border-color:var(--acc);background:#163055}
-  .choice.correct{border-color:var(--good);background:#10331c;color:#aff5c8}
-  .choice.wrong{border-color:var(--bad);background:#3a1416;color:#ffc1c0}
+  .choice.sel{border-color:var(--acc);background:#241a4d}
+  .choice.correct{border-color:var(--good);background:#0e2e22;color:#bff3dd}
+  .choice.wrong{border-color:var(--bad);background:#321821;color:#ffc8d2}
   .numeric-wrap{display:flex;align-items:center;gap:10px;margin:8px 0 14px}
   .numeric-wrap input{background:var(--panel2);border:1px solid var(--line);color:var(--txt);border-radius:9px;padding:11px 13px;font-size:15px;width:220px}
   .exp{background:var(--panel2);border-left:3px solid var(--acc);padding:12px 14px;border-radius:0 9px 9px 0;margin-top:12px;font-size:13.5px;line-height:1.5}
@@ -61,25 +71,33 @@
   .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--good);color:#06120a;padding:10px 17px;border-radius:9px;font-weight:700;opacity:0;transition:.3s;pointer-events:none;z-index:60}
   .toast.show{opacity:1}
   .toast.err{background:var(--bad);color:#fff}
-  h2{font-size:14px;margin:0 0 11px;color:var(--mut);text-transform:uppercase;letter-spacing:.6px}
-  h3{font-size:14px;margin:14px 0 6px;color:var(--txt)}
+  h2{font-size:13px;margin:0 0 11px;color:var(--mut);text-transform:uppercase;letter-spacing:.7px}
+  h3{font-size:13.5px;margin:14px 0 6px;color:var(--txt)}
+  .btn{background:var(--panel2);border:1px solid var(--line);color:var(--txt);padding:6px 12px;border-radius:8px;cursor:pointer;font-size:12.5px;font-weight:600}
+  .btn:hover{border-color:var(--acc)}
+  .btn.primary{background:var(--acc);border-color:var(--acc);color:#fff}
+  .btn.primary:hover{filter:brightness(1.12)}
+  .btn.ghost{background:transparent}
+  .btn.sm{padding:4px 8px;font-size:11px}
+  .btn.flagged{background:var(--bad);border-color:var(--bad);color:#fff}
+  .btn.active{background:var(--acc);border-color:var(--acc);color:#fff}
+  .btn.pur{background:var(--pur);border-color:var(--pur);color:#1a0b2e}
   .timer{font-size:19px;font-weight:800;font-variant-numeric:tabular-nums}
   .timer.warn{color:var(--warn)}
   .timer.crit{color:var(--bad)}
   .exambar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px}
   .qgrid{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;margin:10px 0}
   .qgrid button{aspect-ratio:1;border-radius:6px;font-size:11px;font-weight:700;background:var(--panel2);border:1px solid var(--line);color:var(--mut);cursor:pointer}
-  .qgrid button.answered{background:#163055;border-color:var(--acc);color:#fff}
-  .qgrid button.flag{background:#3a2e10;border-color:var(--warn);color:var(--warn)}
+  .qgrid button.answered{background:#241a4d;border-color:var(--acc);color:#fff}
+  .qgrid button.flag{background:#332708;border-color:var(--warn);color:var(--warn)}
   .qgrid button.cur{outline:2px solid var(--acc2)}
   .flagbtn{background:transparent;border:1px solid var(--line);color:var(--warn);border-radius:7px;padding:5px 11px;cursor:pointer;font-weight:700;font-size:12.5px}
-  .flagbtn.on{background:#3a2e10;border-color:var(--warn)}
+  .flagbtn.on{background:#332708;border-color:var(--warn)}
   .revrow{display:flex;gap:10px;align-items:flex-start;padding:11px;border-bottom:1px solid var(--line)}
   .revrow .ok{color:var(--good);font-weight:800;min-width:38px}
   .revrow .no{color:var(--bad);font-weight:800;min-width:38px}
   .streak{font-size:13px;color:var(--warn);font-weight:700}
   .hidden{display:none !important}
-  /* vocab */
   .vlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:7px;margin-top:9px}
   .vchip{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 10px;cursor:pointer;font-size:12.5px}
   .vchip:hover{border-color:var(--acc)}
@@ -90,243 +108,272 @@
   .vcard .d{font-size:15.5px;margin-top:13px}
   .vcard .e{font-size:13.5px;margin-top:11px;color:var(--mut);font-style:italic}
   .vcard .flip{font-size:11px;color:var(--mut);margin-top:15px;text-align:center}
-  .typebadge{font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;padding:2px 7px;border-radius:5px;background:#163055;border:1px solid var(--acc);color:var(--acc);margin-left:6px;vertical-align:middle}
+  .typebadge{font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;padding:2px 7px;border-radius:5px;background:#241a4d;border:1px solid var(--acc);color:var(--acc);margin-left:6px;vertical-align:middle}
   .diffbadge{font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;padding:2px 7px;border-radius:5px;margin-left:6px;vertical-align:middle}
-  .diff-easy{background:#10261a;border:1px solid var(--good);color:var(--good)}
-  .diff-medium{background:#2a2206;border:1px solid var(--warn);color:var(--warn)}
-  .diff-hard{background:#2a1416;border:1px solid var(--bad);color:var(--bad)}
+  .diff-easy{background:#0e2e22;border:1px solid var(--good);color:var(--good)}
+  .diff-medium{background:#2e2608;border:1px solid var(--warn);color:var(--warn)}
+  .diff-hard{background:#321821;border:1px solid var(--bad);color:var(--bad)}
   .tag{font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:var(--panel2);border:1px solid var(--line);color:var(--mut);margin-right:5px}
   select.btn{appearance:none}
   label.small{font-size:12px;color:var(--mut)}
-  input[type=text],textarea{background:var(--panel2);border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:9px 11px;font-size:13px}
+  input[type=text],input[type=date],input[type=number],textarea{background:var(--panel2);border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:9px 11px;font-size:13px}
   textarea{width:100%;min-height:130px;font-family:ui-monospace,Menlo,monospace;font-size:11.5px}
   .chk{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;margin:4px 10px 4px 0;cursor:pointer}
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   @media(max-width:720px){.grid2{grid-template-columns:1fr}}
   .awa-prompt{background:var(--panel2);border:1px solid var(--line);border-left:3px solid var(--pur);padding:13px 15px;border-radius:0 9px 9px 0;margin:10px 0;font-size:13.5px;line-height:1.55}
   .score-pred{font-size:22px;font-weight:800;color:var(--acc2)}
+  .quickgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:9px;margin-top:4px}
+  .quickbtn{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:11px 12px;cursor:pointer;font-size:13px;font-weight:600;text-align:left}
+  .quickbtn:hover{border-color:var(--acc);background:#1f2942}
+  .quickbtn .qb-sub{display:block;font-size:10.5px;color:var(--mut);font-weight:600;margin-top:3px}
+  .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+  @media(max-width:860px){.sidebar{position:relative;width:100%;height:auto;flex:none;border-right:none;border-bottom:1px solid var(--line)}.app{flex-direction:column}}
 </style>
 </head>
 <body>
-<header>
-  <h1>GRE <span>Study Machine</span></h1>
-  <nav>
-    <button class="btn active" id="nav-dash" onclick="show('dash')">Dashboard</button>
-    <button class="btn" id="nav-prac" onclick="show('prac')">Practice</button>
-    <button class="btn" id="nav-custom" onclick="show('custom')">Custom Quiz</button>
-    <button class="btn" id="nav-vocab" onclick="show('vocab')">Vocab</button>
-    <button class="btn" id="nav-mock" onclick="show('mock')">Mock Section</button>
-    <button class="btn" id="nav-full" onclick="show('full')">Full Test</button>
-    <button class="btn" id="nav-awa" onclick="show('awa')">AWA</button>
-    <button class="btn" id="nav-plan" onclick="show('plan')">Study Plan</button>
-    <button class="btn" id="nav-imp" onclick="show('imp')">Import</button>
-  </nav>
-</header>
-<main>
-  <!-- DASHBOARD -->
-  <section id="dash">
-    <div class="card">
-      <h2>Progress</h2>
-      <div class="stats">
-        <div class="stat"><div class="n" id="st-total">0</div><div class="l">Bank size</div></div>
-        <div class="stat"><div class="n" id="st-seen">0</div><div class="l">Seen</div></div>
-        <div class="stat"><div class="n" id="st-acc">0%</div><div class="l">Accuracy</div></div>
-        <div class="stat"><div class="n" id="st-mastered">0</div><div class="l">Mastered</div></div>
-        <div class="stat"><div class="n" id="st-flagged">0</div><div class="l">⚑ Flagged</div></div>
-        <div class="stat"><div class="n" id="st-vocab">0</div><div class="l">Words known</div></div>
-      </div>
-    </div>
-    <div class="card">
-      <h2>Estimated GRE Score</h2>
-      <p class="muted">Raw accuracy mapped to the 130–170 scaled range (rough model — real GRE is adaptive). Run more questions to sharpen the estimate.</p>
-      <div class="row">
-        <div><div class="small">Verbal est.</div><div class="score-pred" id="est-v">—</div></div>
-        <div><div class="small">Quant est.</div><div class="score-pred" id="est-q">—</div></div>
-        <div><div class="small">Overall</div><div class="score-pred" id="est-o">—</div></div>
-      </div>
-    </div>
-    <div class="card">
-      <h2>By Topic</h2>
-      <div id="topicbars"></div>
-    </div>
-    <div class="card">
-      <h2>By Difficulty</h2>
-      <div id="diffbars"></div>
-    </div>
-    <div class="card">
-      <h2>Weak Areas (drill these first)</h2>
-      <div id="weak"></div>
-      <div class="row" style="margin-top:12px">
-        <button class="btn primary" onclick="startQuiz('all')">Mixed Quiz</button>
-        <button class="btn" onclick="startWeakDrill()">Weak-Areas Drill</button>
-        <button class="btn" onclick="startMistakes()">Review Mistakes</button>
-        <button class="btn" onclick="show('vocab')">Vocab Drill</button>
-      </div>
-    </div>
-  </section>
+<div class="app">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">GRE <b>Study Machine</b><span class="sub">Prep · Practice · Perform</span></div>
 
-  <!-- PRACTICE (quick) -->
-  <section id="prac" class="hidden">
-    <div class="card">
-      <h2>Quick Practice</h2>
-      <p class="muted">Jump into a quiz by section, question type, or topic. For fine-grained control use <b>Custom Quiz</b>.</p>
-      <div class="row" id="prac-buttons"></div>
-      <div class="row" style="margin-top:12px">
-        <label class="small"># Questions:
-          <select id="qcount" class="btn">
-            <option value="10">10</option><option value="20" selected>20</option>
-            <option value="40">40</option><option value="all">All</option>
-          </select>
-        </label>
-        <label class="chk"><input type="checkbox" id="onlyweak"> only weak/unseen</label>
-      </div>
-      <div class="row" style="margin-top:10px">
-        <button class="btn primary" onclick="beginQuick()">Begin</button>
-        <button class="btn" onclick="show('dash')">Cancel</button>
-      </div>
+    <div class="navgroup">
+      <div class="gl">Study</div>
+      <button class="navbtn" id="nav-prac" onclick="show('prac')"><span class="ic">▸</span> Practice</button>
+      <button class="navbtn" id="nav-custom" onclick="show('custom')"><span class="ic">⚙</span> Custom Quiz</button>
+      <button class="navbtn" id="nav-vocab" onclick="show('vocab')"><span class="ic">📘</span> Vocab Drill</button>
     </div>
-    <div id="prac-run-wrap"></div>
-  </section>
 
-  <!-- CUSTOM QUIZ -->
-  <section id="custom" class="hidden">
-    <div class="card">
-      <h2>Custom Quiz Builder</h2>
-      <p class="muted">Build a targeted set: pick sections, question types, topics, and difficulty. This is how you replicate a paid program's targeted drills.</p>
-      <h3>Sections</h3><div class="row" id="cust-sec"></div>
-      <h3>Question Types</h3><div class="row" id="cust-type"></div>
-      <h3>Difficulty</h3><div class="row" id="cust-diff"></div>
-      <h3>Topics</h3><div class="row" id="cust-topics" style="max-height:180px;overflow:auto"></div>
-      <div class="row" style="margin-top:12px">
-        <label class="small"># Questions:
-          <select id="cust-count" class="btn"><option value="10">10</option><option value="20" selected>20</option><option value="40">40</option><option value="all">All</option></select>
-        </label>
-        <button class="btn primary" onclick="buildCustom()">Build &amp; Start</button>
-        <span class="small" id="cust-info"></span>
-      </div>
+    <div class="navgroup">
+      <div class="gl">Test Day</div>
+      <button class="navbtn" id="nav-mock" onclick="show('mock')"><span class="ic">⏱</span> Mock Section</button>
+      <button class="navbtn" id="nav-full" onclick="show('full')"><span class="ic">📝</span> Full Test</button>
+      <button class="navbtn" id="nav-awa" onclick="show('awa')"><span class="ic">✒</span> AWA Essays</button>
     </div>
-    <div id="custom-run-wrap"></div>
-  </section>
 
-  <!-- VOCAB -->
-  <section id="vocab" class="hidden">
-    <div class="card">
-      <h2>GRE Vocabulary (Spaced Practice)</h2>
-      <p class="muted">Click a card to flip. "Know it" marks the word learned (tracked on dashboard + study plan). Use <b>Review Due</b> to drill words flagged for spaced review.</p>
-      <div class="row">
-        <button class="btn primary" onclick="fcStart('all')">Drill All</button>
-        <button class="btn" onclick="fcStart('unknown')">Drill Unknown</button>
-        <button class="btn" onclick="fcStart('due')">Review Due</button>
-        <button class="btn" onclick="renderVocabList()">Browse A–Z</button>
+    <div class="navgroup">
+      <div class="gl">Plan &amp; Data</div>
+      <button class="navbtn" id="nav-plan" onclick="show('plan')"><span class="ic">🗓</span> Study Plan</button>
+      <button class="navbtn" id="nav-dash" onclick="show('dash')"><span class="ic">▤</span> Dashboard</button>
+      <button class="navbtn" id="nav-imp" onclick="show('imp')"><span class="ic">⇪</span> Import / Export</button>
+    </div>
+
+    <div class="sidefoot">520 questions · 256 words<br>Offline · auto-saved locally</div>
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+    <!-- DASHBOARD -->
+    <section id="dash">
+      <div class="topbar">
+        <div><div class="crumb">Overview</div><h1>Dashboard</h1></div>
       </div>
-      <div id="fc-area" class="hidden">
-        <div class="vcard" id="fc-card" onclick="fcFlip()">
-          <div class="w" id="fc-w"></div><div class="p" id="fc-pos"></div>
-          <div class="d hidden" id="fc-d"></div><div class="e hidden" id="fc-e"></div>
-          <div class="flip" id="fc-flip">click to reveal</div>
+      <div class="card hero">
+        <h2>Your GRE Readiness</h2>
+        <div class="row" style="align-items:stretch">
+          <div style="flex:1;min-width:200px">
+            <p class="muted" style="margin:0 0 10px">Accuracy across completed questions, mapped to the 130–170 scaled range. (Rough model — the real GRE is adaptive.) Drill more to sharpen it.</p>
+            <div class="row" style="margin:0">
+              <div><div class="small">Verbal est.</div><div class="score-pred" id="est-v">—</div></div>
+              <div><div class="small">Quant est.</div><div class="score-pred" id="est-q">—</div></div>
+              <div><div class="small">Overall</div><div class="score-pred" id="est-o">—</div></div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="card">
+        <h2>Progress</h2>
+        <div class="stats">
+          <div class="stat"><div class="n" id="st-total">0</div><div class="l">Bank size</div></div>
+          <div class="stat"><div class="n" id="st-seen">0</div><div class="l">Seen</div></div>
+          <div class="stat"><div class="n" id="st-acc">0%</div><div class="l">Accuracy</div></div>
+          <div class="stat"><div class="n" id="st-mastered">0</div><div class="l">Mastered</div></div>
+          <div class="stat"><div class="n" id="st-flagged">0</div><div class="l">⚑ Flagged</div></div>
+          <div class="stat"><div class="n" id="st-vocab">0</div><div class="l">Words known</div></div>
+        </div>
+        <div class="cta" style="margin-top:14px">
+          <button class="btn primary" onclick="startQuizWith('all')">Mixed Quiz</button>
+          <button class="btn" onclick="startWeakDrill()">Weak-Areas Drill</button>
+          <button class="btn" onclick="startMistakes()">Review Mistakes</button>
+          <button class="btn" onclick="show('vocab')">Vocab Drill</button>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="card"><h2>By Topic</h2><div id="topicbars"></div></div>
+        <div class="card"><h2>By Difficulty</h2><div id="diffbars"></div></div>
+      </div>
+
+      <div class="card">
+        <h2>Weak Areas — drill these first</h2>
+        <div id="weak"></div>
+      </div>
+    </section>
+
+    <!-- PRACTICE -->
+    <section id="prac" class="hidden">
+      <div class="topbar"><div><div class="crumb">Study</div><h1>Practice</h1><div class="blurb">Jump into a quiz by section, type, or topic. For fine-grained control use Custom Quiz.</div></div></div>
+      <div class="card">
+        <h2>Pick a drill</h2>
+        <div class="quickgrid" id="prac-buttons"></div>
+        <div class="row" style="margin-top:14px">
+          <label class="small"># Questions:
+            <select id="qcount" class="btn">
+              <option value="10">10</option><option value="20" selected>20</option>
+              <option value="40">40</option><option value="all">All</option>
+            </select>
+          </label>
+          <label class="chk"><input type="checkbox" id="onlyweak"> only weak / unseen</label>
+          <button class="btn primary" onclick="beginQuick()">Begin</button>
+        </div>
+        <p class="small" style="margin-top:8px">Tip: pick a section or type above, then Begin. The "only weak" filter focuses on what you've missed or never seen.</p>
+      </div>
+      <div id="prac-run-wrap"></div>
+    </section>
+
+    <!-- CUSTOM QUIZ -->
+    <section id="custom" class="hidden">
+      <div class="topbar"><div><div class="crumb">Study</div><h1>Custom Quiz</h1><div class="blurb">Build a targeted set: sections, types, topics, difficulty. This replicates a paid program's laser drills.</div></div></div>
+      <div class="card">
+        <h2>Filters</h2>
+        <h3>Sections</h3><div class="row" id="cust-sec"></div>
+        <h3>Question Types</h3><div class="row" id="cust-type"></div>
+        <h3>Difficulty</h3><div class="row" id="cust-diff"></div>
+        <h3>Topics</h3><div class="row" id="cust-topics" style="max-height:190px;overflow:auto"></div>
+        <div class="row" style="margin-top:14px">
+          <label class="small"># Questions:
+            <select id="cust-count" class="btn"><option value="10">10</option><option value="20" selected>20</option><option value="40">40</option><option value="all">All</option></select>
+          </label>
+          <button class="btn primary" onclick="buildCustom()">Build &amp; Start</button>
+          <span class="small" id="cust-info"></span>
+        </div>
+      </div>
+      <div id="custom-run-wrap"></div>
+    </section>
+
+    <!-- VOCAB -->
+    <section id="vocab" class="hidden">
+      <div class="topbar"><div><div class="crumb">Study</div><h1>Vocab Drill</h1><div class="blurb">Spaced-repetition deck. Click to flip; "Know it" marks learned and schedules review.</div></div></div>
+      <div class="card">
+        <h2>GRE Vocabulary</h2>
+        <div class="cta">
+          <button class="btn primary" onclick="fcStart('all')">Drill All</button>
+          <button class="btn" onclick="fcStart('unknown')">Drill Unknown</button>
+          <button class="btn" onclick="fcStart('due')">Review Due</button>
+          <button class="btn" onclick="renderVocabList()">Browse A–Z</button>
+        </div>
+        <div id="fc-area" class="hidden">
+          <div class="vcard" id="fc-card" onclick="fcFlip()">
+            <div class="w" id="fc-w"></div><div class="p" id="fc-pos"></div>
+            <div class="d hidden" id="fc-d"></div><div class="e hidden" id="fc-e"></div>
+            <div class="flip" id="fc-flip">click to reveal</div>
+          </div>
+          <div class="row">
+            <button class="btn" style="border-color:var(--good);color:var(--good)" onclick="fcKnown()">✓ Know it</button>
+            <button class="btn" style="border-color:var(--warn);color:var(--warn)" onclick="fcAgain()">↻ Still learning</button>
+            <button class="btn" onclick="fcPrev()">←</button><button class="btn" onclick="fcNext()">→</button>
+            <span class="small" id="fc-poscount"></span>
+          </div>
+        </div>
+        <div id="vlist-area"></div>
+      </div>
+    </section>
+
+    <!-- MOCK SECTION -->
+    <section id="mock" class="hidden">
+      <div class="topbar"><div><div class="crumb">Test Day</div><h1>Mock Section</h1><div class="blurb">One GRE section under the clock: Verbal 20Q/30min or Quant 20Q/35min.</div></div></div>
+      <div class="card">
+        <h2>Timed Section</h2>
+        <p class="muted">Auto-fills what the bank allows (needs 20 of that section). Flag questions and review at the end.</p>
+        <div class="cta">
+          <button class="btn primary" onclick="startMock('verbal')">Verbal Section</button>
+          <button class="btn primary" onclick="startMock('quant')">Quant Section</button>
+        </div>
+      </div>
+      <div id="mock-run-wrap"></div>
+    </section>
+
+    <!-- FULL TEST -->
+    <section id="full" class="hidden">
+      <div class="topbar"><div><div class="crumb">Test Day</div><h1>Full Test</h1><div class="blurb">AWA → Verbal 1 → Quant 1 → Verbal 2 → Quant 2, each timed. Full 340-scale estimate.</div></div></div>
+      <div class="card">
+        <h2>Full-Length Practice Test</h2>
+        <div class="cta">
+          <button class="btn primary" onclick="startFullTest()">Start Full Test</button>
+          <button class="btn" onclick="showFullStatus()">View Progress</button>
+        </div>
+        <div id="full-status"></div>
+      </div>
+      <div id="full-run-wrap"></div>
+    </section>
+
+    <!-- AWA -->
+    <section id="awa" class="hidden">
+      <div class="topbar"><div><div class="crumb">Write</div><h1>AWA Essays</h1><div class="blurb">Practice Issue + Argument tasks. Type, time yourself, self-grade against the 0–6 rubric.</div></div></div>
+      <div class="card">
+        <h2>Analytical Writing</h2>
+        <div class="cta">
+          <button class="btn primary" onclick="awaStart('issue')">Issue Task</button>
+          <button class="btn primary" onclick="awaStart('argument')">Argument Task</button>
+          <button class="btn" onclick="renderAwaBank()">Prompt Bank</button>
+        </div>
+        <div id="awa-area" class="hidden">
+          <div class="qmeta"><span id="awa-type" class="pill"></span><span class="timer" id="awa-timer">30:00</span></div>
+          <div class="awa-prompt" id="awa-prompt"></div>
+          <textarea id="awa-text" style="min-height:280px" placeholder="Write your essay here..."></textarea>
+          <div class="row" style="margin-top:10px">
+            <button class="btn" onclick="awaToggleTimer()">Start/Stop Timer</button>
+            <button class="btn" onclick="awaWordCount()">Word Count</button>
+            <button class="btn" onclick="showRubric()">Show Rubric</button>
+            <button class="btn ghost" onclick="awaFinish()">Finish / Self-grade</button>
+            <span class="small" id="awa-info"></span>
+          </div>
+          <div id="awa-rubric" class="hidden"></div>
+        </div>
+        <div id="awa-bank"></div>
+      </div>
+    </section>
+
+    <!-- STUDY PLAN -->
+    <section id="plan" class="hidden">
+      <div class="topbar"><div><div class="crumb">Plan</div><h1>Study Plan</h1><div class="blurb">A day-by-day plan from today to test day, weighted to your weak topics + vocab.</div></div></div>
+      <div class="card">
+        <h2>Adaptive Study Plan</h2>
         <div class="row">
-          <button class="btn" style="border-color:var(--good);color:var(--good)" onclick="fcKnown()">✓ Know it</button>
-          <button class="btn" style="border-color:var(--warn);color:var(--warn)" onclick="fcAgain()">↻ Still learning</button>
-          <button class="btn" onclick="fcPrev()">←</button><button class="btn" onclick="fcNext()">→</button>
-          <span class="small" id="fc-poscount"></span>
+          <label class="small">Test date: <input type="date" id="plan-date" class="btn"></label>
+          <label class="small">Hours/week: <input type="number" id="plan-hours" value="10" min="2" max="40" class="btn" style="width:70px"></label>
+          <label class="small">Start level:
+            <select id="plan-level" class="btn"><option value="beginner">Beginner</option><option value="intermediate" selected>Intermediate</option><option value="advanced">Advanced</option></select>
+          </label>
+          <button class="btn primary" onclick="genPlan()">Generate Plan</button>
         </div>
+        <div id="plan-out"></div>
       </div>
-      <div id="vlist-area"></div>
-    </div>
-  </section>
+    </section>
 
-  <!-- MOCK SECTION -->
-  <section id="mock" class="hidden">
-    <div class="card">
-      <h2>Timed Section Mock</h2>
-      <p class="muted">One GRE section under the clock: <b>Verbal 20Q/30min</b> or <b>Quant 20Q/35min</b>. Needs 20 questions of that section; current bank auto-fills what it can.</p>
-      <div class="row">
-        <button class="btn primary" onclick="startMock('verbal')">Verbal Section</button>
-        <button class="btn primary" onclick="startMock('quant')">Quant Section</button>
-      </div>
-    </div>
-    <div id="mock-run-wrap"></div>
-  </section>
-
-  <!-- FULL TEST -->
-  <section id="full" class="hidden">
-    <div class="card">
-      <h2>Full-Length Practice Test</h2>
-      <p class="muted">Runs AWA (untimed, with timer) → Verbal 1 → Quant 1 → Verbal 2 → Quant 2. Each section is timed. You can pause between sections. Tracks a full 340-scale estimate.</p>
-      <div class="row">
-        <button class="btn primary" onclick="startFullTest()">Start Full Test</button>
-        <button class="btn" onclick="showFullStatus()">View Progress</button>
-      </div>
-      <div id="full-status"></div>
-    </div>
-    <div id="full-run-wrap"></div>
-  </section>
-
-  <!-- AWA -->
-  <section id="awa" class="hidden">
-    <div class="card">
-      <h2>Analytical Writing (AWA)</h2>
-      <p class="muted">Practice the Issue and Argument tasks. Type your essay, use the timer, and self-grade against the official 0–6 rubric. Sample prompts included.</p>
-      <div class="row">
-        <button class="btn primary" onclick="awaStart('issue')">Issue Task</button>
-        <button class="btn primary" onclick="awaStart('argument')">Argument Task</button>
-        <button class="btn" onclick="renderAwaBank()">Prompt Bank</button>
-      </div>
-      <div id="awa-area" class="hidden">
-        <div class="qmeta"><span id="awa-type" class="pill"></span><span class="timer" id="awa-timer">30:00</span></div>
-        <div class="awa-prompt" id="awa-prompt"></div>
-        <textarea id="awa-text" style="min-height:280px" placeholder="Write your essay here..."></textarea>
+    <!-- IMPORT -->
+    <section id="imp" class="hidden">
+      <div class="topbar"><div><div class="crumb">Data</div><h1>Import / Export</h1><div class="blurb">Add your own questions or back up the whole bank.</div></div></div>
+      <div class="card">
+        <h2>Import Questions</h2>
+        <p class="muted">Paste a JSON array (schema below) or load a .js bank. Imports persist locally.<br>
+        <code>{"type":"tc|se|qc|multi|numeric|mc|rc","section":"Verbal|Quant","topic":"...","difficulty":"easy|medium|hard","stem":"...","choices":{"A":"..."},"answer":"A" or ["B","E"],"explanation":"...","passage":"... (rc only)"}</code></p>
+        <textarea id="imp-text" placeholder='[{"type":"mc","section":"Quant","topic":"Algebra","difficulty":"medium","stem":"...","choices":{"A":"...","B":"..."},"answer":"A","explanation":"..."}]'></textarea>
         <div class="row" style="margin-top:10px">
-          <button class="btn" onclick="awaToggleTimer()">Start/Stop Timer</button>
-          <button class="btn" onclick="awaWordCount()">Word Count</button>
-          <button class="btn" onclick="showRubric()">Show Rubric</button>
-          <button class="btn ghost" onclick="awaFinish()">Finish / Self-grade</button>
-          <span class="small" id="awa-info"></span>
+          <button class="btn primary" onclick="doImport()">Add to Bank</button>
+          <button class="btn" onclick="exportBank()">Export Bank</button>
+          <button class="btn" onclick="document.getElementById('imp-file').click()">Load .js</button>
+          <input type="file" id="imp-file" accept=".js,.json" style="display:none" onchange="loadFile(event)">
         </div>
-        <div id="awa-rubric" class="hidden"></div>
+        <p class="small" id="imp-msg" style="margin-top:9px"></p>
       </div>
-      <div id="awa-bank"></div>
-    </div>
-  </section>
+    </section>
 
-  <!-- STUDY PLAN -->
-  <section id="plan" class="hidden">
-    <div class="card">
-      <h2>Adaptive Study Plan</h2>
-      <p class="muted">Tell us your test date and weekly hours; we generate a day-by-day plan weighting weak topics and vocab SRS.</p>
-      <div class="row">
-        <label class="small">Test date: <input type="date" id="plan-date" class="btn"></label>
-        <label class="small">Hours/week: <input type="number" id="plan-hours" value="10" min="2" max="40" class="btn" style="width:70px"></label>
-        <label class="small">Start level:
-          <select id="plan-level" class="btn"><option value="beginner">Beginner</option><option value="intermediate" selected>Intermediate</option><option value="advanced">Advanced</option></select>
-        </label>
-        <button class="btn primary" onclick="genPlan()">Generate Plan</button>
-      </div>
-      <div id="plan-out"></div>
-    </div>
-  </section>
-
-  <!-- IMPORT -->
-  <section id="imp" class="hidden">
-    <div class="card">
-      <h2>Import Questions</h2>
-      <p class="muted">Paste JSON array (schema below) or load a .js bank. Imports persist locally. Each item:<br>
-      <code>{"type":"tc|se|qc|multi|numeric|mc|rc","section":"Verbal|Quant","topic":"...","difficulty":"easy|medium|hard","stem":"...","choices":{"A":"..."},"answer":"A" or ["B","E"],"explanation":"...","passage":"... (rc only)"}</code></p>
-      <textarea id="imp-text" placeholder='[{"type":"mc","section":"Quant","topic":"Algebra","difficulty":"medium","stem":"...","choices":{"A":"...","B":"..."},"answer":"A","explanation":"..."}]'></textarea>
-      <div class="row" style="margin-top:10px">
-        <button class="btn primary" onclick="doImport()">Add to Bank</button>
-        <button class="btn" onclick="exportBank()">Export Bank</button>
-        <button class="btn" onclick="document.getElementById('imp-file').click()">Load .js</button>
-        <input type="file" id="imp-file" accept=".js,.json" style="display:none" onchange="loadFile(event)">
-      </div>
-      <p class="small" id="imp-msg" style="margin-top:9px"></p>
-    </div>
-  </section>
-
-  <!-- SHARED RUN CONTAINERS (practice / custom / mock / full all render here) -->
-  <section id="run" class="hidden"></section>
-</main>
+    <!-- SHARED RUN CONTAINER -->
+    <section id="run" class="hidden"></section>
+  </main>
+</div>
 <div class="toast" id="toast"></div>
 
 <script src="gre_quant_gen.js"></script>
