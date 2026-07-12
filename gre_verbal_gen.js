@@ -139,15 +139,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: A ___ smile played on her lips as she watched the plan unfold perfectly.",
 "choices": {
-"A": "fervent",
-"B": "muted",
-"C": "enervate",
-"D": "pensive",
-"E": "ravenous",
-"F": "denigrate"
+"A": "fetid",
+"B": "myopic",
+"C": "environs",
+"D": "penury",
+"E": "delectable",
+"F": "denouement"
 },
 "answer": "E",
-"explanation": "'ravenous' fits the context.",
+"explanation": "'delectable' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-8"
 },
@@ -197,14 +197,14 @@ var GRE_VERBAL_GEN = [
 "stem": "Fill the blank: The ___ diplomat smoothed over the tense negotiation with quiet grace.",
 "choices": {
 "A": "idiosyncratic",
-"B": "precocious",
+"B": "reflux",
 "C": "cumbersome",
 "D": "malapropism",
 "E": "desecrate",
 "F": "finagle"
 },
 "answer": "B",
-"explanation": "'precocious' fits the context.",
+"explanation": "'reflux' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-11"
 },
@@ -217,13 +217,13 @@ var GRE_VERBAL_GEN = [
 "choices": {
 "A": "portentous",
 "B": "amenable",
-"C": "benevolent",
+"C": "lambaste",
 "D": "protean",
 "E": "nuance",
-"F": "fawn"
+"F": "fathom"
 },
 "answer": "C",
-"explanation": "'benevolent' fits the context.",
+"explanation": "'lambaste' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-12"
 },
@@ -255,13 +255,13 @@ var GRE_VERBAL_GEN = [
 "choices": {
 "A": "intact",
 "B": "privy",
-"C": "fawn",
-"D": "gusto",
+"C": "fecund",
+"D": "beatific",
 "E": "nihilism",
-"F": "consonance"
+"F": "conspicuous"
 },
 "answer": "D",
-"explanation": "'gusto' fits the context.",
+"explanation": "'beatific' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-14"
 },
@@ -291,7 +291,7 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: Her ___ dedication to the cause never wavered, even under pressure.",
 "choices": {
-"A": "epigram",
+"A": "inorganic",
 "B": "legacy",
 "C": "preen",
 "D": "pule",
@@ -299,7 +299,7 @@ var GRE_VERBAL_GEN = [
 "F": "contrite"
 },
 "answer": "A",
-"explanation": "'epigram' fits the context.",
+"explanation": "'inorganic' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-16"
 },
@@ -329,15 +329,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: He was ___ about his plan, revealing nothing to his rivals.",
 "choices": {
-"A": "languid",
-"B": "maxim",
-"C": "quash",
-"D": "obtrude",
-"E": "modish",
-"F": "plod"
+"A": "languish",
+"B": "mayhem",
+"C": "buoyancy",
+"D": "obviate",
+"E": "mollify",
+"F": "plumb"
 },
 "answer": "C",
-"explanation": "'quash' fits the context.",
+"explanation": "'buoyancy' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-18"
 },
@@ -372,10 +372,10 @@ var GRE_VERBAL_GEN = [
 "C": "legacy",
 "D": "adumbrate",
 "E": "diurnal",
-"F": "porous"
+"F": "phobic"
 },
 "answer": "F",
-"explanation": "'porous' fits the context.",
+"explanation": "'phobic' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-20"
 },
@@ -389,12 +389,12 @@ var GRE_VERBAL_GEN = [
 "A": "consternation",
 "B": "outlandish",
 "C": "latent",
-"D": "dispatch",
+"D": "ingenuous",
 "E": "plod",
-"F": "harvest"
+"F": "hapless"
 },
 "answer": "D",
-"explanation": "'dispatch' fits the context.",
+"explanation": "'ingenuous' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-21"
 },
@@ -443,15 +443,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: The ___ messenger delivered the bad news with unexpected gentleness.",
 "choices": {
-"A": "lurch",
+"A": "perjury",
 "B": "heterogeneous",
 "C": "hybrid",
-"D": "odious",
+"D": "occlude",
 "E": "cursory",
 "F": "exult"
 },
 "answer": "A",
-"explanation": "'lurch' fits the context.",
+"explanation": "'perjury' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-24"
 },
@@ -519,15 +519,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: The ___ child smiled sweetly while plotting mischief.",
 "choices": {
-"A": "fluent",
-"B": "benefactor",
+"A": "flout",
+"B": "harbinger",
 "C": "pious",
 "D": "palmy",
 "E": "anonymous",
 "F": "rapport"
 },
 "answer": "B",
-"explanation": "'benefactor' fits the context.",
+"explanation": "'harbinger' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-28"
 },
@@ -557,15 +557,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: The ___ king ruled with absolute, unquestioned authority.",
 "choices": {
-"A": "occlude",
-"B": "fidelity",
+"A": "odious",
+"B": "figurine",
 "C": "pertinacious",
-"D": "perjury",
-"E": "lambaste",
+"D": "abhor",
+"E": "lambent",
 "F": "predecessor"
 },
 "answer": "D",
-"explanation": "'perjury' fits the context.",
+"explanation": "'abhor' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-30"
 },
@@ -577,14 +577,14 @@ var GRE_VERBAL_GEN = [
 "stem": "Fill the blank: Her ___ wit made the dullest meeting bearable.",
 "choices": {
 "A": "comeliness",
-"B": "randy",
-"C": "prelate",
-"D": "microcosm",
-"E": "equivocate",
-"F": "refrain"
+"B": "rankle",
+"C": "preponderance",
+"D": "mien",
+"E": "erudite",
+"F": "dispirit"
 },
 "answer": "F",
-"explanation": "'refrain' fits the context.",
+"explanation": "'dispirit' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-31"
 },

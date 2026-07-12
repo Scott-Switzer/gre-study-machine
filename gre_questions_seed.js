@@ -388,9 +388,9 @@ var GRE_QUESTIONS_SEED = [
     id: "num-03",
     type: "numeric",
     section: "Quant",
-    stem: "In a deck of 52 cards, what is the probability of drawing a heart? Express your answer as a simplified fraction (enter the numerator of the simplified fraction with denominator 4).",
+    stem: "In a standard deck of 52 cards, how many cards are hearts? (Enter the number of hearts.)",
     answer: "13",
-    explanation: "There are 13 hearts out of 52 cards → 13/52 = 1/4. The simplified fraction has numerator 1 and denominator 4. Entering the numerator (13) of the unsimplified form is also accepted; the simplified numerator is 1. (This item accepts either 13 or 1 given the wording — tune in your own items.)",
+    explanation: "A standard deck has 4 suits of 13 cards each; hearts = 13. Enter 13.",
     source: "GRE seed bank"
   }
 ];
