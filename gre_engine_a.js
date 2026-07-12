@@ -216,6 +216,14 @@ function startMistakes(){
   if(!wrong.length){ toast('No mistakes yet'); return; }
   startRunner({qs:shuff(wrong), label:'Mistakes', mode:'practice'});
 }
+function startSRS(){
+  // Spaced repetition: due (overdue or due now) questions, oldest due first.
+  var now=Date.now();
+  var due=GRE_QUESTIONS.filter(q=>{ var st=state[q.id]; return st && st.seen>0 && (st.due||0)<=now; });
+  if(!due.length){ toast('Nothing due — all reviewed. Drill more to build a queue.'); return; }
+  due.sort((a,b)=>(state[a.id].due||0)-(state[b.id].due||0));
+  startRunner({qs:due.slice(0,Math.min(40,due.length)), label:'SRS Review ('+due.length+' due)', mode:'practice'});
+}
 function unseenCount(sec){ var u=0; GRE_QUESTIONS.filter(q=>q.section===sec).forEach(q=>{var st=state[q.id]; if(!st||(st.seen||0)===0)u++;}); return u; }
 function startRunner(opts){
   RUN=Object.assign({idx:0,correct:0,answers:{},flagged:{},mode:'practice',showTimer:false,timeLimit:0,sectionLabel:'',onDone:null},opts);
@@ -333,8 +341,14 @@ function answerRun(q){
     document.querySelectorAll('#run-choices .btn').forEach(b=>b.onclick=null);
   }
   // state
-  if(!state[q.id]) state[q.id]={seen:0,correct:0,wrong:0};
+  if(!state[q.id]) state[q.id]={seen:0,correct:0,wrong:0,box:0,due:0};
   state[q.id].seen++; if(isCorrect){state[q.id].correct++;RUN.correct++;} else state[q.id].wrong++;
+  // Spaced repetition: correct -> promote box + longer interval; wrong -> reset to box 1 (due now)
+  var st=state[q.id];
+  if(isCorrect){ st.box=Math.min(5,(st.box||0)+1); }
+  else { st.box=1; }
+  var intervals=[0,0,1,3,7,16]; // days for box 1..5
+  st.due=Date.now()+ (intervals[st.box]||0)*86400000;
   saveState();
   // explanation
   var e=document.getElementById('run-exp');

@@ -81,10 +81,24 @@ function startFullTest(){
   document.getElementById('full-status').innerHTML='<p class="small">Starting full test…</p>';
   awaStart('issue', function(){ awaStart('argument', function(){ runFullSection('Verbal', 1); }); });
 }
-function runFullSection(sec, n){
+function runFullSection(sec, n, diff){
   var pool=GRE_QUESTIONS.filter(q=>q.section===sec);
-  var cnt=Math.min(20,pool.length);
-  startRunner({qs:shuff(pool).slice(0,cnt), label:sec+' '+n, sectionLabel:sec+' '+n, mode:'full', showTimer:true, timeLimit:SECTION_TIME[sec==='Quant'?'quant':'verbal'],
+  // Adaptive: section 2 difficulty depends on section 1 performance (real GRE logic)
+  if(typeof diff==='undefined'){
+    if(n===2){
+      var first=Object.keys(FULL.results).filter(k=>k.indexOf(sec)>=0 && k.indexOf(' 1')>=0);
+      // parse first-section accuracy
+      var acc=first.map(k=>{var p=FULL.results[k].split('/'); return (+p[0])/(+p[1]||1);});
+      var avg=acc.length? acc.reduce((a,b)=>a+b,0)/acc.length : 0.5;
+      diff = avg>=0.7 ? 'hard' : (avg>=0.5 ? 'medium' : 'easy');
+      toast(sec+' 2 adaptively set to '+diff+' (sec1 ' + Math.round(avg*100) + '%)');
+    } else { diff='medium'; }
+  }
+  // build pool by difficulty when available
+  var byDiff=pool.filter(q=>(q.difficulty||'medium')===diff);
+  var use = byDiff.length>=20 ? byDiff : pool;
+  var cnt=Math.min(20, use.length);
+  startRunner({qs:shuff(use).slice(0,cnt), label:sec+' '+n+(n===2?(' ['+diff+']'):''), sectionLabel:sec+' '+n, mode:'full', showTimer:true, timeLimit:SECTION_TIME[sec==='Quant'?'quant':'verbal'],
     onDone:function(r){
       FULL.results[sec+' '+n]=(r.correct||0)+'/'+r.qs.length;
       var vDone=Object.keys(FULL.results).filter(k=>k.indexOf('Verbal')>=0).length;
@@ -157,6 +171,7 @@ function renderAwaBank(){
 }
 
 /* ================= STUDY PLAN ================= */
+function topicAcc(tp){ var qs=GRE_QUESTIONS.filter(q=>(q.topic||'General')===tp); if(!qs.length) return null; var c=0,t=0; qs.forEach(q=>{var s=state[q.id]; if(s){c+=s.correct||0; t+=(s.correct||0)+(s.wrong||0);}}); return t? c/t : null; }
 function genPlan(){
   var date=document.getElementById('plan-date').value;
   var hrs=parseInt(document.getElementById('plan-hours').value)||10;
@@ -164,22 +179,46 @@ function genPlan(){
   if(!date){ toast('Pick a test date', true); return; }
   var days=Math.ceil((new Date(date)-new Date())/86400000);
   if(days<1){ toast('Test date is in the past', true); return; }
-  // weight: weak topics
-  var weak=GRE_QUESTIONS.map(q=>{ var s=state[q.id]; var a=s?(s.correct||0)/((s.correct||0)+(s.wrong||0)||1):0; return {tp:q.topic||'General', a:a, seen:s?(s.seen||0):0}; })
-    .reduce((m,x)=>{ if(!m[x.tp]) m[x.tp]={a:1,seen:0,n:0}; m[x.tp].a=Math.min(m[x.tp].a,x.a); m[x.tp].seen+=x.seen; m[x.tp].n++; return m; },{});
-  var weakTopics=Object.keys(weak).sort((a,b)=>weak[a].a-weak[b].a).slice(0,6);
+  // Real weak topics by accuracy (unseen => treat as weakest)
+  var tps=topics();
+  var acc=tps.map(tp=>({tp:tp, a:topicAcc(tp)})).filter(x=>x.a!==null);
+  acc.sort((x,y)=>x.a-y.a);
+  var weakTopics=acc.slice(0,5).map(x=>x.tp);
+  if(!weakTopics.length) weakTopics=['take a diagnostic quiz'];
   var weeks=Math.ceil(days/7);
-  var html='<div class="card"><h2>Your '+weeks+'-Week Plan ('+days+' days, '+hrs+' h/week)</h2>';
-  html+='<p class="small">Level: '+level+' · Focus topics: '+(weakTopics.length?weakTopics.map(esc).join(', '):'take a diagnostic first')+'</p>';
-  var phase=level==='beginner'?'Foundations':(level==='advanced'?'Sharpening':'Building');
-  for(var w=1; w<=weeks; w++){
-    var focus = w<=2 ? 'Diagnose + '+weakTopics.slice(0,2).join(' / ') : (w>=weeks-1 ? 'Full tests + weak review' : 'Topic drills + vocab SRS');
-    html+='<div class="secrow"><span class="name"><b>Week '+w+'</b></span><span class="pct">'+hrs+'h</span></div>'+
-      '<div class="small" style="margin:-4px 0 8px">'+focus+' · '+'Custom-quiz the weak topics, 30 min vocab/day, 1 timed section.</div>';
+  // daily plan
+  var days2=[];
+  for(var d=1; d<=days; d++){
+    var phase = d<=Math.ceil(days*0.15) ? 'diagnose' : (d>=days-Math.ceil(days*0.15) ? 'final' : 'build');
+    var task;
+    if(phase==='diagnose'){ task='Diagnostic: 1 timed Verbal + 1 timed Quant section; log weak topics.'; }
+    else if(phase==='final'){ task='Full adaptive test + SRS review of all due questions + light vocab.'; }
+    else {
+      var wt = weakTopics[(d-1)%weakTopics.length];
+      var vocab = (d%2===0)?' · 15-min vocab SRS':'';
+      var sec = (d%3===0)?' · 1 timed section':'';
+      task='Drill "'+wt+'" (20 Q)'+vocab+sec+'.';
+    }
+    days2.push({d: d, phase:phase, task:task});
   }
-  html+='<div class="row" style="margin-top:10px"><button class="btn primary" onclick="show(\'custom\')">Open Custom Quiz</button><button class="btn" onclick="show(\'vocab\')">Vocab Drill</button><button class="btn" onclick="show(\'mock\')">Timed Section</button></div></div>';
+  var todayPlan=days2[0];
+  var html='<div class="card"><h2>Your '+weeks+'-Week Plan to '+date+' ('+days+' days, '+hrs+' h/week)</h2>';
+  html+='<p class="small">Level: '+level+' · Weak topics: '+(weakTopics.join(', '))+'</p>';
+  // TODAY card
+  html+='<div class="card" style="background:linear-gradient(135deg,#1c2740,#141b2e);margin-top:8px"><h3 style="margin:0 0 6px">📌 Today — Day 1 of '+days+'</h3>'+
+    '<div style="font-size:15px">'+todayPlan.task+'</div>'+
+    '<div class="row" style="margin-top:10px"><button class="btn primary" onclick="if(\''+todayPlan.phase+'\'===\'diagnose\'){show(\'mock\');}else{startWeakDrill();}">Start today\'s task</button>'+
+    '<button class="btn" onclick="show(\'vocab\')">Vocab</button>'+
+    '<button class="btn" onclick="startSRS()">SRS Review</button></div></div>';
+  // weekly summary
+  for(var w=1; w<=weeks; w++){
+    var wd=days2.filter(x=>x.d>(w-1)*7 && x.d<=w*7);
+    var foc = w<=2 ? 'Diagnose + '+weakTopics.slice(0,2).join(' / ') : (w>=weeks-1 ? 'Full tests + SRS review' : 'Topic drills + vocab SRS');
+    html+='<div class="secrow"><span class="name"><b>Week '+w+'</b> <span class="small">('+wd.length+' days)</span></span><span class="pct">'+hrs+'h</span></div>'+
+      '<div class="small" style="margin:-4px 0 10px">'+foc+'</div>';
+  }
+  html+='<div class="row" style="margin-top:10px"><button class="btn primary" onclick="show(\'custom\')">Open Custom Quiz</button><button class="btn" onclick="show(\'vocab\')">Vocab Drill</button><button class="btn" onclick="show(\'mock\')">Timed Section</button><button class="btn" onclick="show(\'full\')">Full Test</button></div></div>';
   document.getElementById('plan-out').innerHTML=html;
-  // default date = today+56 if empty handled above
 }
 
 /* ================= IMPORT / EXPORT ================= */

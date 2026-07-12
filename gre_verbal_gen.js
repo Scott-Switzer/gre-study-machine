@@ -215,15 +215,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: His ___ wealth could not buy him genuine friends.",
 "choices": {
-"A": "rabble",
+"A": "brevity",
 "B": "amenable",
-"C": "prospect",
-"D": "demure",
-"E": "fathom",
-"F": "predecessor"
+"C": "protean",
+"D": "denigrate",
+"E": "fawn",
+"F": "predilection"
 },
 "answer": "A",
-"explanation": "'rabble' fits the context.",
+"explanation": "'brevity' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-12"
 },
@@ -386,15 +386,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: Because the evidence was ___, the jury deliberated for only minutes.",
 "choices": {
-"A": "ire",
-"B": "insular",
+"A": "irascible",
+"B": "insufferable",
 "C": "berserk",
-"D": "raffish",
+"D": "raft",
 "E": "disabuse",
-"F": "dogmatic"
+"F": "terse"
 },
 "answer": "F",
-"explanation": "'dogmatic' fits the context.",
+"explanation": "'terse' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-21"
 },
@@ -557,15 +557,15 @@ var GRE_VERBAL_GEN = [
 "difficulty": "medium",
 "stem": "Fill the blank: The ___ king ruled with absolute, unquestioned authority.",
 "choices": {
-"A": "grapple",
-"B": "quantum",
-"C": "propitiate",
-"D": "clarify",
-"E": "privy",
-"F": "canine"
+"A": "grandiloquent",
+"B": "qualm",
+"C": "propensity",
+"D": "clamorous",
+"E": "privation",
+"F": "unyielding"
 },
 "answer": "F",
-"explanation": "'canine' fits the context.",
+"explanation": "'unyielding' fits the context.",
 "source": "generated-verbal",
 "id": "v-gen-30"
 },
@@ -4002,5 +4002,627 @@ var GRE_VERBAL_GEN = [
 "explanation": "Stated: renewables already scale without fusion's unresolved hurdles.",
 "source": "generated-verbal",
 "id": "v-gen-200"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Inflation measures the general rise in prices, but the indexes that track it rest on assumptions about how people substitute between goods. When the price of beef rises, shoppers may buy chicken; a fixed-basket index overstates the true cost of living, while a chain-weighted index better reflects actual behavior. Central banks therefore face a quiet dilemma: tighten too early and stall growth, too late and let expectations of inflation become self-fulfilling.",
+"stem": "The passage suggests a fixed-basket index",
+"choices": {
+"A": "understates inflation",
+"B": "may overstate the cost of living if shoppers substitute",
+"C": "is always accurate",
+"D": "ignores beef",
+"E": "causes inflation"
+},
+"answer": "B",
+"explanation": "Stated: substitution makes a fixed basket overstate true cost.",
+"source": "generated-verbal",
+"id": "v-gen-201"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Inflation measures the general rise in prices, but the indexes that track it rest on assumptions about how people substitute between goods. When the price of beef rises, shoppers may buy chicken; a fixed-basket index overstates the true cost of living, while a chain-weighted index better reflects actual behavior. Central banks therefore face a quiet dilemma: tighten too early and stall growth, too late and let expectations of inflation become self-fulfilling.",
+"stem": "The word 'self-fulfilling' most nearly means",
+"choices": {
+"A": "false",
+"B": "coming true because expected",
+"C": "tiny",
+"D": "measured",
+"E": "avoided"
+},
+"answer": "B",
+"explanation": "Self-fulfilling = realized because people expect it.",
+"source": "generated-verbal",
+"id": "v-gen-202"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Inflation measures the general rise in prices, but the indexes that track it rest on assumptions about how people substitute between goods. When the price of beef rises, shoppers may buy chicken; a fixed-basket index overstates the true cost of living, while a chain-weighted index better reflects actual behavior. Central banks therefore face a quiet dilemma: tighten too early and stall growth, too late and let expectations of inflation become self-fulfilling.",
+"stem": "According to the passage, central banks must",
+"choices": {
+"A": "ignore inflation",
+"B": "balance timing of tightening",
+"C": "always tighten",
+"D": "abolish indexes",
+"E": "buy chicken"
+},
+"answer": "B",
+"explanation": "Stated: tighten too early stalls growth, too late embeds inflation.",
+"source": "generated-verbal",
+"id": "v-gen-203"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The legal doctrine of stare decisis binds courts to follow precedent, promoting stability and predictability. Yet the Supreme Court has overturned its own rulings when social consensus or constitutional understanding shifted, as with school segregation and campaign finance. Critics argue that selective fidelity to precedent undermines the very predictability the doctrine promises; defenders counter that a constitution must breathe with the nation it governs.",
+"stem": "The passage suggests stare decisis",
+"choices": {
+"A": "is never deviated from",
+"B": "promotes stability but is sometimes overridden",
+"C": "only applies to finance",
+"D": "abolished segregation",
+"E": "ignores consensus"
+},
+"answer": "B",
+"explanation": "The passage says courts follow precedent yet have overturned rulings when understanding shifted.",
+"source": "generated-verbal",
+"id": "v-gen-204"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The legal doctrine of stare decisis binds courts to follow precedent, promoting stability and predictability. Yet the Supreme Court has overturned its own rulings when social consensus or constitutional understanding shifted, as with school segregation and campaign finance. Critics argue that selective fidelity to precedent undermines the very predictability the doctrine promises; defenders counter that a constitution must breathe with the nation it governs.",
+"stem": "The word 'breathe' most nearly means",
+"choices": {
+"A": "stop",
+"B": "evolve / stay living with",
+"C": "sleep",
+"D": "measure",
+"E": "repeat"
+},
+"answer": "B",
+"explanation": "Breathe = remain responsive / alive with the nation.",
+"source": "generated-verbal",
+"id": "v-gen-205"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The legal doctrine of stare decisis binds courts to follow precedent, promoting stability and predictability. Yet the Supreme Court has overturned its own rulings when social consensus or constitutional understanding shifted, as with school segregation and campaign finance. Critics argue that selective fidelity to precedent undermines the very predictability the doctrine promises; defenders counter that a constitution must breathe with the nation it governs.",
+"stem": "According to the passage, defenders of overturning precedent argue the constitution",
+"choices": {
+"A": "is fixed",
+"B": "must evolve with the nation",
+"C": "ignores precedent",
+"D": "is finance-only",
+"E": "ended segregation"
+},
+"answer": "B",
+"explanation": "Stated: a constitution must breathe with the nation it governs.",
+"source": "generated-verbal",
+"id": "v-gen-206"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Antibodies tag invaders for destruction, but some pathogens disguise themselves by mimicking host molecules, slipping past immune detection. HIV goes further, attacking the immune system's own command cells so the body cannot coordinate a response. Such evasion explains why a vaccine must do more than present an antigen; it must provoke the specific cellular machinery that the pathogen has learned to disable.",
+"stem": "The passage suggests HIV is dangerous because it",
+"choices": {
+"A": "presents antigens",
+"B": "disables the immune command cells",
+"C": "mimics antibodies",
+"D": "is a vaccine",
+"E": "causes fever only"
+},
+"answer": "B",
+"explanation": "Stated: HIV attacks the immune system's own command cells.",
+"source": "generated-verbal",
+"id": "v-gen-207"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Antibodies tag invaders for destruction, but some pathogens disguise themselves by mimicking host molecules, slipping past immune detection. HIV goes further, attacking the immune system's own command cells so the body cannot coordinate a response. Such evasion explains why a vaccine must do more than present an antigen; it must provoke the specific cellular machinery that the pathogen has learned to disable.",
+"stem": "The word 'mimicking' most nearly means",
+"choices": {
+"A": "destroying",
+"B": "copying / imitating",
+"C": "measuring",
+"D": "ignoring",
+"E": "vaccinating"
+},
+"answer": "B",
+"explanation": "Mimicking = imitating host molecules.",
+"source": "generated-verbal",
+"id": "v-gen-208"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Antibodies tag invaders for destruction, but some pathogens disguise themselves by mimicking host molecules, slipping past immune detection. HIV goes further, attacking the immune system's own command cells so the body cannot coordinate a response. Such evasion explains why a vaccine must do more than present an antigen; it must provoke the specific cellular machinery that the pathogen has learned to disable.",
+"stem": "According to the passage, an effective vaccine must",
+"choices": {
+"A": "only present an antigen",
+"B": "provoke the machinery the pathogen disables",
+"C": "avoid antigens",
+"D": "disable HIV",
+"E": "mimic the host"
+},
+"answer": "B",
+"explanation": "Stated: it must provoke the specific cellular machinery the pathogen disables.",
+"source": "generated-verbal",
+"id": "v-gen-209"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "In economics, comparative advantage holds that nations gain by specializing in what they produce relatively most efficiently, even if another nation is absolutely better at everything. A country that is twice as good at wine and three times as good at cloth should still make cloth and trade for wine. The model assumes mobile resources and full employment, assumptions real economies violate during recessions, when the gains from trade can be unevenly distributed.",
+"stem": "The passage suggests comparative advantage implies a nation should",
+"choices": {
+"A": "make everything itself",
+"B": "specialize where its relative efficiency is highest",
+"C": "avoid trade",
+"D": "only produce wine",
+"E": "ignore cost"
+},
+"answer": "B",
+"explanation": "Stated: specialize in what it produces relatively most efficiently.",
+"source": "generated-verbal",
+"id": "v-gen-210"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "In economics, comparative advantage holds that nations gain by specializing in what they produce relatively most efficiently, even if another nation is absolutely better at everything. A country that is twice as good at wine and three times as good at cloth should still make cloth and trade for wine. The model assumes mobile resources and full employment, assumptions real economies violate during recessions, when the gains from trade can be unevenly distributed.",
+"stem": "The word 'relatively' most nearly means",
+"choices": {
+"A": "absolutely",
+"B": "in comparison to others",
+"C": "never",
+"D": "poorly",
+"E": "equally"
+},
+"answer": "B",
+"explanation": "Relatively = by comparison with the other good / nation.",
+"source": "generated-verbal",
+"id": "v-gen-211"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "In economics, comparative advantage holds that nations gain by specializing in what they produce relatively most efficiently, even if another nation is absolutely better at everything. A country that is twice as good at wine and three times as good at cloth should still make cloth and trade for wine. The model assumes mobile resources and full employment, assumptions real economies violate during recessions, when the gains from trade can be unevenly distributed.",
+"stem": "According to the passage, the model's assumptions",
+"choices": {
+"A": "always hold",
+"B": "are violated in recessions",
+"C": "guarantee equal gains",
+"D": "ban trade",
+"E": "ignore cloth"
+},
+"answer": "B",
+"explanation": "Stated: real economies violate them during recessions.",
+"source": "generated-verbal",
+"id": "v-gen-212"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Plate tectonics explains earthquakes as the release of stress where rigid plates grind past one another; the longer the lock, the larger the eventual quake. Seismologists can map faults and measure strain but cannot precisely predict the day, because the final slip depends on microscopic friction no instrument fully captures. This uncertainty is why building codes, not forecasts, remain the frontline defense against destruction.",
+"stem": "The passage suggests quakes are",
+"choices": {
+"A": "perfectly predictable",
+"B": "releases of accumulated plate stress",
+"C": "caused by buildings",
+"D": "always small",
+"E": "microscopic"
+},
+"answer": "B",
+"explanation": "Stated: release of stress where plates grind past one another.",
+"source": "generated-verbal",
+"id": "v-gen-213"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Plate tectonics explains earthquakes as the release of stress where rigid plates grind past one another; the longer the lock, the larger the eventual quake. Seismologists can map faults and measure strain but cannot precisely predict the day, because the final slip depends on microscopic friction no instrument fully captures. This uncertainty is why building codes, not forecasts, remain the frontline defense against destruction.",
+"stem": "The word 'grind' most nearly means",
+"choices": {
+"A": "smooth",
+"B": "rub with pressure",
+"C": "float",
+"D": "cool",
+"E": "measure"
+},
+"answer": "B",
+"explanation": "Grind = rub past under pressure.",
+"source": "generated-verbal",
+"id": "v-gen-214"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Plate tectonics explains earthquakes as the release of stress where rigid plates grind past one another; the longer the lock, the larger the eventual quake. Seismologists can map faults and measure strain but cannot precisely predict the day, because the final slip depends on microscopic friction no instrument fully captures. This uncertainty is why building codes, not forecasts, remain the frontline defense against destruction.",
+"stem": "According to the passage, the main defense is",
+"choices": {
+"A": "exact forecasts",
+"B": "building codes",
+"C": "predicting the day",
+"D": "ignoring faults",
+"E": "microscopes"
+},
+"answer": "B",
+"explanation": "Stated: building codes, not forecasts, are the frontline defense.",
+"source": "generated-verbal",
+"id": "v-gen-215"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "A patent grants a temporary monopoly so inventors reap rewards and disclose methods, balancing incentive against access. Critics note that ever-lengthening protections on software and pharmaceuticals raise prices and slow follow-on innovation, especially in developing countries. Reformers propose shorter terms or compulsory licensing in health emergencies, trading some private reward for broader public benefit.",
+"stem": "The passage suggests a patent's purpose is to",
+"choices": {
+"A": "ban invention",
+"B": "reward inventors while disclosing methods",
+"C": "raise all prices",
+"D": "end competition",
+"E": "hide methods"
+},
+"answer": "B",
+"explanation": "Stated: grant monopoly so inventors reap rewards and disclose methods.",
+"source": "generated-verbal",
+"id": "v-gen-216"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "A patent grants a temporary monopoly so inventors reap rewards and disclose methods, balancing incentive against access. Critics note that ever-lengthening protections on software and pharmaceuticals raise prices and slow follow-on innovation, especially in developing countries. Reformers propose shorter terms or compulsory licensing in health emergencies, trading some private reward for broader public benefit.",
+"stem": "The word 'compulsory' most nearly means",
+"choices": {
+"A": "optional",
+"B": "required by authority",
+"C": "voluntary",
+"D": "temporary",
+"E": "illegal"
+},
+"answer": "B",
+"explanation": "Compulsory = mandated / required.",
+"source": "generated-verbal",
+"id": "v-gen-217"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "A patent grants a temporary monopoly so inventors reap rewards and disclose methods, balancing incentive against access. Critics note that ever-lengthening protections on software and pharmaceuticals raise prices and slow follow-on innovation, especially in developing countries. Reformers propose shorter terms or compulsory licensing in health emergencies, trading some private reward for broader public benefit.",
+"stem": "According to the passage, reformers want to",
+"choices": {
+"A": "lengthen all patents",
+"B": "trade some reward for public benefit",
+"C": "abolish disclosure",
+"D": "raise prices",
+"E": "ban drugs"
+},
+"answer": "B",
+"explanation": "Stated: trade some private reward for broader public benefit.",
+"source": "generated-verbal",
+"id": "v-gen-218"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Memory is reconstructive, not reproductive: each recall reassembles fragments, leaving room for distortion and suggestion. Eyewitness testimony, once treated as gold, is now known to be contaminate by leading questions and the confidence of others. Courts have slowly adapted, permitting expert testimony on memory's fallibility, yet juries still overweight a vivid, certain witness over probabilistic forensic evidence.",
+"stem": "The passage suggests memory is",
+"choices": {
+"A": "a perfect recording",
+"B": "reconstructed and distortable",
+"C": "never wrong",
+"D": "only visual",
+"E": "reproductive"
+},
+"answer": "B",
+"explanation": "Stated: memory is reconstructive, not reproductive.",
+"source": "generated-verbal",
+"id": "v-gen-219"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Memory is reconstructive, not reproductive: each recall reassembles fragments, leaving room for distortion and suggestion. Eyewitness testimony, once treated as gold, is now known to be contaminate by leading questions and the confidence of others. Courts have slowly adapted, permitting expert testimony on memory's fallibility, yet juries still overweight a vivid, certain witness over probabilistic forensic evidence.",
+"stem": "The word 'contaminate' most nearly means",
+"choices": {
+"A": "strengthen",
+"B": "corrupt / pollute",
+"C": "clarify",
+"D": "measure",
+"E": "protect"
+},
+"answer": "B",
+"explanation": "Contaminate = corrupted by suggestion.",
+"source": "generated-verbal",
+"id": "v-gen-220"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Memory is reconstructive, not reproductive: each recall reassembles fragments, leaving room for distortion and suggestion. Eyewitness testimony, once treated as gold, is now known to be contaminate by leading questions and the confidence of others. Courts have slowly adapted, permitting expert testimony on memory's fallibility, yet juries still overweight a vivid, certain witness over probabilistic forensic evidence.",
+"stem": "According to the passage, juries tend to",
+"choices": {
+"A": "ignore witnesses",
+"B": "overweight a vivid certain witness",
+"C": "trust only forensics",
+"D": "ban testimony",
+"E": "follow experts always"
+},
+"answer": "B",
+"explanation": "Stated: juries overweight a vivid certain witness.",
+"source": "generated-verbal",
+"id": "v-gen-221"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The tragedy of the commons arises when individuals exploit a shared resource to their own benefit, depleting it for all. Fisheries collapse when each boat catches freely; atmosphere warms when each nation emits freely. Solutions range from privatization to regulation to social norms, none perfect, but the pattern is clear: unpriced commons invite overuse unless institutions assign responsibility.",
+"stem": "The passage suggests the tragedy of the commons occurs when",
+"choices": {
+"A": "resources are private",
+"B": "individuals overuse a shared resource",
+"C": "nations regulate",
+"D": "fishing stops",
+"E": "prices rise"
+},
+"answer": "B",
+"explanation": "Stated: individuals exploit a shared resource to their own benefit.",
+"source": "generated-verbal",
+"id": "v-gen-222"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The tragedy of the commons arises when individuals exploit a shared resource to their own benefit, depleting it for all. Fisheries collapse when each boat catches freely; atmosphere warms when each nation emits freely. Solutions range from privatization to regulation to social norms, none perfect, but the pattern is clear: unpriced commons invite overuse unless institutions assign responsibility.",
+"stem": "The word 'depleting' most nearly means",
+"choices": {
+"A": "refilling",
+"B": "using up",
+"C": "protecting",
+"D": "pricing",
+"E": "sharing"
+},
+"answer": "B",
+"explanation": "Depleting = using up / exhausting.",
+"source": "generated-verbal",
+"id": "v-gen-223"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The tragedy of the commons arises when individuals exploit a shared resource to their own benefit, depleting it for all. Fisheries collapse when each boat catches freely; atmosphere warms when each nation emits freely. Solutions range from privatization to regulation to social norms, none perfect, but the pattern is clear: unpriced commons invite overuse unless institutions assign responsibility.",
+"stem": "According to the passage, unpriced commons",
+"choices": {
+"A": "are always safe",
+"B": "invite overuse without institutions",
+"C": "need no rules",
+"D": "help everyone",
+"E": "are private"
+},
+"answer": "B",
+"explanation": "Stated: unpriced commons invite overuse unless institutions assign responsibility.",
+"source": "generated-verbal",
+"id": "v-gen-224"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Quantum entanglement links particles so measuring one instantly fixes the other's state, regardless of distance, a feature Einstein called spooky. It enables no faster-than-light signaling, yet underpins emerging technologies for encryption and sensing. The strangeness is not a flaw in theory but a genuine feature of nature that repeated experiment has only confirmed, unsettling our intuition of locality.",
+"stem": "The passage suggests entanglement",
+"choices": {
+"A": "allows faster-than-light messages",
+"B": "links particle states at a distance",
+"C": "is a theory flaw",
+"D": "was disproven",
+"E": "only affects light"
+},
+"answer": "B",
+"explanation": "Stated: links particles so measuring one fixes the other's state at distance.",
+"source": "generated-verbal",
+"id": "v-gen-225"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Quantum entanglement links particles so measuring one instantly fixes the other's state, regardless of distance, a feature Einstein called spooky. It enables no faster-than-light signaling, yet underpins emerging technologies for encryption and sensing. The strangeness is not a flaw in theory but a genuine feature of nature that repeated experiment has only confirmed, unsettling our intuition of locality.",
+"stem": "The word 'spooky' most nearly means",
+"choices": {
+"A": "ordinary",
+"B": "eerie / unsettling",
+"C": "useful",
+"D": "measured",
+"E": "local"
+},
+"answer": "B",
+"explanation": "Spooky = eerie / unsettling to Einstein.",
+"source": "generated-verbal",
+"id": "v-gen-226"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Quantum entanglement links particles so measuring one instantly fixes the other's state, regardless of distance, a feature Einstein called spooky. It enables no faster-than-light signaling, yet underpins emerging technologies for encryption and sensing. The strangeness is not a flaw in theory but a genuine feature of nature that repeated experiment has only confirmed, unsettling our intuition of locality.",
+"stem": "According to the passage, entanglement underpins",
+"choices": {
+"A": "faster travel",
+"B": "encryption and sensing tech",
+"C": "disproven theory",
+"D": "locality",
+"E": "light speed"
+},
+"answer": "B",
+"explanation": "Stated: underpins emerging encryption and sensing tech.",
+"source": "generated-verbal",
+"id": "v-gen-227"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Urban heat islands form because pavement and roofs absorb sunlight that vegetation would reflect, raising city temperatures several degrees above surroundings. The effect worsens air quality and energy demand, but green roofs, street trees, and reflective surfaces can blunt it. Cities that treat canopy as infrastructure, not decoration, measurably cut summer peak temperatures and the deaths that follow heat waves.",
+"stem": "The passage suggests heat islands arise because",
+"choices": {
+"A": "trees absorb sun",
+"B": "pavement absorbs what vegetation would reflect",
+"C": "cities are cool",
+"D": "roofs reflect",
+"E": "plants are rare"
+},
+"answer": "B",
+"explanation": "Stated: pavement/roofs absorb sunlight vegetation would reflect.",
+"source": "generated-verbal",
+"id": "v-gen-228"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Urban heat islands form because pavement and roofs absorb sunlight that vegetation would reflect, raising city temperatures several degrees above surroundings. The effect worsens air quality and energy demand, but green roofs, street trees, and reflective surfaces can blunt it. Cities that treat canopy as infrastructure, not decoration, measurably cut summer peak temperatures and the deaths that follow heat waves.",
+"stem": "The word 'blunt' most nearly means",
+"choices": {
+"A": "sharpen",
+"B": "reduce / soften",
+"C": "measure",
+"D": "ignore",
+"E": "reflect"
+},
+"answer": "B",
+"explanation": "Blunt = reduce the effect.",
+"source": "generated-verbal",
+"id": "v-gen-229"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "Urban heat islands form because pavement and roofs absorb sunlight that vegetation would reflect, raising city temperatures several degrees above surroundings. The effect worsens air quality and energy demand, but green roofs, street trees, and reflective surfaces can blunt it. Cities that treat canopy as infrastructure, not decoration, measurably cut summer peak temperatures and the deaths that follow heat waves.",
+"stem": "According to the passage, canopy as infrastructure",
+"choices": {
+"A": "warms cities",
+"B": "cuts peak temperatures and deaths",
+"C": "is decoration only"
+},
+"answer": "B",
+"explanation": "Stated: measurably cuts peak temperatures and heat deaths.",
+"source": "generated-verbal",
+"id": "v-gen-230"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The replication crisis in science emerged when many published results failed to reproduce, exposing lax statistical thresholds and incentives to publish positive findings. Preregistration, larger samples, and open data are now urged as remedies. Skeptics worry reform slows discovery; proponents reply that a literature of false positives is worse than a slower, trustworthy one, since policy and medicine rest on what journals report.",
+"stem": "The passage suggests the replication crisis revealed",
+"choices": {
+"A": "perfect science",
+"B": "unreproducible published results",
+"C": "too few papers",
+"D": "honest thresholds",
+"E": "weak incentives"
+},
+"answer": "B",
+"explanation": "Stated: many published results failed to reproduce.",
+"source": "generated-verbal",
+"id": "v-gen-231"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The replication crisis in science emerged when many published results failed to reproduce, exposing lax statistical thresholds and incentives to publish positive findings. Preregistration, larger samples, and open data are now urged as remedies. Skeptics worry reform slows discovery; proponents reply that a literature of false positives is worse than a slower, trustworthy one, since policy and medicine rest on what journals report.",
+"stem": "The word 'thresholds' most nearly means",
+"choices": {
+"A": "floors",
+"B": "boundaries / cutoffs",
+"C": "results",
+"D": "journals",
+"E": "samples"
+},
+"answer": "B",
+"explanation": "Thresholds = statistical cutoffs for significance.",
+"source": "generated-verbal",
+"id": "v-gen-232"
+},
+{
+"type": "rc",
+"section": "Verbal",
+"topic": "Reading Comp",
+"difficulty": "medium",
+"passage": "The replication crisis in science emerged when many published results failed to reproduce, exposing lax statistical thresholds and incentives to publish positive findings. Preregistration, larger samples, and open data are now urged as remedies. Skeptics worry reform slows discovery; proponents reply that a literature of false positives is worse than a slower, trustworthy one, since policy and medicine rest on what journals report.",
+"stem": "According to the passage, proponents of reform hold that",
+"choices": {
+"A": "false positives are fine",
+"B": "a trustworthy literature beats a fast false one"
+},
+"answer": "B",
+"explanation": "Stated: a literature of false positives is worse than slower trustworthy science.",
+"source": "generated-verbal",
+"id": "v-gen-233"
 }
 ];
