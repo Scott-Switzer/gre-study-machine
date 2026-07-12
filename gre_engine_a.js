@@ -5,6 +5,7 @@ try { GRE_IMPORTED = JSON.parse(localStorage.getItem('gre_imported_bank')||'[]')
 var GRE_QUESTIONS = [];
 if (typeof GRE_QUESTIONS_GEN !== "undefined") GRE_QUESTIONS = GRE_QUESTIONS.concat(GRE_QUESTIONS_GEN);
 if (typeof GRE_VERBAL_GEN !== "undefined") GRE_QUESTIONS = GRE_QUESTIONS.concat(GRE_VERBAL_GEN);
+if (typeof GRE_GUTENBERG_GEN !== "undefined") GRE_QUESTIONS = GRE_QUESTIONS.concat(GRE_GUTENBERG_GEN);
 if (typeof GRE_QUESTIONS_CURATED !== "undefined") GRE_QUESTIONS = GRE_QUESTIONS.concat(GRE_QUESTIONS_CURATED);
 if (typeof GRE_QUESTIONS_SEED !== "undefined") GRE_QUESTIONS = GRE_QUESTIONS.concat(GRE_QUESTIONS_SEED);
 GRE_QUESTIONS = GRE_QUESTIONS.concat(GRE_IMPORTED);
